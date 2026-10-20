@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "number": "I.",
+        "thumb": "process1.jpg",
+        "alt": "Process",
+        "name": "Strategy",
+        "designation": "Driving Growth",
+        "description": "Develop a focused plan with clear goals, target audiences, and actionable steps to drive success.",
+        "delay": 0
+    },
+    {
+        "id": 2,
+        "number": "II.",
+        "thumb": "process2.jpg",
+        "alt": "Process",
+        "name": "Execution",
+        "designation": "Effective Tactics",
+        "description": "Implement the strategy effectively, track progress and make necessary adjustments to stay aligned.",
+        "delay": 200
+    },
+    {
+        "id": 3,
+        "number": "III.",
+        "thumb": "process3.jpg",
+        "alt": "Process",
+        "name": "Discover",
+        "designation": "Uncover Insights",
+        "description": "Continuously explore valuable insights and gather feedback to refine strategies and adapt to trends.",
+        "delay": 400
+    }
+]

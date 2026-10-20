@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "activeClass": "active",
+        "title": "I. Awards Jury",
+        "date": "2021-2024"
+    },
+    {
+        "id": 2,
+        "activeClass": "",
+        "title": "II. Studio of the Year",
+        "date": "2023"
+    },
+    {
+        "id": 3,
+        "activeClass": "",
+        "title": "III. Cannes Lions",
+        "date": "2022"
+    },
+    {
+        "id": 4,
+        "activeClass": "",
+        "title": "IV. Adobe Design Achievement Awards",
+        "date": "2022-2023"
+    },
+    {
+        "id": 5,
+        "activeClass": "",
+        "title": "V. D&AD Awards",
+        "date": "2021"
+    },
+    {
+        "id": 6,
+        "activeClass": "",
+        "title": "VI. Red Dot Design Awards",
+        "date": "2020-2021"
+    }
+]

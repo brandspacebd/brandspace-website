@@ -1,0 +1,33 @@
+{
+  "name": "aixor-nextjs",
+  "version": "1.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.8",
+    "gsap": "^3.13.0",
+    "next": "16.0.0",
+    "react": "^19.2.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.2.0",
+    "react-simple-scroll-up": "^0.2.3",
+    "react-toastify": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.7",
+    "@types/bootstrap": "^5.2.10",
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^9.38.0",
+    "eslint-config-next": "16.0.0",
+    "typescript": "^5.9.3"
+  }
+}
