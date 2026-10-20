@@ -11,6 +11,12 @@ export const metadata = {
     title: "Aixor - Service Details"
 };
 
+export async function generateStaticParams() {
+    return ServicesV1Data.map(service => ({
+        id: service.id.toString(),
+    }));
+}
+
 interface Params {
     id: string;
 }

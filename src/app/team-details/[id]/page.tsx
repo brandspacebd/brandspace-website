@@ -9,6 +9,12 @@ export const metadata = {
     title: "Aixor - Team Details"
 };
 
+export async function generateStaticParams() {
+    return TeamV1Data.map(member => ({
+        id: member.id.toString(),
+    }));
+}
+
 interface Params {
     id: string;
 }

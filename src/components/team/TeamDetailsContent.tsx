@@ -1,6 +1,7 @@
 import Link from "next/link";
 import btnArrow from "@/assets/images/btn-arrow.svg"
 import Image from "next/image";
+import getImageUrl from "../utilities/getImageUrl";
 
 interface DataType {
     thumb?: string;
@@ -17,7 +18,7 @@ const TeamDetailsContent = ({ memberData }: { memberData: DataType }) => {
                 <div className="team-details">
                     <div className="team-content-top">
                         <div className="thumb">
-                            <Image src={`/assets/images/${thumb}`} alt="Thumb" width={840} height={830} />
+                            <Image src={getImageUrl(thumb)} alt="Thumb" width={840} height={830} />
                         </div>
                         <div className="right-info">
                             <h2 className="title">{name}</h2>

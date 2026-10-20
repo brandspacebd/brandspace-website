@@ -7,6 +7,12 @@ export const metadata = {
     title: "Aixor - Blog Details"
 };
 
+export async function generateStaticParams() {
+    return FeatureV3Data.map(feature => ({
+        id: feature.id.toString(),
+    }));
+}
+
 interface Params {
     id: string;
 }

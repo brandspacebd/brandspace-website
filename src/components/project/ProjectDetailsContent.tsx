@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Union from '@/assets/images/Union.svg';
 import AnimatedText from '../animated/AnimatedText';
+import getImageUrl from '../utilities/getImageUrl';
 
 interface Datatype {
     thumb?: string;
@@ -27,7 +28,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                 </div>
                 <div className="feature-project">
                     <div className="img-box">
-                        <Image className="scaleDown" src={`/assets/images/${thumb}`} width={2544} height={1336} alt="project-single" />
+                        <Image className="scaleDown" src={getImageUrl(thumb)} width={2544} height={1336} alt="project-single" />
                     </div>
                     <div className="feature-project-infos">
                         <div className="feature-project-info-box project-name">
@@ -91,7 +92,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                     </div>
                 </div>
                 <div className="full-image">
-                    <Image className="scaleDown" src={`/assets/images/${thumb}`} alt="project-single" width={2544} height={1336} />
+                    <Image className="scaleDown" src={getImageUrl(thumb)} alt="project-single" width={2544} height={1336} />
                 </div>
             </div>
         </>

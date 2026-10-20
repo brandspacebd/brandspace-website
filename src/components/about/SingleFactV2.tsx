@@ -1,5 +1,6 @@
 import Image from "next/image";
 import angleIcon from "@/assets/images/angle-icon-1.svg"
+import getImageUrl from "../utilities/getImageUrl";
 
 interface DataType {
     activeClass: string;
@@ -15,7 +16,7 @@ const SingleFactV2 = ({ fact }: { fact: DataType }) => {
     return (
         <>
             <div data-aos="fade-up" className={`funfact-box ${activeClass}`} data-aos-delay={delay}>
-                <Image src={`/assets/images/${thumb}`} alt="funfact" className="overlay" width={512} height={512} />
+                <Image src={getImageUrl(thumb)} alt="funfact" className="overlay" width={512} height={512} />
                 <div className="funfact-header">
                     <span className="title">{title}</span>
                 </div>

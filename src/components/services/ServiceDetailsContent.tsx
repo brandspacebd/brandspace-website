@@ -5,6 +5,7 @@ import AnimatedText from "../animated/AnimatedText";
 import Link from "next/link";
 import btnArrow from '@/assets/images/btn-arrow.svg';
 import useScaleDownAnimation from "@/hooks/useScaleDownAnimation";
+import getImageUrl from "../utilities/getImageUrl";
 interface DataType {
     name?: string;
     thumbFull1?: string;
@@ -36,7 +37,7 @@ const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
                 <div className="project-single-body">
                     <div className="feature-project">
                         <div className="img-box" >
-                            <Image src={`/assets/images/${thumbFull1}`} alt="project-single" width={1900} height={925} />
+                            <Image src={getImageUrl(thumbFull1)} alt="project-single" width={1900} height={925} />
                         </div>
                         <div className="feature-project-infos">
                             <div className="feature-project-info-box project-name">
@@ -81,7 +82,7 @@ const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
                             </div>
                         </div>
                         <div className="full-image" ref={containerRef}>
-                            <Image className="scaleDown" src={`/assets/images/${thumbFull2}`} alt="project-single" width={1900} height={925} />
+                            <Image className="scaleDown" src={getImageUrl(thumbFull2)} alt="project-single" width={1900} height={925} />
                         </div>
                         <div className="section-header">
                             <span className="section-subtitle">

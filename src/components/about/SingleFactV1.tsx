@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import angleIcon from "@/assets/images/angle-icon-1.svg"
 import Image from "next/image";
+import getImageUrl from "../utilities/getImageUrl";
 
 interface DataType {
     id?: number;
@@ -16,7 +17,7 @@ const SingleFactV1 = ({ fact }: { fact: DataType }) => {
 
     return (
         <>
-            <Image src={`/assets/images/${thumb}`} alt="funfact" className="overlay" width={512} height={512} />
+            <Image src={getImageUrl(thumb)} alt="funfact" className="overlay" width={512} height={512} />
             <div className="funfact-header">
                 <span className="title">{title}</span>
             </div>

@@ -4,6 +4,8 @@ import btnArrow from "@/assets/images/btn-arrow.svg"
 import footerBigLogo from "@/assets/images/footer-big-logo.png"
 import Image from "next/image";
 import Link from "next/link";
+import siteSettings from "@/assets/jsonData/settings/siteSettings.json";
+import getImageUrl from "../utilities/getImageUrl";
 
 const FooterV1 = () => {
     return (
@@ -41,7 +43,7 @@ const FooterV1 = () => {
                                     </ul>
                                 </div>
                                 <div className="copyright">
-                                    &copy; {(new Date().getFullYear())} ALL RIGHTS RESERVED
+                                    &copy; {(new Date().getFullYear())} {siteSettings.copyright}
                                 </div>
                             </div>
                         </div>
@@ -54,10 +56,10 @@ const FooterV1 = () => {
                                         <h4>REACH OUT TO US</h4>
                                         <div className="links">
                                             <div className="split-text-anim">
-                                                <a data-aos="slide-up" data-aos-duration={700} href="tel:+840123456789" className="with-border">(+84) 0123456789</a>
+                                                <a data-aos="slide-up" data-aos-duration={700} href={`tel:${siteSettings.phone}`} className="with-border">{siteSettings.phone}</a>
                                             </div>
                                             <div className="split-text-anim">
-                                                <a data-aos="slide-up" data-aos-duration={700} href="mailto:MindBlowingArt2692@gmail.com" className="with-border">MindBlowingArt2692@gmail.com</a>
+                                                <a data-aos="slide-up" data-aos-duration={700} href={`mailto:${siteSettings.email}`} className="with-border">{siteSettings.email}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -76,29 +78,29 @@ const FooterV1 = () => {
                                     <h4>Social</h4>
                                     <ul>
                                         <li>
-                                            <a className="with-border" href="https://instagram.com/" target="_blank">
+                                            <a className="with-border" href={siteSettings.socialLinks.instagram} target="_blank">
                                                 <Image src={btnArrow} alt="icon" /> Instagram
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="with-border" href="https://twitter.com/" target="_blank">
+                                            <a className="with-border" href={siteSettings.socialLinks.twitter} target="_blank">
                                                 <Image src={btnArrow} alt="icon" /> Twitter
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="with-border" href="https://behance.com/" target="_blank">
+                                            <a className="with-border" href={siteSettings.socialLinks.behance} target="_blank">
                                                 <Image src={btnArrow} alt="icon" /> Behance
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="with-border" href="https://dribbble.com/" target="_blank">
+                                            <a className="with-border" href={siteSettings.socialLinks.dribbble} target="_blank">
                                                 <Image src={btnArrow} alt="icon" /> Dribbble
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="copyright">
-                                    BASED IN HANOI, VIETNAM
+                                    {siteSettings.address}
                                 </div>
                             </div>
                         </div>
@@ -106,7 +108,7 @@ const FooterV1 = () => {
                 </div>
                 <div className="footer-bottom">
                     <div className="split-text-anim">
-                        <Image data-aos="slide-up" data-aos-duration={700} src={footerBigLogo} alt="logo" />
+                        <Image data-aos="slide-up" data-aos-duration={700} src={getImageUrl(siteSettings.footerLogo)} alt="logo" width={1800} height={340} />
                     </div>
                 </div>
             </footer>

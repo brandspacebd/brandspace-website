@@ -4,6 +4,7 @@ import Image from "next/image"
 import AnimatedText from "../animated/AnimatedText"
 import SingleFactV1 from "./SingleFactV1";
 import FactData from "@/assets/jsonData/fact/FactData.json"
+import homeData from "@/assets/jsonData/homepage/homeData.json"
 import { useState } from "react";
 
 const AboutV1 = () => {
@@ -24,10 +25,10 @@ const AboutV1 = () => {
                 <div className="custom-container">
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image src={unionIcon} alt="About Us" /> About Us
+                            <Image src={unionIcon} alt="About Us" /> {homeData.about.subtitle}
                         </span>
                         <AnimatedText>
-                            Founded on the principles of creativity, collaboration, and excellence, AIXOR is a diverse team of industry experts dedicated to delivering outstanding results...
+                            {homeData.about.description}
                         </AnimatedText>
                     </div>
                     <div className="funfacts-wrap">

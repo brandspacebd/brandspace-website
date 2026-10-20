@@ -2,6 +2,7 @@
 import useHoverEffect from "@/hooks/useHoverEffect";
 import Image from "next/image";
 import Link from "next/link";
+import getImageUrl from "../utilities/getImageUrl";
 
 interface DataType {
     id?: number;
@@ -27,7 +28,7 @@ const SingleFeatureV2 = ({ feature }: { feature: DataType }) => {
                         <Link href={`/project-details/${id}`}>View</Link>
                     </div>
                     <div className="img-box">
-                        <Image src={`/assets/images/${thumb}`} alt="image" width={2544} height={1336} />
+                        <Image src={getImageUrl(thumb)} alt="image" width={2544} height={1336} />
                     </div>
                     <div className="feature-project-infos">
                         <div className="feature-project-info-box">

@@ -6,6 +6,12 @@ export const metadata = {
     title: "Aixor - Project Details"
 };
 
+export async function generateStaticParams() {
+    return FeatureV2Data.map(project => ({
+        id: project.id.toString(),
+    }));
+}
+
 interface Params {
     id: string;
 }

@@ -2,6 +2,7 @@ import Union from "@/assets/images/Union.svg"
 import Image from 'next/image';
 import Link from "next/link";
 import FeatureV1Data from "@/assets/jsonData/feature/FeatureV1Data.json"
+import homeData from "@/assets/jsonData/homepage/homeData.json"
 import SingleFeatureV1 from "./SingleFeatureV1";
 
 const FeatureV1 = () => {
@@ -12,14 +13,13 @@ const FeatureV1 = () => {
                     <div className="section-header section-header2">
                         <span className="section-subtitle">
                             <Image src={Union} alt="icon" />
-                            Our projects
+                            {homeData.projects.subtitle}
                         </span>
                         <h2 className="section-title section-title2">
-                            Featured WOW <span>Projects</span>
+                            {homeData.projects.title}
                         </h2>
                         <p className="section-desc">
-                            Explore our collection of cutting-edge products designed to empower your business and elevate your creative potential. <br />
-                            Each product is meticulously crafted to provide exceptional performance, usability, and results.
+                            {homeData.projects.description}
                         </p>
                     </div>
                     <div className="feature-project-lists">
@@ -28,8 +28,8 @@ const FeatureV1 = () => {
                         )}
                     </div>
                     <div className="feature-more-btn-wrap">
-                        <Link href="/projects" className="theme-btn">
-                            View More
+                        <Link href={homeData.projects.buttonUrl} className="theme-btn">
+                            {homeData.projects.buttonText}
                         </Link>
                     </div>
                 </div>

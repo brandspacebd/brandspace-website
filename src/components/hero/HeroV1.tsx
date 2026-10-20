@@ -3,6 +3,7 @@ import btnArrowIcon from "@/assets/images/btn-arrow.svg"
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from "react";
+import homeData from "@/assets/jsonData/homepage/homeData.json";
 
 const HeroV1 = () => {
 
@@ -21,8 +22,8 @@ const HeroV1 = () => {
                         {/* Video Section */}
                         <div className="hero-video">
                             {isClient && (
-                                <video loop muted autoPlay>
-                                    <source src="/assets/video/hero-video.mp4" type="video/mp4" />
+                                <video loop muted autoPlay key={homeData.hero.video}>
+                                    <source src={homeData.hero.video} type="video/mp4" />
                                 </video>
                             )}
                         </div>
@@ -31,27 +32,27 @@ const HeroV1 = () => {
 
                             {/* Hero Description */}
                             <div className="hero-top-desc">
-                                <p>“ At AIXOR, we believe that creativity is the catalyst for innovation. As a full-service creative agency, we specialise in transforming bold ideas into compelling realities.</p>
-                                <p>Whether it’s developing a brand identity, creating a user-friendly website, or executing a dynamic marketing campaign, we approach every project with the same level of dedication and enthusiasm. “</p>
+                                <p>{homeData.hero.quote1}</p>
+                                <p>{homeData.hero.quote2}</p>
                             </div>
 
                             {/* Author Information */}
                             <div className="author-info">
-                                <h4>Ahshan M</h4>
-                                <span>Chief Executive Officer</span>
+                                <h4>{homeData.hero.authorName}</h4>
+                                <span>{homeData.hero.authorRole}</span>
                             </div>
                         </div>
 
                         {/* Hero Bottom Section */}
                         <div className="hero-bottom">
                             <div className="left">
-                                <h2>Imagination</h2>
-                                <h2>Meets Innovation</h2>
+                                <h2>{homeData.hero.title1}</h2>
+                                <h2>{homeData.hero.title2}</h2>
                             </div>
 
                             {/* Button Section */}
-                            <Link href="/contact" className="theme-btn">
-                                {`Let's Connect`}
+                            <Link href={homeData.hero.buttonUrl} className="theme-btn">
+                                {homeData.hero.buttonText}
                                 <Image src={btnArrowIcon} alt="icon" />
                             </Link>
                         </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import rating from "@/assets/images/rating.svg"
+import getImageUrl from "../utilities/getImageUrl";
 
 interface DataType {
     id?: number;
@@ -20,7 +21,7 @@ const SingleTestimonialV1 = ({ testimonial }: { testimonial: DataType }) => {
                     <p>“{text}”</p>
                 </div>
                 <div className="testimonial-author">
-                    <Image src={`/assets/images/${thumb}`} alt="testimonial" width={80} height={80} />
+                    <Image src={getImageUrl(thumb)} alt="testimonial" width={80} height={80} />
                     <div className="content">
                         <span className="name">{name}</span>
                         <span className="designation">{designation}</span>

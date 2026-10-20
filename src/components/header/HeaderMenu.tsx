@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import logo1 from "@/assets/images/logo-1.png"
 import Image from 'next/image';
+import siteSettings from "@/assets/jsonData/settings/siteSettings.json";
+import getImageUrl from '../utilities/getImageUrl';
 
 const HeaderMenu = () => {
     return (
@@ -10,7 +11,7 @@ const HeaderMenu = () => {
                     <div className="custom-row">
 
                         <Link href="/" className="logo">
-                            <Image src={logo1} alt="logo" />
+                            <Image src={getImageUrl(siteSettings.logo)} alt={siteSettings.siteName} width={138} height={40} />
                         </Link>
 
                         {/* Navigation menu */}

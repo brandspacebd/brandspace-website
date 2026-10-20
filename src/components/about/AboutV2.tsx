@@ -3,6 +3,7 @@ import Image from "next/image"
 import AnimatedText from "../animated/AnimatedText"
 import SingleFactV2 from "./SingleFactV2"
 import FactData from "@/assets/jsonData/fact/FactData.json"
+import homeData from "@/assets/jsonData/homepage/homeData.json"
 
 const AboutV2 = () => {
     return (
@@ -11,14 +12,14 @@ const AboutV2 = () => {
                 <div className="custom-container">
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image src={unionIcon} alt="About Us" /> About Us
+                            <Image src={unionIcon} alt="About Us" /> {homeData.aboutPage.subtitle}
                         </span>
                         <div className="right">
                             <AnimatedText>
-                                Founded on the principles of creativity, collaboration, and excellence, AIXOR is a diverse team of industry experts dedicated to delivering outstanding results...
+                                {homeData.aboutPage.description1}
                             </AnimatedText>
                             <AnimatedText>
-                                We are committed to pushing the boundaries of what’s possible, working together seamlessly to exceed expectations and deliver outstanding value to our clients.
+                                {homeData.aboutPage.description2}
                             </AnimatedText>
                         </div>
                     </div>

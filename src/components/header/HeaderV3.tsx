@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import logo1 from "@/assets/images/logo-1.png";
 import useNotchScrollLink from "@/hooks/useNotchScrollLink";
+import siteSettings from "@/assets/jsonData/settings/siteSettings.json";
+import getImageUrl from "../utilities/getImageUrl";
 
 const HeaderV3 = () => {
 
@@ -61,12 +63,11 @@ const HeaderV3 = () => {
                     <div className="header-sidebar-top">
                         <ul>
                             <li>
-                                <span>Based in Hanoi,</span>
-                                <a href="mailto:email@example.com">E: MindBlowingArt2692@gmail.com</a>
+                                <span>{siteSettings.address}</span>
+                                <a href={`mailto:${siteSettings.email}`}>E: {siteSettings.email}</a>
                             </li>
                             <li>
-                                <span>VietNam</span>
-                                <a href="tel:+1234567890">(+84) 0123456789</a>
+                                <a href={`tel:${siteSettings.phone}`}>{siteSettings.phone}</a>
                             </li>
                         </ul>
                     </div>
@@ -131,12 +132,11 @@ const HeaderV3 = () => {
                     <div className="header-sidebar-top">
                         <ul>
                             <li>
-                                <span>Based in Hanoi,</span>
-                                <a href="mailto:email@example.com">E: MindBlowingArt2692@gmail.com</a>
+                                <span>{siteSettings.address}</span>
+                                <a href={`mailto:${siteSettings.email}`}>E: {siteSettings.email}</a>
                             </li>
                             <li>
-                                <span>VietNam</span>
-                                <a href="tel:+1234567890">(+84) 0123456789</a>
+                                <a href={`tel:${siteSettings.phone}`}>{siteSettings.phone}</a>
                             </li>
                         </ul>
                     </div>
@@ -181,7 +181,7 @@ const HeaderV3 = () => {
                     <div className="custom-row">
 
                         <Link href="/" className="logo">
-                            <Image src={logo1} alt="logo" />
+                            <Image src={getImageUrl(siteSettings.logo)} alt={siteSettings.siteName} width={138} height={40} />
                         </Link>
 
                         {/* Navigation menu */}

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import getImageUrl from '../utilities/getImageUrl';
 
 interface DataType {
     id?: number;
@@ -15,7 +16,7 @@ const SingleServicesV1 = ({ services }: { services: DataType }) => {
         <>
             <div className="service-inner">
                 <h4 className="title">
-                    <Image src={`/assets/images/${icon}`} alt="icon" width={100} height={100} />
+                    <Image src={getImageUrl(icon)} alt="icon" width={100} height={100} />
                     <Link href={`/service-details/${id}`}>{name}</Link>
                 </h4>
                 <p className="service-feature-lists">
@@ -25,7 +26,7 @@ const SingleServicesV1 = ({ services }: { services: DataType }) => {
                     <span>IV. Mobile-First Systems</span>
                 </p>
                 <div className="service-img-box">
-                    <Image src={`/assets/images/${thumb}`} alt="Icon" width={512} height={468} />
+                    <Image src={getImageUrl(thumb)} alt="Icon" width={512} height={468} />
                 </div>
             </div>
         </>

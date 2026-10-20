@@ -1,0 +1,49 @@
+{
+  "subtitle": "Faq",
+  "title": "Frequent Queries, Quick Fixes",
+  "description": "Whether you have specific questions or need general information, our FAQ section is here to help. From details about our services to guidance on choosing the right plan",
+  "items": [
+    {
+      "id": 1,
+      "number": "I.",
+      "question": "What types of creative services do you offer?",
+      "answer": "Our agency specializes in a range of creative services including branding, graphic design, web design, digital marketing, social media management, and content creation."
+    },
+    {
+      "id": 2,
+      "number": "II.",
+      "question": "What is your typical project timeline?",
+      "answer": "Our agency specializes in a range of creative services including branding, graphic design, web design, digital marketing, social media management, and content creation."
+    },
+    {
+      "id": 3,
+      "number": "III.",
+      "question": "Do you offer post-launch support or maintenance?",
+      "answer": "Our agency specializes in a range of creative services including branding, graphic design, web design, digital marketing, social media management, and content creation."
+    },
+    {
+      "id": 4,
+      "number": "IV.",
+      "question": "Can you assist with both online and offline creative projects?",
+      "answer": "Our agency specializes in a range of creative services including branding, graphic design, web design, digital marketing, social media management, and content creation."
+    },
+    {
+      "id": 5,
+      "number": "V.",
+      "question": "Do your designs are tailored to each client?",
+      "answer": "Our agency specializes in a range of creative services including branding, graphic design, web design, digital marketing, social media management, and content creation."
+    },
+    {
+      "id": 6,
+      "number": "VI.",
+      "question": "How do I upgrade, downgrade, or cancel?",
+      "answer": "Our agency specializes in a range of creative services including branding, graphic design, web design, digital marketing, social media management, and content creation."
+    },
+    {
+      "id": 7,
+      "number": "VII.",
+      "question": "Can I see examples of your previous work?",
+      "answer": "Our agency specializes in a range of creative services including branding, graphic design, web design, digital marketing, social media management, and content creation."
+    }
+  ]
+}
