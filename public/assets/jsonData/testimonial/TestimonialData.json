@@ -1,107 +1,107 @@
 [
-    {
-        "id": 1,
-        "text": "BrandSpace truly understands the power of storytelling and strategic marketing",
-        "thumb": "testimonial1.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 2,
-        "text": "Working with BrandSpace has been a transformative experience for our business",
-        "thumb": "testimonial2.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 3,
-        "text": "BrandSpace truly understands the power of storytelling and strategic marketing",
-        "thumb": "testimonial1.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 4,
-        "text": "We partnered with BrandSpace to design our mobile app, and the results were phenomenal magic",
-        "thumb": "testimonial2.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 5,
-        "text": "Our corporate website needed a complete overhaul, and BrandSpace delivered beyond our expectations",
-        "thumb": "testimonial1.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 6,
-        "text": "BrandSpace truly understands the power of storytelling and strategic marketing",
-        "thumb": "testimonial2.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 7,
-        "text": "Working with BrandSpace has been a transformative experience for our business",
-        "thumb": "testimonial1.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 8,
-        "text": "BrandSpace truly understands the power of storytelling and strategic marketing",
-        "thumb": "testimonial2.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 9,
-        "text": "We partnered with BrandSpace to design our mobile app, and the results were phenomenal magic",
-        "thumb": "testimonial1.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 10,
-        "text": "Our corporate website needed a complete overhaul, and BrandSpace delivered beyond our expectations",
-        "thumb": "testimonial2.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 11,
-        "text": "BrandSpace truly understands the power of storytelling and strategic marketing",
-        "thumb": "testimonial1.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 12,
-        "text": "Working with BrandSpace has been a transformative experience for our business",
-        "thumb": "testimonial2.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 13,
-        "text": "Our corporate website needed a complete overhaul, and BrandSpace delivered beyond our expectations",
-        "thumb": "testimonial1.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 14,
-        "text": "BrandSpace truly understands the power of storytelling and strategic marketing",
-        "thumb": "testimonial2.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    },
-    {
-        "id": 15,
-        "text": "Working with BrandSpace has been a transformative experience for our business",
-        "thumb": "testimonial1.png",
-        "name": "Michael Richards",
-        "designation": "GreenWave Energy"
-    }
+  {
+    "id": 1,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Brandspace truly understands the power of storytelling and strategic marketing",
+    "thumb": "testimonial1.png"
+  },
+  {
+    "id": 2,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Working with Brandspace has been a transformative experience for our business",
+    "thumb": "testimonial2.png"
+  },
+  {
+    "id": 3,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Brandspace truly understands the power of storytelling and strategic marketing",
+    "thumb": "testimonial1.png"
+  },
+  {
+    "id": 4,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "We partnered with Brandspace to design our mobile app, and the results were phenomenal magic",
+    "thumb": "testimonial2.png"
+  },
+  {
+    "id": 5,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Our corporate website needed a complete overhaul, and Brandspace delivered beyond our expectations",
+    "thumb": "testimonial1.png"
+  },
+  {
+    "id": 6,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Brandspace truly understands the power of storytelling and strategic marketing",
+    "thumb": "testimonial2.png"
+  },
+  {
+    "id": 7,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Working with Brandspace has been a transformative experience for our business",
+    "thumb": "testimonial1.png"
+  },
+  {
+    "id": 8,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Brandspace truly understands the power of storytelling and strategic marketing",
+    "thumb": "testimonial2.png"
+  },
+  {
+    "id": 9,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "We partnered with Brandspace to design our mobile app, and the results were phenomenal magic",
+    "thumb": "testimonial1.png"
+  },
+  {
+    "id": 10,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Our corporate website needed a complete overhaul, and Brandspace delivered beyond our expectations",
+    "thumb": "testimonial2.png"
+  },
+  {
+    "id": 11,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Brandspace truly understands the power of storytelling and strategic marketing",
+    "thumb": "testimonial1.png"
+  },
+  {
+    "id": 12,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Working with Brandspace has been a transformative experience for our business",
+    "thumb": "testimonial2.png"
+  },
+  {
+    "id": 13,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Our corporate website needed a complete overhaul, and Brandspace delivered beyond our expectations",
+    "thumb": "testimonial1.png"
+  },
+  {
+    "id": 14,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Brandspace truly understands the power of storytelling and strategic marketing",
+    "thumb": "testimonial2.png"
+  },
+  {
+    "id": 15,
+    "name": "Michael Richards",
+    "designation": "GreenWave Energy",
+    "text": "Working with Brandspace has been a transformative experience for our business",
+    "thumb": "testimonial1.png"
+  }
 ]
