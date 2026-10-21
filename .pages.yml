@@ -1,11 +1,14 @@
-# Pages CMS Configuration for Aixor Agency Website
+# Pages CMS Configuration for BrandSpace Website
 # Documentation: https://pagescms.org/docs/configuration/
 
 media:
-  input: public/uploads
-  output: /uploads
-  categories: [image]
-  extensions: [jpg, jpeg, png, webp, svg, gif]
+  - name: images
+    label: Images & Media
+    input: public/uploads
+    output: /uploads
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, svg, gif]
+    rename: safe
 
 settings:
   content:
@@ -18,7 +21,7 @@ settings:
 
 content:
   # ==========================================
-  # Site Settings
+  # 1. Site Settings
   # ==========================================
   - name: site-settings
     label: Site Settings
@@ -37,10 +40,12 @@ content:
       - name: logo
         label: Header Logo
         type: image
+        media: images
         description: Primary logo image displayed in the website header navigation.
       - name: footerLogo
         label: Footer Logo
         type: image
+        media: images
         description: Large logo displayed in the website footer.
       - name: email
         label: Contact Email
@@ -77,10 +82,10 @@ content:
             type: string
 
   # ==========================================
-  # Homepage Content
+  # 2. Homepage Content
   # ==========================================
   - name: homepage
-    label: Homepage
+    label: Homepage Content
     type: file
     path: public/assets/jsonData/homepage/homeData.json
     format: json
@@ -122,6 +127,10 @@ content:
             label: CTA Button URL
             type: string
             description: Link destination for the action button (e.g. /contact).
+          - name: video
+            label: Hero Video URL / Path
+            type: string
+            description: Video asset path (e.g. /assets/video/hero-video.mp4).
       - name: about
         label: Homepage About Section
         type: object
@@ -169,7 +178,7 @@ content:
             type: string
 
   # ==========================================
-  # Services
+  # 3. Services
   # ==========================================
   - name: services
     label: Services
@@ -191,18 +200,22 @@ content:
       - name: icon
         label: Service Icon
         type: image
+        media: images
         description: Icon graphic representing the service.
       - name: thumb
         label: Thumbnail Image
         type: image
+        media: images
         description: Card preview image shown in the services grid.
       - name: thumbFull1
         label: Detail Image 1
         type: image
+        media: images
         description: First large showcase image on the /service-details/[id] page.
       - name: thumbFull2
         label: Detail Image 2
         type: image
+        media: images
         description: Second large showcase image on the /service-details/[id] page.
       - name: text
         label: Summary Description
@@ -214,80 +227,81 @@ content:
         description: Price figure (e.g. 3000).
 
   # ==========================================
-  # Projects & Portfolio
+  # 4. Featured Projects (Homepage)
   # ==========================================
-  - name: projects-group
-    label: Projects & Portfolio
-    type: group
-    items:
-      - name: featured-projects
-        label: Featured Projects (Homepage)
-        type: file
-        path: public/assets/jsonData/feature/FeatureV1Data.json
-        format: json
-        list: true
-        fields:
-          - name: id
-            label: Project ID
-            type: number
-            required: true
-            description: Unique numerical ID matching detail route /project-details/[id].
-          - name: projectName
-            label: Project Name
-            type: string
-            required: true
-          - name: info
-            label: Category / Tag
-            type: string
-            description: Category tag (e.g. Brand Identity, Marketing, Web Design).
-          - name: subTitle1
-            label: Subtitle Line 1
-            type: string
-          - name: subTitle2
-            label: Subtitle Line 2
-            type: string
-          - name: thumb
-            label: Project Image
-            type: image
-          - name: date
-            label: Date / Year
-            type: string
-
-      - name: all-projects
-        label: All Projects (Portfolio Grid)
-        type: file
-        path: public/assets/jsonData/feature/FeatureV2Data.json
-        format: json
-        list: true
-        fields:
-          - name: id
-            label: Project ID
-            type: number
-            required: true
-            description: Unique numerical ID matching detail route /project-details/[id].
-          - name: name
-            label: Project Name
-            type: string
-            required: true
-          - name: info
-            label: Category / Tag
-            type: string
-            description: Category tag (e.g. Brand Identity, Marketing, Web Design).
-          - name: textFirst
-            label: First Description Line
-            type: string
-          - name: textLast
-            label: Second Description Line
-            type: string
-          - name: thumb
-            label: Project Image
-            type: image
-          - name: date
-            label: Date / Year
-            type: string
+  - name: featured-projects
+    label: Featured Projects (Homepage)
+    type: file
+    path: public/assets/jsonData/feature/FeatureV1Data.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Project ID
+        type: number
+        required: true
+        description: Unique numerical ID matching detail route /project-details/[id].
+      - name: projectName
+        label: Project Name
+        type: string
+        required: true
+      - name: info
+        label: Category / Tag
+        type: string
+        description: Category tag (e.g. Brand Identity, Marketing, Web Design).
+      - name: subTitle1
+        label: Subtitle Line 1
+        type: string
+      - name: subTitle2
+        label: Subtitle Line 2
+        type: string
+      - name: thumb
+        label: Project Image
+        type: image
+        media: images
+      - name: date
+        label: Date / Year
+        type: string
 
   # ==========================================
-  # Blog & Articles
+  # 5. All Projects (Portfolio Grid)
+  # ==========================================
+  - name: all-projects
+    label: All Projects (Portfolio Grid)
+    type: file
+    path: public/assets/jsonData/feature/FeatureV2Data.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Project ID
+        type: number
+        required: true
+        description: Unique numerical ID matching detail route /project-details/[id].
+      - name: name
+        label: Project Name
+        type: string
+        required: true
+      - name: info
+        label: Category / Tag
+        type: string
+        description: Category tag (e.g. Brand Identity, Marketing, Web Design).
+      - name: textFirst
+        label: First Description Line
+        type: string
+      - name: textLast
+        label: Second Description Line
+        type: string
+      - name: thumb
+        label: Project Image
+        type: image
+        media: images
+      - name: date
+        label: Date / Year
+        type: string
+
+  # ==========================================
+  # 6. Blog & Articles
   # ==========================================
   - name: blog
     label: Blog & Articles
@@ -325,14 +339,16 @@ content:
       - name: thumb
         label: Card Thumbnail
         type: image
+        media: images
         description: Blog card image for listings.
       - name: thumbFull
         label: Full Article Cover Image
         type: image
+        media: images
         description: Large featured hero image for /blog-details/[id].
 
   # ==========================================
-  # Team Members
+  # 7. Team Members
   # ==========================================
   - name: team
     label: Team Members
@@ -361,9 +377,10 @@ content:
       - name: thumb
         label: Profile Photo
         type: image
+        media: images
 
   # ==========================================
-  # Testimonials
+  # 8. Testimonials
   # ==========================================
   - name: testimonials
     label: Testimonials
@@ -392,9 +409,10 @@ content:
       - name: thumb
         label: Client Photo / Avatar
         type: image
+        media: images
 
   # ==========================================
-  # Frequently Asked Questions (FAQ)
+  # 9. Frequently Asked Questions (FAQ)
   # ==========================================
   - name: faq
     label: Frequently Asked Questions
@@ -431,108 +449,123 @@ content:
             type: text
 
   # ==========================================
-  # Company & About Elements
+  # 10. Company Values
   # ==========================================
-  - name: company-group
-    label: Company & About
-    type: group
-    items:
-      - name: company-values
-        label: Company Values
-        type: file
-        path: public/assets/jsonData/services/ServicesV2Data.json
-        format: json
-        list: true
-        fields:
-          - name: id
-            label: Value ID
-            type: number
-          - name: title
-            label: Core Value Title
-            type: string
-          - name: text
-            label: Explanation
-            type: text
-          - name: thumb
-            label: Illustration / Icon
-            type: image
+  - name: company-values
+    label: Company Values
+    type: file
+    path: public/assets/jsonData/services/ServicesV2Data.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Value ID
+        type: number
+      - name: title
+        label: Core Value Title
+        type: string
+      - name: text
+        label: Explanation
+        type: text
+      - name: thumb
+        label: Illustration / Icon
+        type: image
+        media: images
 
-      - name: work-process
-        label: Work Process Steps
-        type: file
-        path: public/assets/jsonData/process/ProcessV1Data.json
-        format: json
-        list: true
-        fields:
-          - name: id
-            label: Step ID
-            type: number
-          - name: number
-            label: Step Number
-            type: string
-            description: e.g. I., II., III.
-          - name: name
-            label: Step Name
-            type: string
-          - name: designation
-            label: Step Tagline
-            type: string
-          - name: description
-            label: Step Description
-            type: text
-          - name: thumb
-            label: Step Image
-            type: image
+  # ==========================================
+  # 11. Work Process Steps
+  # ==========================================
+  - name: work-process
+    label: Work Process Steps
+    type: file
+    path: public/assets/jsonData/process/ProcessV1Data.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Step ID
+        type: number
+      - name: number
+        label: Step Number
+        type: string
+        description: e.g. I., II., III.
+      - name: name
+        label: Step Name
+        type: string
+      - name: designation
+        label: Step Tagline
+        type: string
+      - name: description
+        label: Step Description
+        type: text
+      - name: thumb
+        label: Step Image
+        type: image
+        media: images
+      - name: alt
+        label: Image Alt Text
+        type: string
 
-      - name: fun-facts
-        label: Fun Facts & Statistics
-        type: file
-        path: public/assets/jsonData/fact/FactData.json
-        format: json
-        list: true
-        fields:
-          - name: id
-            label: Stat ID
-            type: number
-          - name: title
-            label: Metric Name
-            type: string
-            description: e.g. Years Experience, Completed Projects
-          - name: end
-            label: Numerical Value
-            type: string
-            description: Number value animated by counter (e.g. 12, 25, 110)
-          - name: thumb
-            label: Metric Icon
-            type: image
+  # ==========================================
+  # 12. Fun Facts & Statistics
+  # ==========================================
+  - name: fun-facts
+    label: Fun Facts & Statistics
+    type: file
+    path: public/assets/jsonData/fact/FactData.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Stat ID
+        type: number
+      - name: title
+        label: Metric Name
+        type: string
+        description: e.g. Years Experience, Completed Projects
+      - name: end
+        label: Numerical Value
+        type: string
+        description: Number value animated by counter (e.g. 12, 25, 110)
+      - name: thumb
+        label: Metric Icon
+        type: image
+        media: images
 
-      - name: awards
-        label: Awards & Recognition
-        type: file
-        path: public/assets/jsonData/awards/AwardsV1Data.json
-        format: json
-        list: true
-        fields:
-          - name: id
-            label: Award ID
-            type: number
-          - name: title
-            label: Award Title
-            type: string
-          - name: date
-            label: Year / Period
-            type: string
+  # ==========================================
+  # 13. Awards & Recognition
+  # ==========================================
+  - name: awards
+    label: Awards & Recognition
+    type: file
+    path: public/assets/jsonData/awards/AwardsV1Data.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Award ID
+        type: number
+      - name: title
+        label: Award Title
+        type: string
+      - name: date
+        label: Year / Period
+        type: string
 
-      - name: partners
-        label: Client Logos & Partners
-        type: file
-        path: public/assets/jsonData/partner/PartnerData.json
-        format: json
-        list: true
-        fields:
-          - name: id
-            label: Partner ID
-            type: number
-          - name: thumb
-            label: Partner Logo Image
-            type: image
+  # ==========================================
+  # 14. Client Logos & Partners
+  # ==========================================
+  - name: partners
+    label: Client Logos & Partners
+    type: file
+    path: public/assets/jsonData/partner/PartnerData.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        label: Partner ID
+        type: number
+      - name: thumb
+        label: Partner Logo Image
+        type: image
+        media: images

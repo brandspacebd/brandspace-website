@@ -7,7 +7,7 @@ export function getImageUrl(path?: string): string {
     if (path.startsWith('/') || path.startsWith('http://') || path.startsWith('https://')) {
         return path;
     }
-    if (path.startsWith('uploads/')) {
+    if (path.startsWith('uploads/') || path.startsWith('assets/')) {
         return `/${path}`;
     }
     return `/assets/images/${path}`;
