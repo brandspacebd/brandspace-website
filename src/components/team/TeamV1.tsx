@@ -31,7 +31,7 @@ const TeamV1 = () => {
                         <div className="team-cv-header">
                             <Image src={logo1} alt="logo" />
                             <h3 className="title">Become Our <br />Member?</h3>
-                            <p>Join the AIXOR community and unlock a world of creative possibilities.</p>
+                            <p>Join the BrandSpace community and unlock a world of creative possibilities.</p>
                         </div>
                         <div className="team-cv-footer">
                             <Link href="/contact" className="theme-btn">

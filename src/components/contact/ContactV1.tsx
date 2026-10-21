@@ -21,7 +21,7 @@ const ContactV1 = () => {
                         <div className="contact-content">
                             <h3 data-aos="fade-up" data-aos-delay={200}>Let’s <span>Connect</span></h3>
                             <p>
-                                <span className="required">*</span> Whether you have a question, or want to discuss a potential project, our team at <br /> AIXOR is here to help. Please fill out the form below!!!
+                                <span className="required">*</span> Whether you have a question, or want to discuss a potential project, our team at <br /> BrandSpace is here to help. Please fill out the form below!!!
                             </p>
                             <form id="contact-form" className="contact-form" onSubmit={handleForm}>
                                 <div className="input-group">

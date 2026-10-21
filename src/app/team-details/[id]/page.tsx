@@ -6,7 +6,7 @@ import TeamDetailsContent from '@/components/team/TeamDetailsContent';
 import TeamV1Data from "@/assets/jsonData/team/TeamV1Data.json";
 
 export const metadata = {
-    title: "Aixor - Team Details"
+    title: "BrandSpace - Team Details"
 };
 
 export async function generateStaticParams() {

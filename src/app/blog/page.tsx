@@ -3,7 +3,7 @@ import HeroV2 from "@/components/hero/AboutHero";
 import LayoutV3 from "@/components/layouts/LayoutV3";
 
 export const metadata = {
-    title: "Aixor - Blog"
+    title: "BrandSpace - Blog"
 };
 
 const BlogPage = () => {

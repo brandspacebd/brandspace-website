@@ -9,7 +9,7 @@ import ServicesV2 from "@/components/services/ServicesV2";
 import TeamV1 from "@/components/team/TeamV1";
 
 export const metadata = {
-    title: "Aixor - About Us"
+    title: "BrandSpace - About Us"
 };
 
 const AboutPage = () => {

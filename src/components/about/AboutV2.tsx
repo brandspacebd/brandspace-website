@@ -10,7 +10,7 @@ const homeData = homeDataRaw as HomeData;
 
 const AboutV2 = () => {
     const aboutSubtitle = homeData.aboutPage?.subtitle || "About Us";
-    const desc1 = homeData.aboutPage?.description1 || "Founded on the principles of creativity, collaboration, and excellence, AIXOR is a diverse team of industry experts dedicated to delivering outstanding results...";
+    const desc1 = homeData.aboutPage?.description1 || "Founded on the principles of creativity, collaboration, and excellence, BrandSpace is a diverse team of industry experts dedicated to delivering outstanding results...";
     const desc2 = homeData.aboutPage?.description2 || "We are committed to pushing the boundaries of what’s possible, working together seamlessly to exceed expectations and deliver outstanding value to our clients.";
 
     return (

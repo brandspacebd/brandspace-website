@@ -6,7 +6,7 @@ import LayoutV3 from '@/components/layouts/LayoutV3';
 import PartnerV1 from '@/components/partner/PartnerV1';
 
 export const metadata = {
-    title: "Aixor - Projects"
+    title: "BrandSpace - Projects"
 };
 
 const ProjectsPage = () => {

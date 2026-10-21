@@ -29,7 +29,7 @@ const ServicesV1 = () => {
                             Our Service
                         </span>
                         <AnimatedText>
-                            {`At AIXOR, we offer tailored creative solutions to elevate your brand and drive success, exceeding your expectations with our expert team's dedicated services.`}
+                            {`At BrandSpace, we offer tailored creative solutions to elevate your brand and drive success, exceeding your expectations with our expert team's dedicated services.`}
                         </AnimatedText>
                     </div>
                 </div>

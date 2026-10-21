@@ -8,7 +8,7 @@ import ServicesV1Data from "@/assets/jsonData/services/ServicesV1Data.json"
 import LayoutV3 from '@/components/layouts/LayoutV3';
 
 export const metadata = {
-    title: "Aixor - Service Details"
+    title: "BrandSpace - Service Details"
 };
 
 export async function generateStaticParams() {

@@ -10,7 +10,7 @@ const homeData = homeDataRaw as HomeData;
 
 const HeroV1 = () => {
     const hero = homeData.hero || {};
-    const quote1 = hero.quote1 || "“ At AIXOR, we believe that creativity is the catalyst for innovation. As a full-service creative agency, we specialise in transforming bold ideas into compelling realities.";
+    const quote1 = hero.quote1 || "“ At BrandSpace, we believe that creativity is the catalyst for innovation. As a full-service creative agency, we specialise in transforming bold ideas into compelling realities.";
     const quote2 = hero.quote2 || "Whether it’s developing a brand identity, creating a user-friendly website, or executing a dynamic marketing campaign, we approach every project with the same level of dedication and enthusiasm. “";
     const authorName = hero.authorName || "Ahshan M";
     const authorRole = hero.authorRole || "Chief Executive Officer";

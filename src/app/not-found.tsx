@@ -3,7 +3,7 @@ import HeaderV2 from '@/components/header/HeaderV2';
 import ErrorHero from '@/components/hero/ErrorHero';
 
 export const metadata = {
-    title: "Aixor - Page Not Found"
+    title: "BrandSpace - Page Not Found"
 };
 
 const NotFound = () => {
