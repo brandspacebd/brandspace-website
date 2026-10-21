@@ -15,23 +15,29 @@
   },
   {
     "id": 3,
-    "name": "Adrew Onana",
-    "designation": "Senior Developer",
-    "text": "Andrew Onana is our tech guru, responsible for turning our creative visions into functional digital solutions.",
+    "name": "Partha Sarothi Sarker",
+    "designation": "Lead Brand Communication & Business Development",
+    "text": "Partha Sarothi Sarker is our tech guru, responsible for turning our creative visions into functional digital solutions.",
     "thumb": "team3.png"
   },
   {
     "id": 4,
-    "name": "Luka Modric",
-    "designation": "Project Manager",
-    "text": "James ensures that all our projects are delivered on time and within budget, making sure every project runs smoothly from start to finish.",
+    "name": "Sunvir Hasan Mitul",
+    "designation": "Digital Growth Strategist, SEO & AIO Specialist",
+    "text": "Mitul ensures that all our projects are delivered on time and within budget, making sure every project runs smoothly from start to finish.",
     "thumb": "team4.png"
   },
   {
     "id": 5,
-    "name": "Toni Kross",
-    "designation": "Lead Visual",
-    "text": "Toni Kroos brings a fresh perspective to our design team. He helps our clients stand out in a crowded market.",
+    "name": "Asif Islam",
+    "designation": "Visualizer, AI specialist",
+    "text": "Asif Islam brings a fresh perspective to our design team. He helps our clients stand out in a crowded market.",
     "thumb": "team5.png"
+  },
+  {
+    "id": 6,
+    "name": "Engr. Md Mahmudur Rashid",
+    "designation": "Software Engineer | Cybersecurity Specialist | Automation Expert",
+    "text": "Mahmudur ensures that all our projects are delivered on time and within budget, making sure every project runs smoothly from start to finish."
   }
 ]
