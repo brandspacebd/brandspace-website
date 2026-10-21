@@ -2,21 +2,29 @@ import Union from "@/assets/images/Union.svg"
 import pricingShape1 from "@/assets/images/pricing-shape1.png"
 import pricingShape2 from "@/assets/images/pricing-shape2.png"
 import Image from "next/image";
-import FaqData from "@/assets/jsonData/faq/FaqData.json";
+import FaqDataRaw from "@/assets/jsonData/faq/FaqData.json";
+import type { FaqData as FaqDataType } from "@/types/content";
+
+const FaqData = FaqDataRaw as FaqDataType;
 
 const FaqV1 = () => {
+    const subtitle = FaqData.subtitle || "Faq";
+    const title = FaqData.title || "Frequent Queries, Quick Fixes";
+    const description = FaqData.description || "Whether you have specific questions or need general information, our FAQ section is here to help.";
+    const items = FaqData.items || [];
+
     return (
         <>
             <div className="faq-sec">
                 <div className="section-header section-header2">
                     <span className="section-subtitle">
                         <Image src={Union} alt="icon" />
-                        {FaqData.subtitle}
+                        {subtitle}
                     </span>
                     <h2 className="section-title section-title2">
-                        {FaqData.title}
+                        {title}
                     </h2>
-                    <p className="section-desc">{FaqData.description}</p>
+                    <p className="section-desc">{description}</p>
                 </div>
 
                 {/* Faq lists */}
@@ -28,7 +36,7 @@ const FaqV1 = () => {
                         <Image src={pricingShape2} alt="shape" />
                     </div>
 
-                    {FaqData.items.map((item, index) => (
+                    {items.map((item, index) => (
                         <div className="accordion-item faq-item" key={item.id}>
                             <h2 className="accordion-header" id={`heading${item.id}`}>
                                 <button

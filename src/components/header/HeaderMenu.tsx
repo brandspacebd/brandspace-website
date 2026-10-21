@@ -1,9 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import siteSettings from "@/assets/jsonData/settings/siteSettings.json";
+import siteSettingsRaw from "@/assets/jsonData/settings/siteSettings.json";
 import getImageUrl from '../utilities/getImageUrl';
+import { SiteSettings } from '@/types/content';
+
+const siteSettings = siteSettingsRaw as SiteSettings;
 
 const HeaderMenu = () => {
+    const phone = siteSettings.phone || "(+84) 0123456789";
+    const email = siteSettings.email || "example@gmail.com";
+    const siteName = siteSettings.siteName || "AIXOR";
+
     return (
         <>
             <header className="header-menu-wrap">
@@ -11,7 +18,7 @@ const HeaderMenu = () => {
                     <div className="custom-row">
 
                         <Link href="/" className="logo">
-                            <Image src={getImageUrl(siteSettings.logo)} alt={siteSettings.siteName} width={138} height={40} />
+                            <Image src={getImageUrl(siteSettings.logo)} alt={siteName} width={138} height={40} />
                         </Link>
 
                         {/* Navigation menu */}
@@ -51,10 +58,12 @@ const HeaderMenu = () => {
 
                         {/* Header right info */}
                         <div className="header-right-info">
-                            <a className="with-border" href="tel:+1234567890">(+84) 0123456789</a>
-                            <a href="mailto:example@gmail.com">
-                                <i className="iconoir-mail-out" />
-                            </a>
+                            {phone && <a className="with-border" href={`tel:${phone}`}>{phone}</a>}
+                            {email && (
+                                <a href={`mailto:${email}`}>
+                                    <i className="iconoir-mail-out" />
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>

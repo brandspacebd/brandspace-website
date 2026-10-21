@@ -4,10 +4,15 @@ import Image from "next/image"
 import AnimatedText from "../animated/AnimatedText"
 import SingleFactV1 from "./SingleFactV1";
 import FactData from "@/assets/jsonData/fact/FactData.json"
-import homeData from "@/assets/jsonData/homepage/homeData.json"
+import homeDataRaw from "@/assets/jsonData/homepage/homeData.json"
+import { HomeData } from "@/types/content"
 import { useState } from "react";
 
+const homeData = homeDataRaw as HomeData;
+
 const AboutV1 = () => {
+    const aboutSubtitle = homeData.about?.subtitle || "About Us";
+    const aboutDesc = homeData.about?.description || "Founded on the principles of creativity, collaboration, and excellence, AIXOR is a diverse team of industry experts dedicated to delivering outstanding results...";
 
     const [activeServiceId, setActiveServiceId] = useState(FactData[0]?.id || null);
 
@@ -25,10 +30,10 @@ const AboutV1 = () => {
                 <div className="custom-container">
                     <div className="section-header">
                         <span className="section-subtitle">
-                            <Image src={unionIcon} alt="About Us" /> {homeData.about.subtitle}
+                            <Image src={unionIcon} alt="About Us" /> {aboutSubtitle}
                         </span>
                         <AnimatedText>
-                            {homeData.about.description}
+                            {aboutDesc}
                         </AnimatedText>
                     </div>
                     <div className="funfacts-wrap">

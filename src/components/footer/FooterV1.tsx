@@ -4,10 +4,19 @@ import btnArrow from "@/assets/images/btn-arrow.svg"
 import footerBigLogo from "@/assets/images/footer-big-logo.png"
 import Image from "next/image";
 import Link from "next/link";
-import siteSettings from "@/assets/jsonData/settings/siteSettings.json";
+import siteSettingsRaw from "@/assets/jsonData/settings/siteSettings.json";
 import getImageUrl from "../utilities/getImageUrl";
+import { SiteSettings } from "@/types/content";
+
+const siteSettings = siteSettingsRaw as SiteSettings;
 
 const FooterV1 = () => {
+    const phone = siteSettings.phone || "(+84) 0123456789";
+    const email = siteSettings.email || "MindBlowingArt2692@gmail.com";
+    const address = siteSettings.address || "BASED IN HANOI, VIETNAM";
+    const copyright = siteSettings.copyright || "ALL RIGHTS RESERVED";
+    const socialLinks = siteSettings.socialLinks || {};
+
     return (
         <>
             <footer className="footer-area">
@@ -43,7 +52,7 @@ const FooterV1 = () => {
                                     </ul>
                                 </div>
                                 <div className="copyright">
-                                    &copy; {(new Date().getFullYear())} {siteSettings.copyright}
+                                    &copy; {(new Date().getFullYear())} {copyright}
                                 </div>
                             </div>
                         </div>
@@ -55,12 +64,16 @@ const FooterV1 = () => {
                                     <div className="footer-widget-top">
                                         <h4>REACH OUT TO US</h4>
                                         <div className="links">
-                                            <div className="split-text-anim">
-                                                <a data-aos="slide-up" data-aos-duration={700} href={`tel:${siteSettings.phone}`} className="with-border">{siteSettings.phone}</a>
-                                            </div>
-                                            <div className="split-text-anim">
-                                                <a data-aos="slide-up" data-aos-duration={700} href={`mailto:${siteSettings.email}`} className="with-border">{siteSettings.email}</a>
-                                            </div>
+                                            {phone && (
+                                                <div className="split-text-anim">
+                                                    <a data-aos="slide-up" data-aos-duration={700} href={`tel:${phone}`} className="with-border">{phone}</a>
+                                                </div>
+                                            )}
+                                            {email && (
+                                                <div className="split-text-anim">
+                                                    <a data-aos="slide-up" data-aos-duration={700} href={`mailto:${email}`} className="with-border">{email}</a>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                     <Link href="/contact" className="theme-btn">
@@ -77,30 +90,38 @@ const FooterV1 = () => {
                                 <div className="footer-widget-top">
                                     <h4>Social</h4>
                                     <ul>
-                                        <li>
-                                            <a className="with-border" href={siteSettings.socialLinks.instagram} target="_blank">
-                                                <Image src={btnArrow} alt="icon" /> Instagram
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="with-border" href={siteSettings.socialLinks.twitter} target="_blank">
-                                                <Image src={btnArrow} alt="icon" /> Twitter
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="with-border" href={siteSettings.socialLinks.behance} target="_blank">
-                                                <Image src={btnArrow} alt="icon" /> Behance
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="with-border" href={siteSettings.socialLinks.dribbble} target="_blank">
-                                                <Image src={btnArrow} alt="icon" /> Dribbble
-                                            </a>
-                                        </li>
+                                        {socialLinks.instagram && (
+                                            <li>
+                                                <a className="with-border" href={socialLinks.instagram} target="_blank" rel="noreferrer">
+                                                    <Image src={btnArrow} alt="icon" /> Instagram
+                                                </a>
+                                            </li>
+                                        )}
+                                        {socialLinks.twitter && (
+                                            <li>
+                                                <a className="with-border" href={socialLinks.twitter} target="_blank" rel="noreferrer">
+                                                    <Image src={btnArrow} alt="icon" /> Twitter
+                                                </a>
+                                            </li>
+                                        )}
+                                        {socialLinks.behance && (
+                                            <li>
+                                                <a className="with-border" href={socialLinks.behance} target="_blank" rel="noreferrer">
+                                                    <Image src={btnArrow} alt="icon" /> Behance
+                                                </a>
+                                            </li>
+                                        )}
+                                        {socialLinks.dribbble && (
+                                            <li>
+                                                <a className="with-border" href={socialLinks.dribbble} target="_blank" rel="noreferrer">
+                                                    <Image src={btnArrow} alt="icon" /> Dribbble
+                                                </a>
+                                            </li>
+                                        )}
                                     </ul>
                                 </div>
                                 <div className="copyright">
-                                    {siteSettings.address}
+                                    {address}
                                 </div>
                             </div>
                         </div>

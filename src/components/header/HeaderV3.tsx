@@ -6,8 +6,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import logo1 from "@/assets/images/logo-1.png";
 import useNotchScrollLink from "@/hooks/useNotchScrollLink";
-import siteSettings from "@/assets/jsonData/settings/siteSettings.json";
+import siteSettingsRaw from "@/assets/jsonData/settings/siteSettings.json";
 import getImageUrl from "../utilities/getImageUrl";
+import { SiteSettings } from "@/types/content";
+
+const siteSettings = siteSettingsRaw as SiteSettings;
 
 const HeaderV3 = () => {
 
@@ -132,12 +135,14 @@ const HeaderV3 = () => {
                     <div className="header-sidebar-top">
                         <ul>
                             <li>
-                                <span>{siteSettings.address}</span>
-                                <a href={`mailto:${siteSettings.email}`}>E: {siteSettings.email}</a>
+                                <span>{siteSettings.address || "BASED IN HANOI, VIETNAM"}</span>
+                                {siteSettings.email && <a href={`mailto:${siteSettings.email}`}>E: {siteSettings.email}</a>}
                             </li>
-                            <li>
-                                <a href={`tel:${siteSettings.phone}`}>{siteSettings.phone}</a>
-                            </li>
+                            {siteSettings.phone && (
+                                <li>
+                                    <a href={`tel:${siteSettings.phone}`}>{siteSettings.phone}</a>
+                                </li>
+                            )}
                         </ul>
                     </div>
 
@@ -181,7 +186,7 @@ const HeaderV3 = () => {
                     <div className="custom-row">
 
                         <Link href="/" className="logo">
-                            <Image src={getImageUrl(siteSettings.logo)} alt={siteSettings.siteName} width={138} height={40} />
+                            <Image src={getImageUrl(siteSettings.logo)} alt={siteSettings.siteName || "Logo"} width={138} height={40} />
                         </Link>
 
                         {/* Navigation menu */}
