@@ -1,5 +1,6 @@
 export interface SiteSettings {
     siteName?: string;
+    websiteUrl?: string;
     logo?: string;
     footerLogo?: string;
     email?: string;

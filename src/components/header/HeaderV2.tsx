@@ -7,9 +7,9 @@ import { SiteSettings } from '@/types/content';
 const siteSettings = siteSettingsRaw as SiteSettings;
 
 const HeaderV2 = () => {
-    const phone = siteSettings.phone || "(+84) 0123456789";
-    const email = siteSettings.email || "example@gmail.com";
-    const siteName = siteSettings.siteName || "AIXOR";
+    const phone = siteSettings.phone || "+880 1727 881588";
+    const email = siteSettings.email || "emailtobrandspace@gmail.com";
+    const siteName = siteSettings.siteName || "BrandSpace";
 
     return (
         <>

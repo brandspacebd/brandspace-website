@@ -31,7 +31,9 @@ const urbanist = Urbanist({
 })
 
 export const metadata: Metadata = {
-  title: "Aixor - Marketing Agency React NextJS Template"
+  title: "BrandSpace - Creative Agency",
+  description: "BrandSpace is a full-service creative agency transforming bold ideas into compelling realities.",
+  metadataBase: new URL("https://www.brandspacebd.com"),
 };
 
 export default function RootLayout({

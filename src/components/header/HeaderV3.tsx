@@ -13,6 +13,8 @@ import { SiteSettings } from "@/types/content";
 const siteSettings = siteSettingsRaw as SiteSettings;
 
 const HeaderV3 = () => {
+    const phone = siteSettings.phone || "+880 1727 881588";
+    const email = siteSettings.email || "emailtobrandspace@gmail.com";
 
     const [isSidebarActive, setIsSidebarActive] = useState(false);
     const [isHamburgActive, setIsHamburgActive] = useState(false);
@@ -135,7 +137,7 @@ const HeaderV3 = () => {
                     <div className="header-sidebar-top">
                         <ul>
                             <li>
-                                <span>{siteSettings.address || "BASED IN HANOI, VIETNAM"}</span>
+                                <span>{siteSettings.address || "Dhaka, Bangladesh"}</span>
                                 {siteSettings.email && <a href={`mailto:${siteSettings.email}`}>E: {siteSettings.email}</a>}
                             </li>
                             {siteSettings.phone && (
@@ -225,10 +227,12 @@ const HeaderV3 = () => {
 
                         {/* Header right info */}
                         <div className="header-right-info">
-                            <a className="with-border" href="tel:+1234567890">(+84) 0123456789</a>
-                            <a href="mailto:example@gmail.com">
-                                <i className="iconoir-mail-out" />
-                            </a>
+                            {phone && <a className="with-border" href={`tel:${phone}`}>{phone}</a>}
+                            {email && (
+                                <a href={`mailto:${email}`}>
+                                    <i className="iconoir-mail-out" />
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>

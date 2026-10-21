@@ -11,9 +11,9 @@ import { SiteSettings } from "@/types/content";
 const siteSettings = siteSettingsRaw as SiteSettings;
 
 const FooterV1 = () => {
-    const phone = siteSettings.phone || "(+84) 0123456789";
-    const email = siteSettings.email || "MindBlowingArt2692@gmail.com";
-    const address = siteSettings.address || "BASED IN HANOI, VIETNAM";
+    const phone = siteSettings.phone || "+880 1727 881588";
+    const email = siteSettings.email || "emailtobrandspace@gmail.com";
+    const address = siteSettings.address || "Dhaka, Bangladesh";
     const copyright = siteSettings.copyright || "ALL RIGHTS RESERVED";
     const socialLinks = siteSettings.socialLinks || {};
 

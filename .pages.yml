@@ -30,6 +30,10 @@ content:
         label: Website Name
         type: string
         description: The brand or company name displayed across the website.
+      - name: websiteUrl
+        label: Website Link / URL
+        type: string
+        description: Primary public website URL (e.g. https://www.brandspacebd.com).
       - name: logo
         label: Header Logo
         type: image

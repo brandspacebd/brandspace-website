@@ -5,8 +5,15 @@ import sidebarbg from "@/assets/images/sidebarbg.png";
 import Image from "next/image";
 import SocialShareV1 from "../social/SocialShareV1";
 import { useEffect, useState } from "react";
+import siteSettingsRaw from "@/assets/jsonData/settings/siteSettings.json";
+import { SiteSettings } from "@/types/content";
+
+const siteSettings = siteSettingsRaw as SiteSettings;
 
 const HeaderSidebar = () => {
+    const phone = siteSettings.phone || "+880 1727 881588";
+    const email = siteSettings.email || "emailtobrandspace@gmail.com";
+    const address = siteSettings.address || "Dhaka, Bangladesh";
     const [isSidebarActive, setIsSidebarActive] = useState(false);
     const [isHamburgActive, setIsHamburgActive] = useState(false);
 
@@ -58,13 +65,14 @@ const HeaderSidebar = () => {
                     <div className="header-sidebar-top">
                         <ul>
                             <li>
-                                <span>Based in Hanoi,</span>
-                                <a href="mailto:email@example.com">E: MindBlowingArt2692@gmail.com</a>
+                                <span>{address}</span>
+                                {email && <a href={`mailto:${email}`}>E: {email}</a>}
                             </li>
-                            <li>
-                                <span>VietNam</span>
-                                <a href="tel:+1234567890">(+84) 0123456789</a>
-                            </li>
+                            {phone && (
+                                <li>
+                                    <a href={`tel:${phone}`}>{phone}</a>
+                                </li>
+                            )}
                         </ul>
                     </div>
 
