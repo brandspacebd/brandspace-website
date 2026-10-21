@@ -3,14 +3,14 @@
     "id": 1,
     "name": "Alomgir Hossain",
     "designation": "Founder, Art Director",
-    "text": "Alomgir Hossain oversees all creative projects, bringing his keen eye for design and exceptional storytelling abilities to the table.",
+    "text": "Alomgir Hossain  is the creative force behind our stunning visual designs with a strong background in UI/UX and graphic design.",
     "thumb": "team1.png"
   },
   {
     "id": 2,
     "name": "Mushfiqur Rahman",
     "designation": "Strategic Creative Advisor, Creative Director",
-    "text": "Mushfiqur Rahman is the creative force behind our stunning visual designs with a strong background in UI/UX and graphic design.",
+    "text": "Mushfiqur Rahman oversees all creative projects, bringing his keen eye for design and exceptional storytelling abilities to the table.",
     "thumb": "team2.png"
   },
   {
@@ -39,5 +39,16 @@
     "name": "Engr. Md Mahmudur Rashid",
     "designation": "Software Engineer | Cybersecurity Specialist | Automation Expert",
     "text": "Mahmudur ensures that all our projects are delivered on time and within budget, making sure every project runs smoothly from start to finish."
+  },
+  {
+    "id": 7,
+    "name": "Olosh MK Mostafa",
+    "designation": "Senior 3D Product Designer & 3D Artist",
+    "text": "12+ years of experience in 3D Product Design, Industrial Design, Product Concept Development, Mold-Ready 3D Modeling, Packaging Design, and Photorealistic CGI Rendering."
+  },
+  {
+    "id": 8,
+    "name": "Apurbo Mostofa",
+    "designation": "Manager, Client Service."
   }
 ]
