@@ -1,16 +1,16 @@
 [
   {
     "id": 1,
-    "name": "Mushfiqur Rahman",
-    "designation": "Strategic Creative Advisor, Creative Director",
-    "text": "Mushfiqur Rahman oversees all creative projects, bringing his keen eye for design and exceptional storytelling abilities to the table.",
+    "name": "Alomgir Hossain",
+    "designation": "Founder, Art Director",
+    "text": "Alomgir Hossain oversees all creative projects, bringing his keen eye for design and exceptional storytelling abilities to the table.",
     "thumb": "team1.png"
   },
   {
     "id": 2,
-    "name": "Bob Pasley",
-    "designation": "Lead Designer",
-    "text": "Bob Pabsley is the creative force behind our stunning visual designs with a strong background in UI/UX and graphic design.",
+    "name": "Mushfiqur Rahman",
+    "designation": "Strategic Creative Advisor, Creative Director",
+    "text": "Mushfiqur Rahman is the creative force behind our stunning visual designs with a strong background in UI/UX and graphic design.",
     "thumb": "team2.png"
   },
   {
