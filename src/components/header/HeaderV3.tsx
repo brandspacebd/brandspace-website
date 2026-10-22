@@ -1,14 +1,11 @@
 "use client";
-import sidebarbg from "@/assets/images/sidebarbg.png";
 import Image from "next/image";
-import SocialShareV1 from "../social/SocialShareV1";
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import logo1 from "@/assets/images/logo-1.png";
 import useNotchScrollLink from "@/hooks/useNotchScrollLink";
 import siteSettingsRaw from "@/assets/jsonData/settings/siteSettings.json";
 import getImageUrl from "../utilities/getImageUrl";
 import { SiteSettings } from "@/types/content";
+import HeaderSidebar from "./HeaderSidebar";
 
 const siteSettings = siteSettingsRaw as SiteSettings;
 
@@ -16,100 +13,11 @@ const HeaderV3 = () => {
     const phone = siteSettings.phone || "+880 1727 881588";
     const email = siteSettings.email || "emailtobrandspace@gmail.com";
 
-    const [isSidebarActive, setIsSidebarActive] = useState(false);
-    const [isHamburgActive, setIsHamburgActive] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsHamburgActive(window.scrollY >= 100);
-        };
-
-        // Attach event listener
-        window.addEventListener("scroll", handleScroll);
-
-        // Cleanup function
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
-    const handleHamburgClick = () => {
-        setIsSidebarActive(true);
-        document.body.style.overflow = "hidden";
-    };
-
-    const handleCloseClick = () => {
-        setIsSidebarActive(false);
-        document.body.style.overflow = "auto";
-    };
-
     useNotchScrollLink(".notch-bar-menu-wrap", "a[href^='#']");
 
     return (
         <>
-            {/* hamburg-menu */}
-            <div className="scroll-to-show-menu">
-                <span className={`hamburg-menu ${isHamburgActive ? "active" : ""}`} onClick={handleHamburgClick}>
-                    <span />
-                    <span />
-                    <span />
-                </span>
-            </div>
-
-            {/* Sidebar */}
-            <div className={`header-sidebar-wrap ${isSidebarActive ? "active" : ""}`}>
-                <div className="header-sidebar-content">
-                    <span className="close-header-sidebar" onClick={handleCloseClick}>
-                        <i className="las la-times" />
-                    </span>
-
-                    {/* Sidebar image */}
-                    <Image src={sidebarbg} alt="sidebar" className="sidebar-shape" />
-                    <div className="header-sidebar-top">
-                        <ul>
-                            <li>
-                                <span>{siteSettings.address}</span>
-                                <a href={`mailto:${siteSettings.email}`}>E: {siteSettings.email}</a>
-                            </li>
-                            <li>
-                                <a href={`tel:${siteSettings.phone}`}>{siteSettings.phone}</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Sidebar menu */}
-                    <nav className="sidebar-menu">
-                        <ul className="menu" id="sidebar-menu-id">
-                            <li>
-                                <a href="#about" onClick={handleCloseClick}>About Us</a>
-                            </li>
-                            <li>
-                                <a href="#services" onClick={handleCloseClick}>Services</a>
-                            </li>
-                            <li>
-                                <a href="#projects" onClick={handleCloseClick}>Projects</a>
-                            </li>
-                            <li>
-                                <a href="#awards" onClick={handleCloseClick}>Awards</a>
-                            </li>
-                            <li>
-                                <a href="#team" onClick={handleCloseClick}>Members</a>
-                            </li>
-                            <li>
-                                <a href="#pricing" onClick={handleCloseClick}>Pricing</a>
-                            </li>
-                            <li>
-                                <a href="#contact" onClick={handleCloseClick}>Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div className="header-sidebar-bottom">
-                        <ul>
-                            <SocialShareV1 />
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <HeaderSidebar />
 
             {/* Notch Bar Menu Wrap */}
             <div className="notch-bar-menu-wrap">
@@ -123,63 +31,6 @@ const HeaderV3 = () => {
                     <li><a className="anchor" href="#pricing">Pricing</a></li>
                     <li><a className="anchor" href="#contact">Contact</a></li>
                 </ul>
-            </div>
-
-            {/* Sidebar 2 */}
-            <div className={`header-sidebar-wrap ${isSidebarActive ? "active" : ""}`}>
-                <div className="header-sidebar-content">
-                    <span className="close-header-sidebar" onClick={handleCloseClick}>
-                        <i className="las la-times" />
-                    </span>
-
-                    {/* Sidebar image */}
-                    <Image src={sidebarbg} alt="sidebar" className="sidebar-shape" />
-                    <div className="header-sidebar-top">
-                        <ul>
-                            <li>
-                                <span>{siteSettings.address || "Dhaka, Bangladesh"}</span>
-                                {siteSettings.email && <a href={`mailto:${siteSettings.email}`}>E: {siteSettings.email}</a>}
-                            </li>
-                            {siteSettings.phone && (
-                                <li>
-                                    <a href={`tel:${siteSettings.phone}`}>{siteSettings.phone}</a>
-                                </li>
-                            )}
-                        </ul>
-                    </div>
-
-                    {/* Sidebar menu */}
-                    <nav className="sidebar-menu">
-                        <ul className="menu" id="sidebar-menu-id">
-                            <li>
-                                <a href="#about" onClick={handleCloseClick}>About Us</a>
-                            </li>
-                            <li>
-                                <a href="#services" onClick={handleCloseClick}>Services</a>
-                            </li>
-                            <li>
-                                <a href="#projects" onClick={handleCloseClick}>Projects</a>
-                            </li>
-                            <li>
-                                <a href="#awards" onClick={handleCloseClick}>Awards</a>
-                            </li>
-                            <li>
-                                <a href="#team" onClick={handleCloseClick}>Members</a>
-                            </li>
-                            <li>
-                                <a href="#pricing" onClick={handleCloseClick}>Pricing</a>
-                            </li>
-                            <li>
-                                <a href="#contact" onClick={handleCloseClick}>Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div className="header-sidebar-bottom">
-                        <ul>
-                            <SocialShareV1 />
-                        </ul>
-                    </div>
-                </div>
             </div>
 
             {/* header-menu-wrap */}
@@ -257,7 +108,7 @@ const HeaderV3 = () => {
                                         </div>
 
                                         <div className="explore-col">
-                                            <span className="explore-col-title">Engage & Join</span>
+                                            <span className="explore-col-title">LET’S CONNECT</span>
                                             <ul className="explore-links">
                                                 <li>
                                                     <Link href="/rate-card">

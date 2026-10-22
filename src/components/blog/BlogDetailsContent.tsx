@@ -12,12 +12,13 @@ import getImageUrl from "../utilities/getImageUrl";
 
 interface DataType {
     title?: string;
-    thumbFull?: string
-    date?: string
+    thumbFull?: string;
+    date?: string;
+    content?: string;
 }
 
 const BlogDetailsContent = ({ blogData }: { blogData: DataType }) => {
-    const { title, thumbFull, date } = blogData
+    const { title, thumbFull, date, content } = blogData;
 
     return (
         <>
@@ -41,21 +42,33 @@ const BlogDetailsContent = ({ blogData }: { blogData: DataType }) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <p>Visual campaigns are key to capturing attention and delivering impactful messages. By blending eye-catching imagery with thoughtful messaging, these campaigns engage audiences and leave a lasting impression. Whether for online platforms or print, the aim is to drive action and deepen brand connections. Done right, visual campaigns can elevate your brand and enhance its visibility.</p>
-                                    <p>Whether in digital or print formats, the objective is to inspire action and strengthen brand loyalty. When executed effectively, visual campaigns can significantly boost your brand’s recognition and impact.</p>
+                                    {content ? (
+                                        content.includes('<') ? (
+                                            <div className="blog-body-html" dangerouslySetInnerHTML={{ __html: content }} />
+                                        ) : (
+                                            content.split('\n\n').map((paragraph, i) => <p key={i}>{paragraph}</p>)
+                                        )
+                                    ) : (
+                                        <>
+                                            <p>Visual campaigns are key to capturing attention and delivering impactful messages. By blending eye-catching imagery with thoughtful messaging, these campaigns engage audiences and leave a lasting impression. Whether for online platforms or print, the aim is to drive action and deepen brand connections. Done right, visual campaigns can elevate your brand and enhance its visibility.</p>
+                                            <p>Whether in digital or print formats, the objective is to inspire action and strengthen brand loyalty. When executed effectively, visual campaigns can significantly boost your brand’s recognition and impact.</p>
+                                        </>
+                                    )}
                                 </div>
                                 <Image src={getImageUrl(thumbFull)} alt="image" width={1220} height={1280} />
-                                <div className="blog-content-box">
-                                    <h3>Importance of Visual Campaigns</h3>
-                                    <p>Visual campaigns are vital for effective communication. They quickly capture attention and enhance engagement through compelling imagery. By conveying messages efficiently visuals create memorable impressions that strengthen brand identity. Consistent visual themes foster recognition, while effective designs drive action and encourage audience engagement.</p>
-                                    <ul>
-                                        <li>I. Captures Attention</li>
-                                        <li>II. Enhances Engagement</li>
-                                        <li>III. Conveys Messages Quickly</li>
-                                        <li>IV. Strengthens Brand Identity</li>
-                                        <li>V. Increases Shareability</li>
-                                    </ul>
-                                </div>
+                                {!content && (
+                                    <div className="blog-content-box">
+                                        <h3>Importance of Visual Campaigns</h3>
+                                        <p>Visual campaigns are vital for effective communication. They quickly capture attention and enhance engagement through compelling imagery. By conveying messages efficiently visuals create memorable impressions that strengthen brand identity. Consistent visual themes foster recognition, while effective designs drive action and encourage audience engagement.</p>
+                                        <ul>
+                                            <li>I. Captures Attention</li>
+                                            <li>II. Enhances Engagement</li>
+                                            <li>III. Conveys Messages Quickly</li>
+                                            <li>IV. Strengthens Brand Identity</li>
+                                            <li>V. Increases Shareability</li>
+                                        </ul>
+                                    </div>
+                                )}
                             </div>
                             <div className="comment-lists-wrap">
                                 <h3 className="title-with-circle section-subtitle">

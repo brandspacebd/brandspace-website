@@ -12,10 +12,11 @@ interface DataType {
     thumbFull2?: string;
     text?: string;
     price?: string;
+    description?: string;
 }
 
 const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
-    const { name, text, price, thumbFull1, thumbFull2 } = serviceData
+    const { name, text, price, thumbFull1, thumbFull2, description } = serviceData;
 
     const containerRef = useScaleDownAnimation('.scaleDown');
 
@@ -30,7 +31,7 @@ const ServiceDetailsContent = ({ serviceData }: { serviceData: DataType }) => {
                             {name}
                         </span>
                         <AnimatedText>
-                            Our approach to brand identity goes beyond the conventional. We blend strategic insight with creative flair to craft identities that are not only visually striking but also resonate deeply with target audiences.
+                            {description || "Our approach to brand identity goes beyond the conventional. We blend strategic insight with creative flair to craft identities that are not only visually striking but also resonate deeply with target audiences."}
                         </AnimatedText>
                     </div>
                 </div>

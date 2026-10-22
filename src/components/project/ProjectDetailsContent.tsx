@@ -7,10 +7,15 @@ interface Datatype {
     thumb?: string;
     name?: string;
     info?: string;
+    date?: string;
+    description?: string;
+    textFirst?: string;
+    textLast?: string;
 }
 
 const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
-    const { thumb, name, info } = projectData
+    const { thumb, name, info, date, description, textFirst, textLast } = projectData;
+    const projectDesc = description || (textFirst ? `${textFirst} ${textLast}`.trim() : "One of our most successful projects in this area highlights our ability to design and develop.");
 
     return (
         <>
@@ -19,7 +24,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                     <div className="section-header">
                         <span className="section-subtitle">
                             <Image src={Union} alt="icon" />
-                            Dimension Dynamics
+                            {name || "Project Details"}
                         </span>
                         <AnimatedText>
                             Founded on the principles of creativity, collaboration, and excellence, Brandspace is a diverse team of industry experts dedicated to delivering outstanding results...
@@ -37,7 +42,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                         </div>
                         <div className="feature-project-info-box project-description">
                             <span className="title">Description:</span>
-                            <span className="subtitle">One of our most successful projects in this area highlights our<br />ability to design and develop.</span>
+                            <span className="subtitle">{projectDesc}</span>
                         </div>
                         <div className="feature-project-info-box">
                             <span className="title">Industry:</span>
@@ -45,7 +50,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                         </div>
                         <div className="feature-project-info-box">
                             <span className="title">Release Date:</span>
-                            <span className="subtitle">Dec 10, 2023</span>
+                            <span className="subtitle">{date || "Recent"}</span>
                         </div>
                     </div>
                 </div>

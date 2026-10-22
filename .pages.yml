@@ -2,13 +2,11 @@
 # Documentation: https://pagescms.org/docs/configuration/
 
 media:
-  - name: images
-    label: Images & Media
-    input: public/uploads
-    output: /uploads
-    categories: [image]
-    extensions: [jpg, jpeg, png, webp, svg, gif]
-    rename: safe
+  input: public/uploads
+  output: /uploads
+  categories: [image]
+  extensions: [jpg, jpeg, png, webp, svg, gif]
+  rename: safe
 
 settings:
   content:
@@ -40,12 +38,14 @@ content:
       - name: logo
         label: Header Logo
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Primary logo image displayed in the website header navigation.
       - name: footerLogo
         label: Footer Logo
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Large logo displayed in the website footer.
       - name: email
         label: Contact Email
@@ -57,8 +57,8 @@ content:
         description: Public telephone / WhatsApp number.
       - name: address
         label: Physical Address / Location
-        type: string
-        description: Office address or location string shown in footer and contact areas.
+        type: text
+        description: Office address or location string shown in footer, sidebar and contact areas.
       - name: copyright
         label: Copyright Text
         type: string
@@ -142,6 +142,7 @@ content:
           - name: description
             label: About Description
             type: text
+            description: Full animated introduction text on the homepage.
       - name: aboutPage
         label: About Us Page Text
         type: object
@@ -153,9 +154,11 @@ content:
           - name: description1
             label: First Paragraph
             type: text
+            description: First animated paragraph on the /about page.
           - name: description2
             label: Second Paragraph
             type: text
+            description: Second animated paragraph on the /about page.
       - name: projects
         label: Homepage Projects Section Header
         type: object
@@ -200,27 +203,35 @@ content:
       - name: icon
         label: Service Icon
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Icon graphic representing the service.
       - name: thumb
         label: Thumbnail Image
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Card preview image shown in the services grid.
       - name: thumbFull1
         label: Detail Image 1
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
         description: First large showcase image on the /service-details/[id] page.
       - name: thumbFull2
         label: Detail Image 2
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Second large showcase image on the /service-details/[id] page.
       - name: text
         label: Summary Description
         type: text
         description: Brief overview of the service offering.
+      - name: description
+        label: Detail Page Overview
+        type: text
+        description: Extended introductory description shown at the top of /service-details/[id].
       - name: price
         label: Starting Price
         type: string
@@ -258,13 +269,14 @@ content:
       - name: thumb
         label: Project Image
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: date
         label: Date / Year
         type: string
 
   # ==========================================
-  # 5. All Projects (Portfolio Grid)
+  # 5. All Projects (Portfolio Grid & Details)
   # ==========================================
   - name: all-projects
     label: All Projects (Portfolio Grid)
@@ -292,10 +304,15 @@ content:
       - name: textLast
         label: Second Description Line
         type: string
+      - name: description
+        label: Full Project Description
+        type: text
+        description: Extended description displayed on the /project-details/[id] page.
       - name: thumb
         label: Project Image
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: date
         label: Date / Year
         type: string
@@ -339,13 +356,22 @@ content:
       - name: thumb
         label: Card Thumbnail
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Blog card image for listings.
       - name: thumbFull
         label: Full Article Cover Image
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Large featured hero image for /blog-details/[id].
+      - name: content
+        label: Full Article Content
+        type: rich-text
+        options:
+          format: html
+          switcher: true
+        description: Full article body editor with rich formatting, bold, italics, bullet lists, headings, and links.
 
   # ==========================================
   # 7. Team Members
@@ -377,7 +403,8 @@ content:
       - name: thumb
         label: Profile Photo
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
 
   # ==========================================
   # 8. Testimonials
@@ -405,11 +432,12 @@ content:
         label: Testimonial Quote
         type: text
         required: true
-        description: Client feedback or review statement.
+        description: Full client feedback or review statement.
       - name: thumb
         label: Client Photo / Avatar
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
 
   # ==========================================
   # 9. Frequently Asked Questions (FAQ)
@@ -447,6 +475,7 @@ content:
           - name: answer
             label: Answer
             type: text
+            description: Full answer text.
 
   # ==========================================
   # 10. Company Values
@@ -470,7 +499,8 @@ content:
       - name: thumb
         label: Illustration / Icon
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
 
   # ==========================================
   # 11. Work Process Steps
@@ -501,7 +531,8 @@ content:
       - name: thumb
         label: Step Image
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: alt
         label: Image Alt Text
         type: string
@@ -530,7 +561,8 @@ content:
       - name: thumb
         label: Metric Icon
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
 
   # ==========================================
   # 13. Awards & Recognition
@@ -568,4 +600,5 @@ content:
       - name: thumb
         label: Partner Logo Image
         type: image
-        media: images
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]

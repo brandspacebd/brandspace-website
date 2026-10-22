@@ -347,23 +347,9 @@
         width: 100%;
     }
 
-    .header-sidebar-wrap .header-sidebar-content .header-sidebar-bottom,
-    .header-sidebar-wrap .header-sidebar-content .sidebar-menu {
-        padding-left: 25px;
-    }
-
-    .header-sidebar-wrap .header-sidebar-content .header-sidebar-top {
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-top: 70px;
-    }
-
-    .header-sidebar-wrap .header-sidebar-content .header-sidebar-top ul li {
-        gap: 25px;
-    }
-
-    .header-sidebar-wrap .header-sidebar-content .close-header-sidebar {
-        right: 20px;
+    .header-sidebar-wrap .header-sidebar-content {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .single-project .header-menu-wrap {
@@ -678,7 +664,7 @@
     }
 
     .header-sidebar-wrap .header-sidebar-content {
-        gap: 50px;
+        gap: 0;
     }
 
     .process-sec {

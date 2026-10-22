@@ -89,7 +89,7 @@ const HeaderMenu = () => {
 
                                     {/* Column 3: Commercial & Careers */}
                                     <div className="explore-col">
-                                        <span className="explore-col-title">Engage & Join</span>
+                                        <span className="explore-col-title">LET’S CONNECT</span>
                                         <ul className="explore-links">
                                             <li>
                                                 <Link href="/rate-card">
