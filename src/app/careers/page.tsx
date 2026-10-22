@@ -6,15 +6,15 @@ import ServicesV2 from "@/components/services/ServicesV2";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "Careers at BrandSpace - Join Our Creative Crew",
-    description: "Explore career opportunities, creative roles, and culture at BrandSpace agency."
+    title: "Careers at Brandspace - Join Our Creative Crew",
+    description: "Explore career opportunities, creative roles, and culture at Brandspace agency."
 };
 
 const CareersPage = () => {
     return (
         <div className="aixor-main careers-page">
             <LayoutV3>
-                <HeroV2 title="Careers at BrandSpace" />
+                <HeroV2 title="Careers at Brandspace" />
                 <AboutV2 />
                 <div style={{ padding: "60px 0 20px" }}>
                     <div className="custom-container">

@@ -6,7 +6,7 @@ import ServicesV2 from "@/components/services/ServicesV2";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "Monthly Retainer Service - BrandSpace",
+    title: "Monthly Retainer Service - Brandspace",
     description: "Guaranteed agency bandwidth, dedicated senior creative direction, and prioritized sprint turnarounds."
 };
 

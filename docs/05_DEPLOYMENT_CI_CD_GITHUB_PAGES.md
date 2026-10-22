@@ -1,5 +1,5 @@
 # 05 - Deployment, CI/CD & GitHub Pages
-## BrandSpace / Aixor Agency Next.js Static Website
+## Brandspace / Aixor Agency Next.js Static Website
 
 This document provides a guide to the continuous deployment pipeline, GitHub Actions workflow configuration, and GitHub Pages setup.
 
@@ -129,4 +129,4 @@ If prompted for credentials:
 - Alternatively, authenticate via GitHub CLI: `gh auth login`.
 
 ---
-*Authored for the BrandSpace Engineering & AI Pair-Programming Team.*
+*Authored for the Brandspace Engineering & AI Pair-Programming Team.*

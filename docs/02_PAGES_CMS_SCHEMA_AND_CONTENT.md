@@ -1,5 +1,5 @@
 # 02 - Pages CMS Schema & Content Architecture
-## BrandSpace / Aixor Agency Next.js Static Website
+## Brandspace / Aixor Agency Next.js Static Website
 
 This document details how **Pages CMS** connects to the repository, how the configuration file [`.pages.yml`](../.pages.yml) is structured, and how each content section in the CMS maps to local JSON files and React components.
 
@@ -130,4 +130,4 @@ If you need to add a new editable field:
 4. **Test the Static Build:** Run `npm run build` to confirm TypeScript passes and pages compile without error.
 
 ---
-*Authored for the BrandSpace Engineering & AI Pair-Programming Team.*
+*Authored for the Brandspace Engineering & AI Pair-Programming Team.*

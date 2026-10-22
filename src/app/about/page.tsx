@@ -9,7 +9,7 @@ import ServicesV2 from "@/components/services/ServicesV2";
 import TeamV1 from "@/components/team/TeamV1";
 
 export const metadata = {
-    title: "BrandSpace - About Us"
+    title: "Brandspace - About Us"
 };
 
 const AboutPage = () => {

@@ -6,8 +6,8 @@ import AwardsV1 from "@/components/awards/AwardsV1";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "Khyap - BrandSpace Venture",
-    description: "Khyap is BrandSpace's avant-garde cultural, artistic, and experimental branding venture."
+    title: "Khyap - Brandspace Venture",
+    description: "Khyap is Brandspace's avant-garde cultural, artistic, and experimental branding venture."
 };
 
 const KhyapPage = () => {

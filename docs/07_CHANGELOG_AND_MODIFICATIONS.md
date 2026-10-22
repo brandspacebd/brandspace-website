@@ -1,5 +1,5 @@
 # 07 - Changelog & Modification Audit
-## BrandSpace / Aixor Agency Next.js Static Website
+## Brandspace / Aixor Agency Next.js Static Website
 
 This document records the exact modifications made to the original ThemeForest Aixor Agency Next.js template to achieve full Pages CMS integration and static export compatibility.
 
@@ -75,4 +75,4 @@ This document records the exact modifications made to the original ThemeForest A
 - Created [`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml) configuring automated static site builds and GitHub Pages deployment on pushes to `main`.
 
 ---
-*Authored for the BrandSpace Engineering & AI Pair-Programming Team.*
+*Authored for the Brandspace Engineering & AI Pair-Programming Team.*

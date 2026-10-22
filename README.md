@@ -1,4 +1,4 @@
-# BrandSpace Agency Website - Next.js & Pages CMS
+# Brandspace Agency Website - Next.js & Pages CMS
 
 A modern, high-performance agency website built with Next.js 16 and fully integrated with **Pages CMS** for Git-based, serverless content management.
 

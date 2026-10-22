@@ -1,5 +1,5 @@
 # 04 - Routing & Static Export Engine
-## BrandSpace / Aixor Agency Next.js Static Website
+## Brandspace / Aixor Agency Next.js Static Website
 
 This document explains the routing topology of the application, how dynamic routes are pre-rendered at build time, and how 404 error handling is implemented for GitHub Pages.
 
@@ -119,4 +119,4 @@ When Next.js exports `src/app/not-found.tsx`, it creates **`out/404.html`**.
 GitHub Pages natively looks for `404.html` in the root of the deployed site and serves it automatically whenever a visitor requests a non-existent route. This provides seamless, styled error handling with zero server configuration.
 
 ---
-*Authored for the BrandSpace Engineering & AI Pair-Programming Team.*
+*Authored for the Brandspace Engineering & AI Pair-Programming Team.*

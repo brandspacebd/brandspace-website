@@ -31,8 +31,8 @@ const urbanist = Urbanist({
 })
 
 export const metadata: Metadata = {
-  title: "BrandSpace - Creative Agency",
-  description: "BrandSpace is a full-service creative agency transforming bold ideas into compelling realities.",
+  title: "Brandspace - Creative Agency",
+  description: "Brandspace is a full-service creative agency transforming bold ideas into compelling realities.",
   metadataBase: new URL("https://www.brandspacebd.com"),
 };
 

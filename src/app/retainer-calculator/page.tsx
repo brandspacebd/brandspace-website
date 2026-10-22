@@ -5,7 +5,7 @@ import FaqV1 from "@/components/faq/FaqV1";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "Monthly Retainer Fee Calculator - BrandSpace",
+    title: "Monthly Retainer Fee Calculator - Brandspace",
     description: "Calculate your custom creative retainer fee in real time based on required disciplines, monthly hours, and turnaround SLA."
 };
 

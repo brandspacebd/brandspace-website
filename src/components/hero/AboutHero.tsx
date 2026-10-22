@@ -16,7 +16,7 @@ const HeroV2 = ({ title }: DataType) => {
                         <Image className="hero-shape" src={contact} alt="Shape" />
                         <div className="hero-top">
                             <div className="hero-top-desc">
-                                <p>{`"At BrandSpace, we hold that creativity sparks innovation. As a full-spectrum creative firm, we excel in converting ambitious ideas into engaging results."`}</p>
+                                <p>{`"At Brandspace, we hold that creativity sparks innovation. As a full-spectrum creative firm, we excel in converting ambitious ideas into engaging results."`}</p>
                             </div>
                             <div className="author-info">
                                 <h4>Ahshan M</h4>
@@ -26,7 +26,7 @@ const HeroV2 = ({ title }: DataType) => {
                         <div className="hero-bottom">
                             <div className="left">
                                 <h2>{title ? title : "Not found Page"}</h2>
-                                <h2>BrandSpace</h2>
+                                <h2>Brandspace</h2>
                             </div>
                             <Link href="/contact" className="theme-btn">
                                 {`Let's Connect`}

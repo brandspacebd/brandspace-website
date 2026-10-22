@@ -6,8 +6,8 @@ import FeatureV2 from "@/components/feature/FeatureV2";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "Our Clients - BrandSpace",
-    description: "Explore the ambitious brands, industry pioneers, and global businesses that trust BrandSpace."
+    title: "Our Clients - Brandspace",
+    description: "Explore the ambitious brands, industry pioneers, and global businesses that trust Brandspace."
 };
 
 const ClientsPage = () => {

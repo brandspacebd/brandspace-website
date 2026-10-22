@@ -11,7 +11,7 @@ import TeamV1 from "@/components/team/TeamV1";
 import TestimonialV1 from "@/components/testimonial/TestimonialV1";
 
 export const metadata = {
-    title: "BrandSpace - Home 2 Page"
+    title: "Brandspace - Home 2 Page"
 };
 
 const Home2Page = () => {

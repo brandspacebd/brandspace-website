@@ -12,7 +12,7 @@ const homeData = homeDataRaw as HomeData;
 
 const AboutV1 = () => {
     const aboutSubtitle = homeData.about?.subtitle || "About Us";
-    const aboutDesc = homeData.about?.description || "Founded on the principles of creativity, collaboration, and excellence, BrandSpace is a diverse team of industry experts dedicated to delivering outstanding results...";
+    const aboutDesc = homeData.about?.description || "Founded on the principles of creativity, collaboration, and excellence, Brandspace is a diverse team of industry experts dedicated to delivering outstanding results...";
 
     const [activeServiceId, setActiveServiceId] = useState(FactData[0]?.id || null);
 

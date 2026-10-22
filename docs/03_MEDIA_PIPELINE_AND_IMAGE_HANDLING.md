@@ -1,5 +1,5 @@
 # 03 - Media Pipeline & Image Handling
-## BrandSpace / Aixor Agency Next.js Static Website
+## Brandspace / Aixor Agency Next.js Static Website
 
 This document explains the media pipeline, image upload configuration, path resolution logic, and Next.js static asset integration.
 
@@ -122,4 +122,4 @@ Because Git does not track empty directories, the repository includes a tracking
 This guarantees the `public/uploads/` folder exists immediately upon initial clone or inside CI/CD environments, preventing build failures before the first CMS image is uploaded.
 
 ---
-*Authored for the BrandSpace Engineering & AI Pair-Programming Team.*
+*Authored for the Brandspace Engineering & AI Pair-Programming Team.*

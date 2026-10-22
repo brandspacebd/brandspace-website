@@ -7,7 +7,7 @@ import FaqV1 from "@/components/faq/FaqV1";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "Services & Capabilities - BrandSpace",
+    title: "Services & Capabilities - Brandspace",
     description: "Full-spectrum creative agency services including Creative Work, AI Generated Campaigns, Hybrid AI Creative Design, Digital Campaigns, and 360 Degree Campaigns."
 };
 

@@ -5,8 +5,8 @@ import AboutV2 from "@/components/about/AboutV2";
 import PartnerV1 from "@/components/partner/PartnerV1";
 
 export const metadata = {
-    title: "Our Core Team - BrandSpace",
-    description: "Meet the executive leadership and core creative specialists driving innovation at BrandSpace."
+    title: "Our Core Team - Brandspace",
+    description: "Meet the executive leadership and core creative specialists driving innovation at Brandspace."
 };
 
 const CoreTeamPage = () => {

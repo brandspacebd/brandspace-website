@@ -5,8 +5,8 @@ import PriceV1 from "@/components/pricing/PriceV1";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "Agency Rate Card - BrandSpace",
-    description: "View BrandSpace's service rate card and submit a request to receive the official commercial fee schedule."
+    title: "Agency Rate Card - Brandspace",
+    description: "View Brandspace's service rate card and submit a request to receive the official commercial fee schedule."
 };
 
 const RateCardPage = () => {

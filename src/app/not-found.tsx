@@ -3,7 +3,7 @@ import HeaderV2 from '@/components/header/HeaderV2';
 import ErrorHero from '@/components/hero/ErrorHero';
 
 export const metadata = {
-    title: "BrandSpace - Page Not Found"
+    title: "Brandspace - Page Not Found"
 };
 
 const NotFound = () => {

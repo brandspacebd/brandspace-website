@@ -6,8 +6,8 @@ import FeatureV1 from "@/components/feature/FeatureV1";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "Our Creative Network - BrandSpace",
-    description: "Discover BrandSpace's extended global network of directors, generative artists, illustrators, and strategists."
+    title: "Our Creative Network - Brandspace",
+    description: "Discover Brandspace's extended global network of directors, generative artists, illustrators, and strategists."
 };
 
 const CreativeNetworkPage = () => {

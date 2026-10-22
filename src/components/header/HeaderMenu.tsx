@@ -9,7 +9,7 @@ const siteSettings = siteSettingsRaw as SiteSettings;
 const HeaderMenu = () => {
     const phone = siteSettings.phone || "+880 1727 881588";
     const email = siteSettings.email || "hello@brandspacebd.com";
-    const siteName = siteSettings.siteName || "BrandSpace";
+    const siteName = siteSettings.siteName || "Brandspace";
 
     return (
         <header className="header-menu-wrap">

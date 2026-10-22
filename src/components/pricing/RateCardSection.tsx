@@ -152,7 +152,7 @@ const RateCardSection = () => {
                                 <>
                                     <h3 style={{ fontSize: "24px", color: "#fff", marginBottom: "8px" }}>Request Official Rate Card</h3>
                                     <p style={{ color: "#999", fontSize: "14px", marginBottom: "25px" }}>
-                                        Please share your organization details to receive BrandSpace&apos;s full commercial fee matrix.
+                                        Please share your organization details to receive Brandspace&apos;s full commercial fee matrix.
                                     </p>
 
                                     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "18px" }}>

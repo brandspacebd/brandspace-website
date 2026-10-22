@@ -1,15 +1,15 @@
 # 00 - Full Project Master Documentation
-## BrandSpace / Aixor Agency Next.js Static Website & Pages CMS
+## Brandspace / Aixor Agency Next.js Static Website & Pages CMS
 
 > **Welcome, Developer or AI Agent!**  
-> This master document provides a comprehensive, end-to-end overview of the BrandSpace (Aixor Agency) website. If you are a new AI coding agent or software engineer resuming work on this repository, **read this document and the accompanying guides in `docs/` first**. You will understand the entire system architecture, content schema, design system, deployment pipeline, and development conventions without having to reverse-engineer the codebase.
+> This master document provides a comprehensive, end-to-end overview of the Brandspace (Aixor Agency) website. If you are a new AI coding agent or software engineer resuming work on this repository, **read this document and the accompanying guides in `docs/` first**. You will understand the entire system architecture, content schema, design system, deployment pipeline, and development conventions without having to reverse-engineer the codebase.
 
 ---
 
 ## 1. Project Overview & Business Goal
 
 - **Repository Name:** `brandspacebd/brandspace-website`
-- **Owner / Organization:** BrandSpace (`emailtobrandspace@gmail.com`)
+- **Owner / Organization:** Brandspace (`emailtobrandspace@gmail.com`)
 - **Base Template:** Aixor Agency Next.js Template (purchased from ThemeForest)
 - **Primary Objective:** Convert a premium agency Next.js template into a completely content-editable, Git-based client website powered by **Pages CMS**, deployable as an ultra-fast, zero-maintenance static export on **GitHub Pages**, without maintaining any backend server, custom API, VPS, database, or exposed access tokens.
 
@@ -43,7 +43,7 @@
 ## 3. Repository Directory Structure
 
 ```plaintext
-BrandSpace-Website/
+Brandspace-Website/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml              # GitHub Actions static export deployment workflow
@@ -159,4 +159,4 @@ git status
 ```
 
 ---
-*Authored for the BrandSpace Engineering & AI Pair-Programming Team.*
+*Authored for the Brandspace Engineering & AI Pair-Programming Team.*

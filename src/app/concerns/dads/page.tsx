@@ -6,8 +6,8 @@ import ProcessV1 from "@/components/process/ProcessV1";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "DAdS - BrandSpace Venture",
-    description: "DAdS (Digital Advertising & Strategy) is BrandSpace's performance-driven marketing and advertising studio venture."
+    title: "DAdS - Brandspace Venture",
+    description: "DAdS (Digital Advertising & Strategy) is Brandspace's performance-driven marketing and advertising studio venture."
 };
 
 const DAdsPage = () => {

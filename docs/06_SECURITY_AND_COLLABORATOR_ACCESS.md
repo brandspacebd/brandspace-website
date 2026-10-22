@@ -1,5 +1,5 @@
 # 06 - Security & Collaborator Access Model
-## BrandSpace / Aixor Agency Next.js Static Website
+## Brandspace / Aixor Agency Next.js Static Website
 
 This document outlines the security architecture, customer access boundaries, and Pages CMS collaborator invitation workflow.
 
@@ -77,4 +77,4 @@ This project enforces a **strict Zero-Trust architecture**:
 4. When they make changes and click **Save**, Pages CMS creates a Git commit on `main`, automatically triggering the deployment pipeline.
 
 ---
-*Authored for the BrandSpace Engineering & AI Pair-Programming Team.*
+*Authored for the Brandspace Engineering & AI Pair-Programming Team.*

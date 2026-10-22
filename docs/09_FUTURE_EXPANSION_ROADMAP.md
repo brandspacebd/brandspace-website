@@ -1,7 +1,7 @@
 # 09 - Future Expansion Roadmap
-## BrandSpace / Aixor Agency Next.js Static Website
+## Brandspace / Aixor Agency Next.js Static Website
 
-This document provides clear blueprints and architectural patterns for scaling and extending the BrandSpace website in future development phases, while strictly maintaining the zero-maintenance, serverless static architecture.
+This document provides clear blueprints and architectural patterns for scaling and extending the Brandspace website in future development phases, while strictly maintaining the zero-maintenance, serverless static architecture.
 
 ---
 
@@ -83,10 +83,10 @@ Because there is no search database (Elasticsearch, Algolia, Meilisearch), clien
 - Update `src/app/layout.tsx` or individual page metadata to define standard OpenGraph tags:
   ```typescript
   export const metadata = {
-      title: "BrandSpace - Creative Agency",
+      title: "Brandspace - Creative Agency",
       description: "Transforming bold ideas into compelling realities.",
       openGraph: {
-          title: "BrandSpace - Creative Agency",
+          title: "Brandspace - Creative Agency",
           description: "Transforming bold ideas into compelling realities.",
           url: "https://brandspacebd.com",
           images: [{ url: "/assets/images/logo/brandspace-og.jpg", width: 1200, height: 630 }],
@@ -111,4 +111,4 @@ To support multiple languages (e.g. English and Bengali) on a static site:
 4. In `.pages.yml`, configure separate file entries for English and Bengali content.
 
 ---
-*Authored for the BrandSpace Engineering & AI Pair-Programming Team.*
+*Authored for the Brandspace Engineering & AI Pair-Programming Team.*

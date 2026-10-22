@@ -1,5 +1,5 @@
 # 01 - Architecture & Technology Stack
-## BrandSpace / Aixor Agency Next.js Static Website
+## Brandspace / Aixor Agency Next.js Static Website
 
 This document provides a deep architectural breakdown of the technology stack, build pipeline, component paradigms, and design patterns utilized in this project.
 
@@ -122,4 +122,4 @@ legacy-peer-deps=true
 3. **Separation of Presentation & Data:** Components do not contain hardcoded copy. All headings, descriptions, button labels, URLs, and image filenames are passed from the structured JSON files.
 
 ---
-*Authored for the BrandSpace Engineering & AI Pair-Programming Team.*
+*Authored for the Brandspace Engineering & AI Pair-Programming Team.*

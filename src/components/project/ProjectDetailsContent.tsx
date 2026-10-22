@@ -22,7 +22,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                             Dimension Dynamics
                         </span>
                         <AnimatedText>
-                            Founded on the principles of creativity, collaboration, and excellence, BrandSpace is a diverse team of industry experts dedicated to delivering outstanding results...
+                            Founded on the principles of creativity, collaboration, and excellence, Brandspace is a diverse team of industry experts dedicated to delivering outstanding results...
                         </AnimatedText>
                     </div>
                 </div>

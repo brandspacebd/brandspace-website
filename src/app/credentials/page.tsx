@@ -6,8 +6,8 @@ import PartnerV1 from "@/components/partner/PartnerV1";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "Credentials & Accreditations - BrandSpace",
-    description: "BrandSpace's agency credentials, verified industry recognitions, and creative awards."
+    title: "Credentials & Accreditations - Brandspace",
+    description: "Brandspace's agency credentials, verified industry recognitions, and creative awards."
 };
 
 const CredentialsPage = () => {

@@ -1,5 +1,5 @@
 # 08 - AI Agent & Developer Guidelines
-## BrandSpace / Aixor Agency Next.js Static Website
+## Brandspace / Aixor Agency Next.js Static Website
 
 > **Instructions for Incoming Coding Agents:**  
 > When you are handed this project or are pair-programming with the user, follow the strict conventions and safeguards documented below.
@@ -79,4 +79,4 @@ When adding a new content section or modifying an existing one:
 4. **Build Verification:** Run `npm run build`. The build must exit with code 0 and generate all pages in `out/`.
 
 ---
-*Authored for the BrandSpace Engineering & AI Pair-Programming Team.*
+*Authored for the Brandspace Engineering & AI Pair-Programming Team.*

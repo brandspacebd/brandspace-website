@@ -3,7 +3,7 @@ import FeatureV2Data from '@/assets/jsonData/feature/FeatureV2Data.json';
 import LayoutV3 from "@/components/layouts/LayoutV3";
 
 export const metadata = {
-    title: "BrandSpace - Project Details"
+    title: "Brandspace - Project Details"
 };
 
 export async function generateStaticParams() {
