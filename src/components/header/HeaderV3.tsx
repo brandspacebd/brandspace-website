@@ -213,9 +213,9 @@ const HeaderV3 = () => {
                                     </ul>
                                 </li>
 
-                                {/* OUR CONCERNS Dropdown */}
+                                {/* OUR VENTURES Dropdown */}
                                 <li className="dropdown-menu-item">
-                                    <Link href="#">OUR CONCERNS <i className="las la-angle-down" /></Link>
+                                    <Link href="#">OUR VENTURES <i className="las la-angle-down" /></Link>
                                     <ul className="dropdown-list">
                                         <li><Link href="/concerns/gardenspace">Gardenspace</Link></li>
                                         <li><Link href="/concerns/dads">DAdS</Link></li>

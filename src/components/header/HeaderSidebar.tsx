@@ -111,13 +111,13 @@ const HeaderSidebar = () => {
                                 )}
                             </li>
 
-                            {/* OUR CONCERNS */}
+                            {/* OUR VENTURES */}
                             <li>
                                 <div
                                     onClick={() => setOpenConcerns(!openConcerns)}
                                     style={{ display: "flex", alignItems: "center", justifyContent: "space-between", cursor: "pointer", color: "var(--secondary)" }}
                                 >
-                                    <span>OUR CONCERNS</span>
+                                    <span>OUR VENTURES</span>
                                     <i className={`las ${openConcerns ? "la-angle-up" : "la-angle-down"}`} style={{ fontSize: "16px" }} />
                                 </div>
                                 {openConcerns && (

@@ -6,8 +6,8 @@ import ProcessV1 from "@/components/process/ProcessV1";
 import ContactV1 from "@/components/contact/ContactV1";
 
 export const metadata = {
-    title: "Gardenspace - BrandSpace Concern",
-    description: "Gardenspace is BrandSpace's environmental, spatial design, and experiential lifestyle branding concern."
+    title: "Gardenspace - BrandSpace Venture",
+    description: "Gardenspace is BrandSpace's environmental, spatial design, and experiential lifestyle branding venture."
 };
 
 const GardenspacePage = () => {
