@@ -364,7 +364,10 @@ const HeaderSidebar = () => {
                         )}
 
                         <div className="mobile-social-wrap">
-                            <SocialShareV1 />
+                            <span className="mobile-social-title">Follow Us</span>
+                            <ul className="mobile-social-list">
+                                <SocialShareV1 />
+                            </ul>
                         </div>
                     </div>
                 </div>

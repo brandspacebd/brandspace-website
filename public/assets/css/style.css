@@ -1213,36 +1213,66 @@ a {
 }
 
 .mobile-social-wrap {
-    padding-top: 4px;
-}
-
-.mobile-social-wrap ul {
+    padding-top: 10px;
+    margin-top: 4px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 10px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
 }
 
+.mobile-social-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    display: block;
+}
+
+.mobile-social-wrap .mobile-social-list,
+.mobile-social-wrap ul {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+.mobile-social-wrap .mobile-social-list li,
+.mobile-social-wrap ul li {
+    list-style: none !important;
+    display: inline-flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.mobile-social-wrap .mobile-social-list li a,
 .mobile-social-wrap ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    text-decoration: none;
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
-    transition: 0.25s ease;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
+.mobile-social-wrap .mobile-social-list li a:hover,
 .mobile-social-wrap ul li a:hover {
-    background: var(--primary, #c9f31d);
-    color: #000000;
-    border-color: var(--primary, #c9f31d);
+    background: var(--primary, #c9f31d) !important;
+    color: #000000 !important;
+    border-color: var(--primary, #c9f31d) !important;
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 4px 14px rgba(201, 243, 29, 0.35) !important;
 }
 
 .scroll-to-show-menu {
