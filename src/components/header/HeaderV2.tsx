@@ -3,6 +3,7 @@ import Image from 'next/image';
 import siteSettingsRaw from "@/assets/jsonData/settings/siteSettings.json";
 import getImageUrl from '../utilities/getImageUrl';
 import { SiteSettings } from '@/types/content';
+import HeaderSidebar from './HeaderSidebar';
 
 const siteSettings = siteSettingsRaw as SiteSettings;
 
@@ -12,13 +13,15 @@ const HeaderV2 = () => {
     const siteName = siteSettings.siteName || "Brandspace";
 
     return (
-        <header className="header-menu-wrap">
-            <div className="custom-container">
-                <div className="custom-row">
+        <>
+            <HeaderSidebar />
+            <header className="header-menu-wrap">
+                <div className="custom-container">
+                    <div className="custom-row">
 
-                    <Link href="/" className="logo">
-                        <Image src={getImageUrl(siteSettings.logo)} alt={siteName} width={185} height={50} priority />
-                    </Link>
+                        <Link href="/" className="logo">
+                            <Image src={getImageUrl(siteSettings.logo)} alt={siteName} width={155} height={42} priority />
+                        </Link>
 
                     {/* Navigation menu */}
                     <nav className="navbar">
@@ -139,6 +142,7 @@ const HeaderV2 = () => {
                 </div>
             </div>
         </header>
+        </>
     );
 };
 

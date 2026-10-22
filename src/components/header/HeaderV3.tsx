@@ -188,7 +188,7 @@ const HeaderV3 = () => {
                     <div className="custom-row">
 
                         <Link href="/" className="logo">
-                            <Image src={getImageUrl(siteSettings.logo)} alt={siteSettings.siteName || "Logo"} width={185} height={50} priority />
+                            <Image src={getImageUrl(siteSettings.logo)} alt={siteSettings.siteName || "Logo"} width={155} height={42} priority />
                         </Link>
 
                         {/* Navigation menu */}

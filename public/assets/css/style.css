@@ -349,9 +349,9 @@ a {
 }
 
 .header-menu-wrap .logo img {
-    max-width: 200px;
+    max-width: 155px;
     width: auto;
-    height: 48px;
+    height: 38px;
     object-fit: contain;
     display: block;
     transition: transform 0.25s ease, opacity 0.25s ease;
@@ -580,15 +580,59 @@ a {
 
 @media (max-width: 1200px) {
     .header-menu-wrap .logo img {
-        max-width: 165px;
-        height: 42px;
+        max-width: 140px;
+        height: 34px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .header-menu-wrap .logo img {
-        max-width: 140px;
-        height: 36px;
+        max-width: 125px;
+        height: 30px;
+    }
+
+    .scroll-to-show-menu {
+        display: block !important;
+        pointer-events: none !important;
+    }
+
+    .hamburg-menu {
+        display: flex !important;
+        transform: scale(1) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        right: 20px !important;
+        top: 16px !important;
+        width: 44px !important;
+        height: 44px !important;
+        background: rgba(22, 22, 22, 0.95) !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.7) !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
+        z-index: 1028 !important;
+    }
+
+    .hamburg-menu span {
+        width: 18px !important;
+        height: 2px !important;
+        border-radius: 2px !important;
+        background: #ffffff !important;
+    }
+
+    .header-menu-wrap .navbar,
+    .header-menu-wrap .header-right-info {
+        display: none !important;
+    }
+
+    .header-menu-wrap {
+        padding-top: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-menu-wrap .logo img {
+        max-width: 110px;
+        height: 26px;
     }
 }
 
@@ -858,26 +902,28 @@ a {
     transform: translateX(-50%);
     z-index: 1026;
     top: 0;
+    pointer-events: none;
 }
 
 .hamburg-menu {
-    border: 2.5px solid #ffffff;
-    width: 60px;
-    height: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    width: 48px;
+    height: 48px;
     display: flex;
     flex-direction: column;
     position: absolute;
     right: 35px;
-    top: 25px;
+    top: 20px;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    gap: 5px;
+    gap: 4.5px;
     background: #1a1a1a;
     cursor: pointer;
     transform: scale(0);
     transition: .3s;
     -webkit-transition: .3s;
+    pointer-events: auto;
 }
 
 .hamburg-menu.active {
@@ -895,7 +941,8 @@ a {
 .hamburg-menu span {
     display: block;
     width: 20px;
-    height: 1px;
+    height: 2px;
+    border-radius: 2px;
     background: #ffffff;
     transition: .3s;
     -webkit-transition: .3s;

@@ -335,6 +335,11 @@
 
     .hamburg-menu {
         right: 20px;
+        transform: scale(1) !important;
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
     }
 
     .feature-project-info-box,
