@@ -123,15 +123,10 @@ const HeaderSidebar = () => {
                                 {openConcerns && (
                                     <ul style={{ paddingLeft: "15px", marginTop: "10px", display: "flex", flexDirection: "column", gap: "8px", borderLeft: "1px solid rgba(201, 243, 29, 0.4)" }}>
                                         <li><Link href="/concerns/gardenspace" onClick={handleCloseClick} style={{ fontSize: "14px" }}>Gardenspace</Link></li>
-                                        <li><Link href="/concerns/dads" onClick={handleCloseClick} style={{ fontSize: "14px" }}>DAdS</Link></li>
+                                        <li><Link href="/concerns/juniorspace" onClick={handleCloseClick} style={{ fontSize: "14px" }}>Juniorspace</Link></li>
                                         <li><Link href="/concerns/khyap" onClick={handleCloseClick} style={{ fontSize: "14px" }}>Khyap</Link></li>
                                     </ul>
                                 )}
-                            </li>
-
-                            {/* CONNECT */}
-                            <li>
-                                <Link href="/contact" onClick={handleCloseClick}>CONNECT</Link>
                             </li>
 
                             {/* EXPLORE */}
@@ -164,6 +159,11 @@ const HeaderSidebar = () => {
                                         <li><Link href="/careers" onClick={handleCloseClick} style={{ fontSize: "14px" }}>Careers (Hiring)</Link></li>
                                     </ul>
                                 )}
+                            </li>
+
+                            {/* CONNECT (Contact Us) - Last Option */}
+                            <li>
+                                <Link href="/contact" onClick={handleCloseClick}>CONNECT</Link>
                             </li>
                         </ul>
                     </nav>

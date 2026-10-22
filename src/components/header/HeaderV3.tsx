@@ -218,14 +218,9 @@ const HeaderV3 = () => {
                                     <Link href="#">OUR VENTURES <i className="las la-angle-down" /></Link>
                                     <ul className="dropdown-list">
                                         <li><Link href="/concerns/gardenspace">Gardenspace</Link></li>
-                                        <li><Link href="/concerns/dads">DAdS</Link></li>
+                                        <li><Link href="/concerns/juniorspace">Juniorspace</Link></li>
                                         <li><Link href="/concerns/khyap">Khyap</Link></li>
                                     </ul>
-                                </li>
-
-                                {/* CONNECT (Contact Us) */}
-                                <li>
-                                    <Link href="/contact">CONNECT <span /></Link>
                                 </li>
 
                                 {/* EXPLORE Mega Dropdown */}
@@ -291,6 +286,11 @@ const HeaderV3 = () => {
                                             </ul>
                                         </div>
                                     </div>
+                                </li>
+
+                                {/* CONNECT (Contact Us) - Last Option */}
+                                <li>
+                                    <Link href="/contact">CONNECT <span /></Link>
                                 </li>
                             </ul>
                         </nav>
