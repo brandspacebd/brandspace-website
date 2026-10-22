@@ -9,15 +9,17 @@ interface DataType {
     id?: number;
     thumb?: string;
     title?: string;
-    end?: string;
+    end?: string | number;
 }
 
 const SingleFactV1 = ({ fact }: { fact: DataType }) => {
-    const { id, thumb, title, end } = fact
+    const { id = 1, thumb, title = '', end = '' } = fact || {};
 
     return (
         <>
-            <Image src={getImageUrl(thumb)} alt="funfact" className="overlay" width={512} height={512} />
+            {thumb && (
+                <Image src={getImageUrl(thumb)} alt={title || "funfact"} className="overlay" width={512} height={512} />
+            )}
             <div className="funfact-header">
                 <span className="title">{title}</span>
             </div>

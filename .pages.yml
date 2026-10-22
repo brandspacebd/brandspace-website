@@ -146,7 +146,7 @@ content:
       - name: aboutPage
         label: About Us Page Text
         type: object
-        description: Main text content for the dedicated /about page.
+        description: Main text content for the dedicated /about page. (The 4 image cards below this text are managed in "About Us - 4 Stat Cards & Images").
         fields:
           - name: subtitle
             label: Subtitle
@@ -538,31 +538,33 @@ content:
         type: string
 
   # ==========================================
-  # 12. Fun Facts & Statistics
+  # 12. About Us - 4 Stat Cards & Images
   # ==========================================
   - name: fun-facts
-    label: Fun Facts & Statistics
+    label: About Us - 4 Stat Cards & Images
     type: file
     path: public/assets/jsonData/fact/FactData.json
     format: json
     list: true
+    description: The 4 highlighted cards on the About Us page & Homepage (Years Experience, Completed Projects, Award Winning, Satisfied Clients). Upload or change the 4 background images here.
     fields:
       - name: id
-        label: Stat ID
+        label: Card ID
         type: number
       - name: title
-        label: Metric Name
+        label: Metric Title
         type: string
-        description: e.g. Years Experience, Completed Projects
+        description: e.g. Years Experience, Completed Projects, Award Winning, Satisfied Clients
       - name: end
-        label: Numerical Value
+        label: Metric Number
         type: string
-        description: Number value animated by counter (e.g. 12, 25, 110)
+        description: Animated counter number (e.g. 12, 25, 110, 4)
       - name: thumb
-        label: Metric Icon
+        label: Card Image
         type: image
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
+        description: Upload or pick the card's background image (JPG, PNG, WebP, SVG).
 
   # ==========================================
   # 13. Awards & Recognition
