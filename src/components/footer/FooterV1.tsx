@@ -35,12 +35,12 @@ const FooterV1 = () => {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link className="with-border" href="/about">
-                                                <Image src={btnArrow} alt="icon" /> Members
+                                            <Link className="with-border" href="/team">
+                                                <Image src={btnArrow} alt="icon" /> Team
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link className="with-border" href="/about">
+                                            <Link className="with-border" href="/stories">
                                                 <Image src={btnArrow} alt="icon" /> Stories
                                             </Link>
                                         </li>
