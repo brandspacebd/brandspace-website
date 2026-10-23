@@ -1,0 +1,41 @@
+{
+  "subtitle": "OFFICIAL AGENCY RATE CARD",
+  "title": "Transparent Pricing, Exceptional Value",
+  "description": "Access our comprehensive service fee schedule, creative campaign rates, and flexible engagement models. Click below to request the complete official confidential rate card directly to your inbox.",
+  "buttonText": "Request a Rate Card",
+  "packages": [
+    {
+      "id": 1,
+      "number": "01. Creative & Branding",
+      "title": "Brand Identity & Strategy",
+      "description": "Full visual identity systems, typography, color palettes, brand guidelines, and brand architecture tailored for modern market leaders.",
+      "features": [
+        "Logo & Brand Mark Suite",
+        "Complete Brand Styleguide",
+        "Stationery & Asset Kits"
+      ]
+    },
+    {
+      "id": 2,
+      "number": "02. AI & Creative Tech",
+      "title": "Hybrid AI Campaigns",
+      "description": "AI-assisted creative rendering combined with human art direction to deliver high-velocity, award-worthy commercial campaigns.",
+      "features": [
+        "Photorealistic AI Concept Art",
+        "Rapid Visual Prototyping",
+        "Generative Media Assets"
+      ]
+    },
+    {
+      "id": 3,
+      "number": "03. 360° Digital",
+      "title": "Integrated Campaigns",
+      "description": "Omnichannel digital marketing, social media content sprints, performance creative ads, and conversion landing pages.",
+      "features": [
+        "Multi-Platform Creative Run",
+        "Performance Video & Motion",
+        "Audience Growth Strategy"
+      ]
+    }
+  ]
+}

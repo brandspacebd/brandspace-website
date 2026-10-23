@@ -3,8 +3,17 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Union from "@/assets/images/Union.svg";
 import btnArrow from "@/assets/images/btn-arrow.svg";
+import defaultRateData from "@/assets/jsonData/pricing/RateCardData.json";
 
 const RateCardSection = () => {
+    const rateData = defaultRateData || {
+        subtitle: "OFFICIAL AGENCY RATE CARD",
+        title: "Transparent Pricing, Exceptional Value",
+        description: "Access our comprehensive service fee schedule, creative campaign rates, and flexible engagement models. Click below to request the complete official confidential rate card directly to your inbox.",
+        buttonText: "Request a Rate Card",
+        packages: []
+    };
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [companyName, setCompanyName] = useState("");
     const [email, setEmail] = useState("");
@@ -31,14 +40,13 @@ const RateCardSection = () => {
                 <div className="section-header section-header2 text-center" style={{ marginBottom: "50px" }}>
                     <span className="section-subtitle">
                         <Image src={Union} alt="icon" />
-                        OFFICIAL AGENCY RATE CARD
+                        {rateData.subtitle}
                     </span>
                     <h2 className="section-title section-title2">
-                        Transparent Pricing, <span>Exceptional Value</span>
+                        {rateData.title}
                     </h2>
                     <p className="section-desc" style={{ maxWidth: "700px", margin: "15px auto 30px" }}>
-                        Access our comprehensive service fee schedule, creative campaign rates, and flexible engagement models.
-                        Click below to request the complete official confidential rate card directly to your inbox.
+                        {rateData.description}
                     </p>
                     <div>
                         <button
@@ -68,38 +76,40 @@ const RateCardSection = () => {
 
                 {/* Rate Card Category Overview */}
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px", marginTop: "40px" }}>
-                    <div className="pricing-box" style={{ background: "rgba(255, 255, 255, 0.03)", border: "1px solid rgba(255, 255, 255, 0.08)", borderRadius: "16px", padding: "35px 30px" }}>
-                        <span style={{ fontSize: "12px", color: "var(--primary, #c9f31d)", textTransform: "uppercase", letterSpacing: "1px" }}>01. Creative & Branding</span>
-                        <h3 style={{ fontSize: "22px", margin: "10px 0 15px", color: "#fff" }}>Brand Identity & Strategy</h3>
-                        <p style={{ color: "#aaa", fontSize: "14px", lineHeight: "1.6" }}>Full visual identity systems, typography, color palettes, brand guidelines, and brand architecture tailored for modern market leaders.</p>
-                        <ul className="feature-lists" style={{ marginTop: "20px", color: "#ddd", fontSize: "14px" }}>
-                            <li><span className="icon"><i className="las la-check" style={{ color: "var(--primary, #c9f31d)" }} /></span> Logo & Brand Mark Suite</li>
-                            <li><span className="icon"><i className="las la-check" style={{ color: "var(--primary, #c9f31d)" }} /></span> Complete Brand Styleguide</li>
-                            <li><span className="icon"><i className="las la-check" style={{ color: "var(--primary, #c9f31d)" }} /></span> Stationery & Asset Kits</li>
-                        </ul>
-                    </div>
-
-                    <div className="pricing-box" style={{ background: "rgba(255, 255, 255, 0.03)", border: "1px solid rgba(255, 255, 255, 0.08)", borderRadius: "16px", padding: "35px 30px" }}>
-                        <span style={{ fontSize: "12px", color: "var(--primary, #c9f31d)", textTransform: "uppercase", letterSpacing: "1px" }}>02. AI & Creative Tech</span>
-                        <h3 style={{ fontSize: "22px", margin: "10px 0 15px", color: "#fff" }}>Hybrid AI Campaigns</h3>
-                        <p style={{ color: "#aaa", fontSize: "14px", lineHeight: "1.6" }}>AI-assisted creative rendering combined with human art direction to deliver high-velocity, award-worthy commercial campaigns.</p>
-                        <ul className="feature-lists" style={{ marginTop: "20px", color: "#ddd", fontSize: "14px" }}>
-                            <li><span className="icon"><i className="las la-check" style={{ color: "var(--primary, #c9f31d)" }} /></span> Photorealistic AI Concept Art</li>
-                            <li><span className="icon"><i className="las la-check" style={{ color: "var(--primary, #c9f31d)" }} /></span> Rapid Visual Prototyping</li>
-                            <li><span className="icon"><i className="las la-check" style={{ color: "var(--primary, #c9f31d)" }} /></span> Generative Media Assets</li>
-                        </ul>
-                    </div>
-
-                    <div className="pricing-box" style={{ background: "rgba(255, 255, 255, 0.03)", border: "1px solid rgba(255, 255, 255, 0.08)", borderRadius: "16px", padding: "35px 30px" }}>
-                        <span style={{ fontSize: "12px", color: "var(--primary, #c9f31d)", textTransform: "uppercase", letterSpacing: "1px" }}>03. 360° Digital</span>
-                        <h3 style={{ fontSize: "22px", margin: "10px 0 15px", color: "#fff" }}>Integrated Campaigns</h3>
-                        <p style={{ color: "#aaa", fontSize: "14px", lineHeight: "1.6" }}>Omnichannel digital marketing, social media content sprints, performance creative ads, and conversion landing pages.</p>
-                        <ul className="feature-lists" style={{ marginTop: "20px", color: "#ddd", fontSize: "14px" }}>
-                            <li><span className="icon"><i className="las la-check" style={{ color: "var(--primary, #c9f31d)" }} /></span> Multi-Platform Creative Run</li>
-                            <li><span className="icon"><i className="las la-check" style={{ color: "var(--primary, #c9f31d)" }} /></span> Performance Video & Motion</li>
-                            <li><span className="icon"><i className="las la-check" style={{ color: "var(--primary, #c9f31d)" }} /></span> Audience Growth Strategy</li>
-                        </ul>
-                    </div>
+                    {(rateData.packages && rateData.packages.length > 0 ? rateData.packages : [
+                        {
+                            id: 1,
+                            number: "01. Creative & Branding",
+                            title: "Brand Identity & Strategy",
+                            description: "Full visual identity systems, typography, color palettes, brand guidelines, and brand architecture tailored for modern market leaders.",
+                            features: ["Logo & Brand Mark Suite", "Complete Brand Styleguide", "Stationery & Asset Kits"]
+                        },
+                        {
+                            id: 2,
+                            number: "02. AI & Creative Tech",
+                            title: "Hybrid AI Campaigns",
+                            description: "AI-assisted creative rendering combined with human art direction to deliver high-velocity, award-worthy commercial campaigns.",
+                            features: ["Photorealistic AI Concept Art", "Rapid Visual Prototyping", "Generative Media Assets"]
+                        },
+                        {
+                            id: 3,
+                            number: "03. 360° Digital",
+                            title: "Integrated Campaigns",
+                            description: "Omnichannel digital marketing, social media content sprints, performance creative ads, and conversion landing pages.",
+                            features: ["Multi-Platform Creative Run", "Performance Video & Motion", "Audience Growth Strategy"]
+                        }
+                    ]).map((pkg, idx) => (
+                        <div key={idx} className="pricing-box" style={{ background: "rgba(255, 255, 255, 0.03)", border: "1px solid rgba(255, 255, 255, 0.08)", borderRadius: "16px", padding: "35px 30px" }}>
+                            <span style={{ fontSize: "12px", color: "var(--primary, #c9f31d)", textTransform: "uppercase", letterSpacing: "1px" }}>{pkg.number}</span>
+                            <h3 style={{ fontSize: "22px", margin: "10px 0 15px", color: "#fff" }}>{pkg.title}</h3>
+                            <p style={{ color: "#aaa", fontSize: "14px", lineHeight: "1.6" }}>{pkg.description}</p>
+                            <ul className="feature-lists" style={{ marginTop: "20px", color: "#ddd", fontSize: "14px" }}>
+                                {pkg.features && pkg.features.map((feat, fIdx) => (
+                                    <li key={fIdx}><span className="icon"><i className="las la-check" style={{ color: "var(--primary, #c9f31d)" }} /></span> {feat}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
 
                 {/* Modal for Request a Rate card */}

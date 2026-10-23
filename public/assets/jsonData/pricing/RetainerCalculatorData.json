@@ -1,0 +1,42 @@
+{
+  "subtitle": "RETAINER FEE CALCULATOR",
+  "title": "Build Your Custom Monthly Retainer",
+  "description": "Select your required creative disciplines, monthly estimated hours, and commitment length to generate an estimated retainer proposal.",
+  "services": [
+    {
+      "id": "branding",
+      "name": "Brand Identity & Strategy",
+      "baseHours": 20,
+      "hourlyRate": 60,
+      "description": "Continuous brand guidelines maintenance, collateral, sub-brand styling"
+    },
+    {
+      "id": "ai_creative",
+      "name": "AI & Hybrid Creative Campaigns",
+      "baseHours": 25,
+      "hourlyRate": 70,
+      "description": "High-concept generative key visuals, AI prompt crafting, visual direction"
+    },
+    {
+      "id": "digital_marketing",
+      "name": "Social Media & Digital Marketing",
+      "baseHours": 30,
+      "hourlyRate": 50,
+      "description": "Monthly content calendars, performance ad variations, community creative"
+    },
+    {
+      "id": "web_uiux",
+      "name": "Web Design & UI/UX Support",
+      "baseHours": 25,
+      "hourlyRate": 65,
+      "description": "Landing page design, conversion rate optimization, digital interface upkeep"
+    },
+    {
+      "id": "motion_video",
+      "name": "Video Production & Motion Graphics",
+      "baseHours": 20,
+      "hourlyRate": 75,
+      "description": "Promotional reels, 2D/3D motion graphics, brand stingers & animation"
+    }
+  ]
+}

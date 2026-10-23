@@ -4,8 +4,14 @@ import btnArrow from '@/assets/images/btn-arrow.svg';
 import contactThumb from '@/assets/images/contact.png';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
+import defaultContactData from '@/assets/jsonData/contact/ContactData.json';
 
 const ContactV1 = () => {
+    const contactData = defaultContactData || {
+        subtitle: "GET IN TOUCH",
+        title: "Let's Create Something Iconic Together",
+        description: "Have a bold brand vision or upcoming campaign? Our team is ready to collaborate. Fill out the brief below or reach out directly."
+    };
 
     const handleForm = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -21,7 +27,7 @@ const ContactV1 = () => {
                         <div className="contact-content">
                             <h3 data-aos="fade-up" data-aos-delay={200}>Let’s <span>Connect</span></h3>
                             <p>
-                                <span className="required">*</span> Whether you have a question, or want to discuss a potential project, our team at <br /> Brandspace is here to help. Please fill out the form below!!!
+                                <span className="required">*</span> {contactData.description}
                             </p>
                             <form id="contact-form" className="contact-form" onSubmit={handleForm}>
                                 <div className="input-group">

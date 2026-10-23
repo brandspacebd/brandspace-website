@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Brand Strategist",
+    "department": "Strategy & Creative",
+    "location": "Dhaka, Bangladesh / Hybrid",
+    "type": "Full-Time",
+    "experience": "4+ Years",
+    "description": "Lead high-level brand positioning, market research, and communication frameworks for national and international clients."
+  },
+  {
+    "id": 2,
+    "title": "AI Prompt Engineer & Visual Designer",
+    "department": "Creative Tech",
+    "location": "Remote / Hybrid",
+    "type": "Full-Time",
+    "experience": "2+ Years",
+    "description": "Craft generative visuals, explore text-to-image/video workflows, and combine AI assets with commercial art direction."
+  },
+  {
+    "id": 3,
+    "title": "Lead Motion Graphics Artist",
+    "department": "Video & Animation",
+    "location": "Dhaka, Bangladesh",
+    "type": "Full-Time",
+    "experience": "3+ Years",
+    "description": "Direct and animate broadcast-quality motion reels, 2D/3D kinetic typography, and campaign stingers."
+  },
+  {
+    "id": 4,
+    "title": "Full-Stack Web Developer (Next.js)",
+    "department": "Engineering",
+    "location": "Dhaka, Bangladesh",
+    "type": "Full-Time",
+    "experience": "3+ Years",
+    "description": "Build high-performance web applications, interactive landing pages, and headless CMS integrations using Next.js & React."
+  }
+]

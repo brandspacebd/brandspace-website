@@ -43,22 +43,29 @@ In Pages CMS, setting `merge: true` ensures that when an editor saves changes to
 
 The table below documents every content section configured in `.pages.yml`, its file location, data structure, and the React components that consume it:
 
-| CMS Section Name | File Path | Data Structure | Consuming React Components | Key Fields |
+| CMS Collection Name | File Path | Data Structure | Consuming React Components / Routes | Key Fields |
 | :--- | :--- | :--- | :--- | :--- |
-| **Site Settings** | `public/assets/jsonData/settings/siteSettings.json` | Single Object (`list: false`) | `HeaderMenu.tsx`, `HeaderV2.tsx`, `HeaderV3.tsx`, `FooterV1.tsx`, `SocialShareV1.tsx` | `siteName`, `logo`, `footerLogo`, `email`, `phone`, `address`, `copyright`, `socialLinks` |
-| **Homepage** | `public/assets/jsonData/homepage/homeData.json` | Single Object (`list: false`) | `HeroV1.tsx`, `AboutV1.tsx`, `AboutV2.tsx`, `FeatureV1.tsx` | `hero` (titles, quotes, author, CTA), `about`, `aboutPage`, `projects` |
-| **Services** | `public/assets/jsonData/services/ServicesV1Data.json` | Array (`list: true`) | `SingleServicesV1.tsx`, `SingleServicesV2.tsx`, `ServiceDetailsContent.tsx`, `src/app/service-details/[id]/page.tsx` | `id`, `name`, `icon`, `thumb`, `thumbFull1`, `thumbFull2`, `text`, `price` |
-| **Featured Projects** | `public/assets/jsonData/feature/FeatureV1Data.json` | Array (`list: true`) | `FeatureV1.tsx`, `SingleFeatureV1.tsx`, `src/app/project-details/[id]/page.tsx` | `id`, `projectName`, `info`, `subTitle1`, `subTitle2`, `thumb`, `date` |
-| **All Projects (Portfolio)** | `public/assets/jsonData/feature/FeatureV2Data.json` | Array (`list: true`) | `SingleFeatureV2.tsx`, `src/app/projects/page.tsx`, `ProjectDetailsContent.tsx` | `id`, `name`, `info`, `textFirst`, `textLast`, `thumb`, `date` |
-| **Blog & Articles** | `public/assets/jsonData/feature/FeatureV3Data.json` | Array (`list: true`) | `SingleFeatureV3.tsx`, `BlogDetailsContent.tsx`, `src/app/blog-details/[id]/page.tsx` | `id`, `title`, `title2`, `author`, `date`, `comment`, `thumb`, `thumbFull` |
-| **Team Members** | `public/assets/jsonData/team/TeamV1Data.json` | Array (`list: true`) | `SingleTeamV1.tsx`, `TeamDetailsContent.tsx`, `src/app/team-details/[id]/page.tsx` | `id`, `name`, `designation`, `text`, `thumb` |
-| **Testimonials** | `public/assets/jsonData/testimonial/TestimonialData.json` | Array (`list: true`) | `SingleTestimonialV1.tsx` | `id`, `name`, `designation`, `text`, `thumb` |
-| **FAQ** | `public/assets/jsonData/faq/FaqData.json` | Single Object with Array (`items`) | `FaqV1.tsx` | `subtitle`, `title`, `description`, `items` (`id`, `number`, `question`, `answer`) |
-| **Company Values** | `public/assets/jsonData/services/ServicesV2Data.json` | Array (`list: true`) | `SingleServicesV2.tsx` | `id`, `title`, `text`, `thumb` |
-| **Work Process** | `public/assets/jsonData/process/ProcessV1Data.json` | Array (`list: true`) | `SingleProcessV1.tsx` | `id`, `number`, `name`, `designation`, `description`, `thumb` |
-| **Fun Facts & Stats** | `public/assets/jsonData/fact/FactData.json` | Array (`list: true`) | `SingleFactV1.tsx`, `SingleFactV2.tsx` | `id`, `title`, `end`, `thumb` |
-| **Awards** | `public/assets/jsonData/awards/AwardsV1Data.json` | Array (`list: true`) | `AwardsV1.tsx` | `id`, `title`, `date` |
-| **Client Logos** | `public/assets/jsonData/partner/PartnerData.json` | Array (`list: true`) | `PartnerV1.tsx` | `id`, `thumb` |
+| **Navbar: Site Settings & Global Branding** | `public/assets/jsonData/settings/siteSettings.json` | Single Object (`list: false`) | `HeaderMenu.tsx`, `HeaderV2.tsx`, `HeaderV3.tsx`, `FooterV1.tsx` | `siteName`, `logo`, `footerLogo`, `email`, `phone`, `address`, `copyright`, `socialLinks` |
+| **1. Home: Hero Banner, Quotes & Intro** | `public/assets/jsonData/homepage/homeData.json` | Single Object (`list: false`) | `HeroV1.tsx`, `AboutV1.tsx`, `AboutV2.tsx` | `hero` (titles, quotes, author, CTA), `about`, `aboutPage`, `projects` |
+| **2. Projects: Featured Projects** | `public/assets/jsonData/feature/FeatureV1Data.json` | Array (`list: true`) | `FeatureV1.tsx`, `src/app/project-details/[id]/page.tsx` | `id`, `projectName`, `info`, `subTitle1`, `subTitle2`, `thumb`, `date` |
+| **2. Projects: All Projects (Portfolio)** | `public/assets/jsonData/feature/FeatureV2Data.json` | Array (`list: true`) | `SingleFeatureV2.tsx`, `src/app/projects/page.tsx` | `id`, `name`, `info`, `textFirst`, `textLast`, `thumb`, `date`, `description` |
+| **3. About Us: 4 Stat Cards & Images** | `public/assets/jsonData/fact/FactData.json` | Array (`list: true`) | `SingleFactV1.tsx`, `SingleFactV2.tsx` | `id`, `title`, `end`, `thumb` |
+| **3. About Us: Core Company Values** | `public/assets/jsonData/services/ServicesV2Data.json` | Array (`list: true`) | `SingleServicesV2.tsx`, `src/app/about/page.tsx` | `id`, `title`, `text`, `thumb` |
+| **3. About Us: Work Process Steps** | `public/assets/jsonData/process/ProcessV1Data.json` | Array (`list: true`) | `SingleProcessV1.tsx` | `id`, `number`, `name`, `designation`, `description`, `thumb`, `alt` |
+| **4. Meet The Team: Core Team Members** | `public/assets/jsonData/team/TeamV1Data.json` | Array (`list: true`) | `SingleTeamV1.tsx`, `src/app/team-details/[id]/page.tsx` | `id`, `name`, `designation`, `text`, `thumb` |
+| **5. Our Ventures: Juniorspace, Khyap, Gardenspace** | `public/assets/jsonData/ventures/VenturesData.json` | Single Object (`list: false`) | `src/app/concerns/juniorspace`, `khyap`, `gardenspace` | `juniorspace`, `khyap`, `gardenspace` (name, tagline, badge, description, button) |
+| **6. Explore: Our Clients & Partner Logos** | `public/assets/jsonData/partner/PartnerData.json` | Array (`list: true`) | `PartnerV1.tsx`, `src/app/clients/page.tsx` | `id`, `thumb` |
+| **6. Explore: All Services & Categories** | `public/assets/jsonData/services/ServicesV1Data.json` | Array (`list: true`) | `src/app/services/page.tsx`, `service-details/[id]` | `id`, `name`, `icon`, `thumb`, `thumbFull1`, `thumbFull2`, `text`, `price` |
+| **7. Explore: Stories & Insights (Articles)** | `public/assets/jsonData/feature/FeatureV3Data.json` | Array (`list: true`) | `src/app/stories/page.tsx`, `blog-details/[id]` | `id`, `title`, `title2`, `author`, `date`, `comment`, `thumb`, `thumbFull`, `content` |
+| **7. Explore: Press Releases & Coverage** | `public/assets/jsonData/press/PressReleasesData.json` | Array (`list: true`) | `src/app/press-releases/page.tsx` | `id`, `title`, `date`, `category`, `summary`, `source`, `link` |
+| **7. Explore: Credentials & Awards** | `public/assets/jsonData/awards/AwardsV1Data.json` | Array (`list: true`) | `AwardsV1.tsx`, `src/app/credentials/page.tsx` | `id`, `title`, `date` |
+| **8. Explore: Agency Rate Card Packages** | `public/assets/jsonData/pricing/RateCardData.json` | Single Object (`list: false`) | `RateCardSection.tsx`, `src/app/rate-card/page.tsx` | `subtitle`, `title`, `description`, `packages` (id, number, title, features) |
+| **8. Explore: Retainer Fee Calculator Rates** | `public/assets/jsonData/pricing/RetainerCalculatorData.json` | Single Object (`list: false`) | `RetainerCalculatorSection.tsx`, `/retainer-calculator` | `subtitle`, `title`, `services` (id, name, baseHours, hourlyRate, description) |
+| **8. Explore: Careers (Current Openings)** | `public/assets/jsonData/careers/CareersData.json` | Array (`list: true`) | `src/app/careers/page.tsx` | `id`, `title`, `department`, `location`, `type`, `experience`, `description` |
+| **9. Connect: Contact Page Details** | `public/assets/jsonData/contact/ContactData.json` | Single Object (`list: false`) | `ContactV1.tsx`, `src/app/contact/page.tsx` | `subtitle`, `title`, `description`, `officeHours`, `responseTime` |
+| **Global: Client Testimonials & Reviews** | `public/assets/jsonData/testimonial/TestimonialData.json` | Array (`list: true`) | `SingleTestimonialV1.tsx`, `src/app/clients/page.tsx` | `id`, `name`, `designation`, `text`, `thumb` |
+| **Global: Frequently Asked Questions (FAQ)** | `public/assets/jsonData/faq/FaqData.json` | Single Object with Array (`items`) | `FaqV1.tsx`, `src/app/faq/page.tsx` | `subtitle`, `title`, `description`, `items` (`id`, `number`, `question`, `answer`) |
+
 
 ---
 

@@ -1,5 +1,8 @@
+# ============================================================
 # Pages CMS Configuration for Brandspace Website
+# Mirroring Live Website Structure & Navbar Architecture
 # Documentation: https://pagescms.org/docs/configuration/
+# ============================================================
 
 media:
   input: public/uploads
@@ -18,14 +21,15 @@ settings:
       delete: "Delete {path} (via Pages CMS)"
 
 content:
-  # ==========================================
-  # 1. Site Settings
-  # ==========================================
+  # ============================================================
+  # NAVBAR > SITE & GLOBAL BRANDING
+  # ============================================================
   - name: site-settings
-    label: Site Settings
+    label: "Navbar: Site Settings & Global Branding"
     type: file
     path: public/assets/jsonData/settings/siteSettings.json
     format: json
+    description: "Global brand identities displayed across the website header navbar and footer."
     fields:
       - name: siteName
         label: Website Name
@@ -58,15 +62,15 @@ content:
       - name: address
         label: Physical Address / Location
         type: text
-        description: Office address or location string shown in footer, sidebar and contact areas.
+        description: Office address shown in footer, sidebar and contact areas.
       - name: copyright
-        label: Copyright Text
+        label: Copyright Statement
         type: string
         description: Footer copyright statement text.
       - name: socialLinks
-        label: Social Media Links
+        label: Social Media Profiles
         type: object
-        description: URLs for social media profile icons in header, footer, and off-canvas menu.
+        description: URLs for social media profiles in header, footer, and off-canvas menu.
         fields:
           - name: instagram
             label: Instagram URL
@@ -81,19 +85,19 @@ content:
             label: Dribbble URL
             type: string
 
-  # ==========================================
-  # 2. Homepage Content
-  # ==========================================
+  # ============================================================
+  # 1. NAVBAR > HOME
+  # ============================================================
   - name: homepage
-    label: Homepage Content
+    label: "1. Home: Hero Banner, Quotes & Intro"
     type: file
     path: public/assets/jsonData/homepage/homeData.json
     format: json
+    description: "Top hero banner, dynamic animated quotes, and introduction text on the homepage."
     fields:
       - name: hero
         label: Hero Section
         type: object
-        description: Top banner content on the homepage.
         fields:
           - name: title1
             label: Hero Heading Line 1
@@ -106,19 +110,19 @@ content:
           - name: quote1
             label: Agency Quote Paragraph 1
             type: text
-            description: First half of the inspirational agency statement.
+            description: First paragraph of the inspirational agency statement.
           - name: quote2
             label: Agency Quote Paragraph 2
             type: text
-            description: Second half of the inspirational agency statement.
+            description: Second paragraph of the inspirational agency statement.
           - name: authorName
             label: Quote Author Name
             type: string
-            description: Name of the executive / founder quoted in the hero section.
+            description: Name of the executive / director quoted in the hero section.
           - name: authorRole
             label: Quote Author Role
             type: string
-            description: Title or role of the author (e.g. Chief Executive Officer).
+            description: Title or role of the author (e.g. Strategic Creative Advisor).
           - name: buttonText
             label: CTA Button Text
             type: string
@@ -134,7 +138,6 @@ content:
       - name: about
         label: Homepage About Section
         type: object
-        description: Introductory about block on the homepage.
         fields:
           - name: subtitle
             label: Section Subtitle
@@ -142,11 +145,10 @@ content:
           - name: description
             label: About Description
             type: text
-            description: Full animated introduction text on the homepage.
       - name: aboutPage
         label: About Us Page Text
         type: object
-        description: Main text content for the dedicated /about page. (The 4 image cards below this text are managed in "About Us - 4 Stat Cards & Images").
+        description: Main text content for the dedicated /about page.
         fields:
           - name: subtitle
             label: Subtitle
@@ -154,15 +156,12 @@ content:
           - name: description1
             label: First Paragraph
             type: text
-            description: First animated paragraph on the /about page.
           - name: description2
             label: Second Paragraph
             type: text
-            description: Second animated paragraph on the /about page.
       - name: projects
         label: Homepage Projects Section Header
         type: object
-        description: Header and call-to-action above featured projects on the homepage.
         fields:
           - name: subtitle
             label: Section Subtitle
@@ -180,15 +179,308 @@ content:
             label: Button URL
             type: string
 
-  # ==========================================
-  # 3. Services
-  # ==========================================
+  # ============================================================
+  # 2. NAVBAR > PROJECTS (7)
+  # ============================================================
+  - name: featured-projects
+    label: "2. Projects: Featured Projects (Homepage Carousel)"
+    type: file
+    path: public/assets/jsonData/feature/FeatureV1Data.json
+    format: json
+    list: true
+    description: "Curated featured client campaigns displayed on the homepage showcase."
+    fields:
+      - name: id
+        label: Project ID
+        type: number
+        required: true
+        description: Unique numerical ID matching detail route /project-details/[id].
+      - name: projectName
+        label: Project Name
+        type: string
+        required: true
+      - name: info
+        label: Category / Tag
+        type: string
+        description: Category tag (e.g. Brand Identity, Marketing, Web Design).
+      - name: subTitle1
+        label: Subtitle Line 1
+        type: string
+      - name: subTitle2
+        label: Subtitle Line 2
+        type: string
+      - name: thumb
+        label: Project Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: date
+        label: Date / Year
+        type: string
+
+  - name: all-projects
+    label: "2. Projects: All Projects (Portfolio Grid & Case Studies)"
+    type: file
+    path: public/assets/jsonData/feature/FeatureV2Data.json
+    format: json
+    list: true
+    description: "Full portfolio project directory displayed at /projects and /project-details/[id]."
+    fields:
+      - name: id
+        label: Project ID
+        type: number
+        required: true
+        description: Unique numerical ID matching detail route /project-details/[id].
+      - name: name
+        label: Project Name
+        type: string
+        required: true
+      - name: info
+        label: Category / Tag
+        type: string
+        description: Category tag (e.g. Brand Identity, Marketing, Web Design).
+      - name: textFirst
+        label: First Description Line
+        type: string
+      - name: textLast
+        label: Second Description Line
+        type: string
+      - name: description
+        label: Full Project Description
+        type: text
+        description: Extended description displayed on the /project-details/[id] page.
+      - name: thumb
+        label: Project Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: date
+        label: Date / Year
+        type: string
+
+  # ============================================================
+  # 3. NAVBAR > ABOUT US
+  # ============================================================
+  - name: fun-facts
+    label: "3. About Us: 4 Stat Cards & Images (Years, Projects, Awards, Clients)"
+    type: file
+    path: public/assets/jsonData/fact/FactData.json
+    format: json
+    list: true
+    description: "The 4 key highlight cards on the About Us page & Homepage (Years Experience, Completed Projects, Award Winning, Satisfied Clients). Upload or change the 4 background images here."
+    fields:
+      - name: id
+        label: Card ID
+        type: number
+      - name: title
+        label: Metric Title
+        type: string
+        description: e.g. Years Experience, Completed Projects, Award Winning, Satisfied Clients
+      - name: end
+        label: Metric Number
+        type: string
+        description: Animated counter number (e.g. 12, 25, 110, 4)
+      - name: thumb
+        label: Card Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+        description: Upload or pick the card's background image (JPG, PNG, WebP, SVG).
+
+  - name: company-values
+    label: "3. About Us: Core Company Values"
+    type: file
+    path: public/assets/jsonData/services/ServicesV2Data.json
+    format: json
+    list: true
+    description: "Core agency philosophies and foundational values displayed on /about."
+    fields:
+      - name: id
+        label: Value ID
+        type: number
+      - name: title
+        label: Core Value Title
+        type: string
+      - name: text
+        label: Explanation
+        type: text
+      - name: thumb
+        label: Illustration / Icon
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+
+  - name: work-process
+    label: "3. About Us: Work Process Steps (How We Work)"
+    type: file
+    path: public/assets/jsonData/process/ProcessV1Data.json
+    format: json
+    list: true
+    description: "Step-by-step methodology explaining how Brandspace delivers creative projects."
+    fields:
+      - name: id
+        label: Step ID
+        type: number
+      - name: number
+        label: Step Number
+        type: string
+        description: e.g. I., II., III.
+      - name: name
+        label: Step Name
+        type: string
+      - name: designation
+        label: Step Tagline
+        type: string
+      - name: description
+        label: Step Description
+        type: text
+      - name: thumb
+        label: Step Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: alt
+        label: Image Alt Text
+        type: string
+
+  # ============================================================
+  # 4. NAVBAR > MEET THE TEAM
+  # ============================================================
+  - name: team
+    label: "4. Meet The Team: Core Team Members & Bios"
+    type: file
+    path: public/assets/jsonData/team/TeamV1Data.json
+    format: json
+    list: true
+    description: "Agency leadership, art directors, and creative strategists displayed at /team and /team-details/[id]."
+    fields:
+      - name: id
+        label: Member ID
+        type: number
+        required: true
+        description: Unique numerical ID matching detail route /team-details/[id].
+      - name: name
+        label: Full Name
+        type: string
+        required: true
+      - name: designation
+        label: Job Title / Role
+        type: string
+        description: Role (e.g. Creative Director, Lead Designer).
+      - name: text
+        label: Bio / Description
+        type: text
+        description: Short biography of the team member.
+      - name: thumb
+        label: Profile Photo
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+
+  # ============================================================
+  # 5. NAVBAR > OUR VENTURES
+  # ============================================================
+  - name: ventures
+    label: "5. Our Ventures: Juniorspace, Khyap & Gardenspace"
+    type: file
+    path: public/assets/jsonData/ventures/VenturesData.json
+    format: json
+    description: "Manage content, descriptions, and taglines for Brandspace's three ventures (Juniorspace, Khyap, Gardenspace)."
+    fields:
+      - name: juniorspace
+        label: Juniorspace (Education & Young Minds)
+        type: object
+        fields:
+          - name: name
+            label: Venture Name
+            type: string
+          - name: tagline
+            label: Tagline
+            type: string
+          - name: badge
+            label: Badge Label
+            type: string
+          - name: description
+            label: Overview Description
+            type: text
+          - name: buttonText
+            label: Button Label
+            type: string
+          - name: buttonUrl
+            label: Destination Link
+            type: string
+      - name: khyap
+        label: Khyap (Avant-Garde & Cultural)
+        type: object
+        fields:
+          - name: name
+            label: Venture Name
+            type: string
+          - name: tagline
+            label: Tagline
+            type: string
+          - name: badge
+            label: Badge Label
+            type: string
+          - name: description
+            label: Overview Description
+            type: text
+          - name: buttonText
+            label: Button Label
+            type: string
+          - name: buttonUrl
+            label: Destination Link
+            type: string
+      - name: gardenspace
+        label: Gardenspace (Spatial & Environmental)
+        type: object
+        fields:
+          - name: name
+            label: Venture Name
+            type: string
+          - name: tagline
+            label: Tagline
+            type: string
+          - name: badge
+            label: Badge Label
+            type: string
+          - name: description
+            label: Overview Description
+            type: text
+          - name: buttonText
+            label: Button Label
+            type: string
+          - name: buttonUrl
+            label: Destination Link
+            type: string
+
+  # ============================================================
+  # 6. NAVBAR > EXPLORE > CLIENTS & SERVICES
+  # ============================================================
+  - name: partners
+    label: "6. Explore: Our Clients & Partner Logos"
+    type: file
+    path: public/assets/jsonData/partner/PartnerData.json
+    format: json
+    list: true
+    description: "Client brand logos displayed in partner carousels on the homepage, /clients, and /credentials."
+    fields:
+      - name: id
+        label: Partner ID
+        type: number
+      - name: thumb
+        label: Partner Logo Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+
   - name: services
-    label: Services
+    label: "6. Explore: All Services (Categories & Detail Pages)"
     type: file
     path: public/assets/jsonData/services/ServicesV1Data.json
     format: json
     list: true
+    description: "Core agency capabilities displayed in the services directory at /services and /service-details/[id]."
     fields:
       - name: id
         label: Service ID
@@ -237,95 +529,16 @@ content:
         type: string
         description: Price figure (e.g. 3000).
 
-  # ==========================================
-  # 4. Featured Projects (Homepage)
-  # ==========================================
-  - name: featured-projects
-    label: Featured Projects (Homepage)
-    type: file
-    path: public/assets/jsonData/feature/FeatureV1Data.json
-    format: json
-    list: true
-    fields:
-      - name: id
-        label: Project ID
-        type: number
-        required: true
-        description: Unique numerical ID matching detail route /project-details/[id].
-      - name: projectName
-        label: Project Name
-        type: string
-        required: true
-      - name: info
-        label: Category / Tag
-        type: string
-        description: Category tag (e.g. Brand Identity, Marketing, Web Design).
-      - name: subTitle1
-        label: Subtitle Line 1
-        type: string
-      - name: subTitle2
-        label: Subtitle Line 2
-        type: string
-      - name: thumb
-        label: Project Image
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif]
-      - name: date
-        label: Date / Year
-        type: string
-
-  # ==========================================
-  # 5. All Projects (Portfolio Grid & Details)
-  # ==========================================
-  - name: all-projects
-    label: All Projects (Portfolio Grid)
-    type: file
-    path: public/assets/jsonData/feature/FeatureV2Data.json
-    format: json
-    list: true
-    fields:
-      - name: id
-        label: Project ID
-        type: number
-        required: true
-        description: Unique numerical ID matching detail route /project-details/[id].
-      - name: name
-        label: Project Name
-        type: string
-        required: true
-      - name: info
-        label: Category / Tag
-        type: string
-        description: Category tag (e.g. Brand Identity, Marketing, Web Design).
-      - name: textFirst
-        label: First Description Line
-        type: string
-      - name: textLast
-        label: Second Description Line
-        type: string
-      - name: description
-        label: Full Project Description
-        type: text
-        description: Extended description displayed on the /project-details/[id] page.
-      - name: thumb
-        label: Project Image
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif]
-      - name: date
-        label: Date / Year
-        type: string
-
-  # ==========================================
-  # 6. Blog & Articles
-  # ==========================================
+  # ============================================================
+  # 7. NAVBAR > EXPLORE > SHOWCASE & MEDIA
+  # ============================================================
   - name: blog
-    label: Blog & Articles
+    label: "7. Explore: Stories & Insights (Articles & Case Studies)"
     type: file
     path: public/assets/jsonData/feature/FeatureV3Data.json
     format: json
     list: true
+    description: "In-depth editorial articles, campaign retrospectives, and stories displayed at /stories, /blog, and /blog-details/[id]."
     fields:
       - name: id
         label: Article ID
@@ -348,7 +561,7 @@ content:
       - name: date
         label: Publication Date
         type: string
-        description: Formatted publish date (e.g. 9 Jan 2024).
+        description: Formatted publish date (e.g. 9 Jan 2025).
       - name: comment
         label: Category / Topic Tag
         type: string
@@ -373,48 +586,208 @@ content:
           switcher: true
         description: Full article body editor with rich formatting, bold, italics, bullet lists, headings, and links.
 
-  # ==========================================
-  # 7. Team Members
-  # ==========================================
-  - name: team
-    label: Team Members
+  - name: press-releases
+    label: "7. Explore: Press Releases & Media Coverage"
     type: file
-    path: public/assets/jsonData/team/TeamV1Data.json
+    path: public/assets/jsonData/press/PressReleasesData.json
     format: json
     list: true
+    description: "Official press releases, media coverage announcements, and company news shown at /press-releases."
     fields:
       - name: id
-        label: Member ID
+        label: Release ID
         type: number
         required: true
-        description: Unique numerical ID matching detail route /team-details/[id].
-      - name: name
-        label: Full Name
+      - name: title
+        label: Press Release Title
         type: string
         required: true
-      - name: designation
-        label: Job Title / Role
+      - name: date
+        label: Release Date
         type: string
-        description: Role (e.g. Creative Director, Lead Designer).
-      - name: text
-        label: Bio / Description
+      - name: category
+        label: Category / Department
+        type: string
+      - name: summary
+        label: Executive Summary
         type: text
-        description: Short biography of the team member.
-      - name: thumb
-        label: Profile Photo
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: source
+        label: Media Source / Publisher
+        type: string
+      - name: link
+        label: Full Story Link / URL
+        type: string
 
-  # ==========================================
-  # 8. Testimonials
-  # ==========================================
+  - name: awards
+    label: "7. Explore: Credentials & Industry Awards"
+    type: file
+    path: public/assets/jsonData/awards/AwardsV1Data.json
+    format: json
+    list: true
+    description: "Industry awards, creative honors, and accreditations displayed at /credentials."
+    fields:
+      - name: id
+        label: Award ID
+        type: number
+      - name: title
+        label: Award Title
+        type: string
+      - name: date
+        label: Year / Period
+        type: string
+
+  # ============================================================
+  # 8. NAVBAR > EXPLORE > LET'S CONNECT
+  # ============================================================
+  - name: rate-card
+    label: "8. Explore: Agency Rate Card Packages"
+    type: file
+    path: public/assets/jsonData/pricing/RateCardData.json
+    format: json
+    description: "Manage package tiers, service scope highlights, and modal header copy on the /rate-card page."
+    fields:
+      - name: subtitle
+        label: Section Subtitle
+        type: string
+      - name: title
+        label: Section Title
+        type: string
+      - name: description
+        label: Section Description
+        type: text
+      - name: buttonText
+        label: Request Button Text
+        type: string
+      - name: packages
+        label: Rate Card Packages
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: Package ID
+            type: number
+          - name: number
+            label: Package Number / Tag
+            type: string
+          - name: title
+            label: Package Name
+            type: string
+          - name: description
+            label: Package Overview
+            type: text
+          - name: features
+            label: Included Deliverables
+            type: string
+            list: true
+
+  - name: retainer-calculator
+    label: "8. Explore: Retainer Fee Calculator Rates"
+    type: file
+    path: public/assets/jsonData/pricing/RetainerCalculatorData.json
+    format: json
+    description: "Hourly billing rates and default allocated monthly hours for disciplines on the /retainer-calculator page."
+    fields:
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: services
+        label: Retainer Service Disciplines
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: Service Identifier
+            type: string
+          - name: name
+            label: Discipline Name
+            type: string
+          - name: baseHours
+            label: Base Monthly Hours
+            type: number
+          - name: hourlyRate
+            label: Hourly Rate (USD)
+            type: number
+          - name: description
+            label: Service Scope
+            type: string
+
+  - name: careers
+    label: "8. Explore: Careers (Current Job Openings)"
+    type: file
+    path: public/assets/jsonData/careers/CareersData.json
+    format: json
+    list: true
+    description: "Job vacancies and creative career opportunities displayed on the /careers page."
+    fields:
+      - name: id
+        label: Job ID
+        type: number
+        required: true
+      - name: title
+        label: Role Title
+        type: string
+        required: true
+      - name: department
+        label: Department / Team
+        type: string
+      - name: location
+        label: Job Location & Work Mode
+        type: string
+        description: e.g. Dhaka, Bangladesh / Hybrid, or Remote
+      - name: type
+        label: Employment Type
+        type: string
+        description: e.g. Full-Time, Contract, Internship
+      - name: experience
+        label: Required Experience
+        type: string
+        description: e.g. 3+ Years
+      - name: description
+        label: Job Description / Responsibilities
+        type: text
+
+  # ============================================================
+  # 9. NAVBAR > CONNECT
+  # ============================================================
+  - name: contact-info
+    label: "9. Connect: Contact Page Details & Office Info"
+    type: file
+    path: public/assets/jsonData/contact/ContactData.json
+    format: json
+    description: "Office operating hours, response time guarantee, and contact page intro text at /contact."
+    fields:
+      - name: subtitle
+        label: Section Subtitle
+        type: string
+      - name: title
+        label: Section Title
+        type: string
+      - name: description
+        label: Introduction Statement
+        type: text
+      - name: officeHours
+        label: Office Operating Hours
+        type: string
+      - name: responseTime
+        label: Response Time Guarantee
+        type: string
+
+  # ============================================================
+  # GLOBAL MODULES & SOCIAL PROOF
+  # ============================================================
   - name: testimonials
-    label: Testimonials
+    label: "Global: Client Testimonials & Reviews"
     type: file
     path: public/assets/jsonData/testimonial/TestimonialData.json
     format: json
     list: true
+    description: "Verified client feedback, endorsements, and ratings displayed on homepage and /clients."
     fields:
       - name: id
         label: Testimonial ID
@@ -439,14 +812,12 @@ content:
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
 
-  # ==========================================
-  # 9. Frequently Asked Questions (FAQ)
-  # ==========================================
   - name: faq
-    label: Frequently Asked Questions
+    label: "Global: Frequently Asked Questions (FAQ)"
     type: file
     path: public/assets/jsonData/faq/FaqData.json
     format: json
+    description: "Interactive accordion FAQs displayed at /faq and /contact."
     fields:
       - name: subtitle
         label: Section Subtitle
@@ -476,131 +847,3 @@ content:
             label: Answer
             type: text
             description: Full answer text.
-
-  # ==========================================
-  # 10. Company Values
-  # ==========================================
-  - name: company-values
-    label: Company Values
-    type: file
-    path: public/assets/jsonData/services/ServicesV2Data.json
-    format: json
-    list: true
-    fields:
-      - name: id
-        label: Value ID
-        type: number
-      - name: title
-        label: Core Value Title
-        type: string
-      - name: text
-        label: Explanation
-        type: text
-      - name: thumb
-        label: Illustration / Icon
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif]
-
-  # ==========================================
-  # 11. Work Process Steps
-  # ==========================================
-  - name: work-process
-    label: Work Process Steps
-    type: file
-    path: public/assets/jsonData/process/ProcessV1Data.json
-    format: json
-    list: true
-    fields:
-      - name: id
-        label: Step ID
-        type: number
-      - name: number
-        label: Step Number
-        type: string
-        description: e.g. I., II., III.
-      - name: name
-        label: Step Name
-        type: string
-      - name: designation
-        label: Step Tagline
-        type: string
-      - name: description
-        label: Step Description
-        type: text
-      - name: thumb
-        label: Step Image
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif]
-      - name: alt
-        label: Image Alt Text
-        type: string
-
-  # ==========================================
-  # 12. About Us - 4 Stat Cards & Images
-  # ==========================================
-  - name: fun-facts
-    label: About Us - 4 Stat Cards & Images
-    type: file
-    path: public/assets/jsonData/fact/FactData.json
-    format: json
-    list: true
-    description: The 4 highlighted cards on the About Us page & Homepage (Years Experience, Completed Projects, Award Winning, Satisfied Clients). Upload or change the 4 background images here.
-    fields:
-      - name: id
-        label: Card ID
-        type: number
-      - name: title
-        label: Metric Title
-        type: string
-        description: e.g. Years Experience, Completed Projects, Award Winning, Satisfied Clients
-      - name: end
-        label: Metric Number
-        type: string
-        description: Animated counter number (e.g. 12, 25, 110, 4)
-      - name: thumb
-        label: Card Image
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif]
-        description: Upload or pick the card's background image (JPG, PNG, WebP, SVG).
-
-  # ==========================================
-  # 13. Awards & Recognition
-  # ==========================================
-  - name: awards
-    label: Awards & Recognition
-    type: file
-    path: public/assets/jsonData/awards/AwardsV1Data.json
-    format: json
-    list: true
-    fields:
-      - name: id
-        label: Award ID
-        type: number
-      - name: title
-        label: Award Title
-        type: string
-      - name: date
-        label: Year / Period
-        type: string
-
-  # ==========================================
-  # 14. Client Logos & Partners
-  # ==========================================
-  - name: partners
-    label: Client Logos & Partners
-    type: file
-    path: public/assets/jsonData/partner/PartnerData.json
-    format: json
-    list: true
-    fields:
-      - name: id
-        label: Partner ID
-        type: number
-      - name: thumb
-        label: Partner Logo Image
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif]

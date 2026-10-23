@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Union from "@/assets/images/Union.svg";
 import btnArrow from "@/assets/images/btn-arrow.svg";
+import defaultRetainerData from "@/assets/jsonData/pricing/RetainerCalculatorData.json";
 
 interface ServiceOption {
     id: string;
@@ -13,7 +14,9 @@ interface ServiceOption {
     description: string;
 }
 
-const SERVICES: ServiceOption[] = [
+const SERVICES: ServiceOption[] = (defaultRetainerData && defaultRetainerData.services && defaultRetainerData.services.length > 0)
+    ? defaultRetainerData.services
+    : [
     {
         id: "branding",
         name: "Brand Identity & Strategy",

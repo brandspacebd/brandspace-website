@@ -4,6 +4,7 @@ import AboutV2 from "@/components/about/AboutV2";
 import TeamV1 from "@/components/team/TeamV1";
 import ServicesV2 from "@/components/services/ServicesV2";
 import ContactV1 from "@/components/contact/ContactV1";
+import careersData from "@/assets/jsonData/careers/CareersData.json";
 
 export const metadata = {
     title: "Careers at Brandspace - Join Our Creative Crew",
@@ -11,6 +12,13 @@ export const metadata = {
 };
 
 const CareersPage = () => {
+    const jobList = careersData && careersData.length > 0 ? careersData : [
+        { title: "Senior Brand Strategist", department: "Strategy & Creative", location: "Dhaka, Bangladesh / Hybrid", type: "Full-Time" },
+        { title: "AI Prompt Engineer & Visual Designer", department: "Creative Tech", location: "Remote / Hybrid", type: "Full-Time" },
+        { title: "Lead Motion Graphics Artist", department: "Video & Animation", location: "Dhaka, Bangladesh", type: "Full-Time" },
+        { title: "Full-Stack Web Developer (Next.js)", department: "Engineering", location: "Dhaka, Bangladesh", type: "Full-Time" }
+    ];
+
     return (
         <div className="aixor-main careers-page">
             <LayoutV3>
@@ -29,12 +37,7 @@ const CareersPage = () => {
                         </div>
 
                         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }}>
-                            {[
-                                { title: "Senior Brand Strategist", department: "Strategy & Creative", location: "Dhaka, Bangladesh / Hybrid", type: "Full-Time" },
-                                { title: "AI Prompt Engineer & Visual Designer", department: "Creative Tech", location: "Remote / Hybrid", type: "Full-Time" },
-                                { title: "Lead Motion Graphics Artist", department: "Video & Animation", location: "Dhaka, Bangladesh", type: "Full-Time" },
-                                { title: "Full-Stack Web Developer (Next.js)", department: "Engineering", location: "Dhaka, Bangladesh", type: "Full-Time" }
-                            ].map((job, idx) => (
+                            {jobList.map((job, idx) => (
                                 <div
                                     key={idx}
                                     style={{
