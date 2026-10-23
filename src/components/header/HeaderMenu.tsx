@@ -58,11 +58,17 @@ const HeaderMenu = () => {
                                 <div className="dropdown-list explore-dropdown">
                                     {/* Column 1: Clients & Services */}
                                     <div className="explore-col">
-                                        <span className="explore-col-title">Clients & Services</span>
+                                        <span className="explore-col-title">
+                                            <span>Clients & Services</span>
+                                            <i className="las la-angle-down explore-title-arrow" />
+                                        </span>
                                         <ul className="explore-links">
                                             <li><Link href="/clients">Our Clients</Link></li>
-                                            <li>
-                                                <Link href="/services" style={{ fontWeight: 600 }}>All Services →</Link>
+                                            <li className="explore-service-item">
+                                                <Link href="/services" style={{ fontWeight: 600 }}>
+                                                    <span>All Services</span>
+                                                    <i className="las la-angle-right sub-service-arrow" />
+                                                </Link>
                                                 <div className="sub-service-links">
                                                     <Link href="/services#creative-work">Creative Work</Link>
                                                     <Link href="/services#ai-generated">AI Generated Campaign</Link>
@@ -76,7 +82,10 @@ const HeaderMenu = () => {
 
                                     {/* Column 2: Showcases & News */}
                                     <div className="explore-col">
-                                        <span className="explore-col-title">Showcase & Media</span>
+                                        <span className="explore-col-title">
+                                            <span>Showcase & Media</span>
+                                            <i className="las la-angle-down explore-title-arrow" />
+                                        </span>
                                         <ul className="explore-links">
                                             <li><Link href="/service-details/1">Service Details / Single</Link></li>
                                             <li><Link href="/project-details/1">Project Details / Single</Link></li>
@@ -89,7 +98,10 @@ const HeaderMenu = () => {
 
                                     {/* Column 3: Commercial & Careers */}
                                     <div className="explore-col">
-                                        <span className="explore-col-title">LET’S CONNECT</span>
+                                        <span className="explore-col-title">
+                                            <span>LET’S CONNECT</span>
+                                            <i className="las la-angle-down explore-title-arrow" />
+                                        </span>
                                         <ul className="explore-links">
                                             <li>
                                                 <Link href="/rate-card">
