@@ -639,6 +639,8 @@ a {
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-links li a {
     font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
     color: #ddd;
     display: flex;
     align-items: center;
@@ -650,7 +652,20 @@ a {
     width: 100%;
 }
 
-.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-links li a span:last-child {
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-links li a span:first-child,
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-links li a span.explore-item-text {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 20px !important;
+    color: inherit !important;
+    font-family: inherit !important;
+    transition: color 0.2s ease;
+}
+
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-links li a span.explore-badge,
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-links li a span:last-child:not(:first-child) {
+    font-size: 10px !important;
+    line-height: 14px !important;
     white-space: nowrap;
     flex-shrink: 0;
 }

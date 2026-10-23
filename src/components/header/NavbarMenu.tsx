@@ -49,45 +49,14 @@ const NavbarMenu = () => {
         });
     };
 
-    // When mouse enters one of the main options or All Services
+    // When mouse enters one of the main options or All Services -> auto expand and remain opened
     const handleOptionMouseEnter = (key: string) => {
         setExpanded((prev) => {
-            if (key === "clients") {
-                // Clients & Services opens; Showcase & Media and Let's Connect stay closed
-                return {
-                    ...prev,
-                    clients: true,
-                    showcase: false,
-                    connect: false,
-                };
-            }
-            if (key === "showcase") {
-                // Showcase & Media opens, Let's Connect closes (not open together)
-                return {
-                    ...prev,
-                    clients: true,
-                    showcase: true,
-                    connect: false,
-                };
-            }
-            if (key === "connect") {
-                // Let's Connect opens, Showcase & Media closes (not open together)
-                return {
-                    ...prev,
-                    clients: true,
-                    showcase: false,
-                    connect: true,
-                };
-            }
-            if (key === "services") {
-                // All Services expands after hover
-                if (prev.services) return prev;
-                return {
-                    ...prev,
-                    services: true,
-                };
-            }
-            return prev;
+            if (prev[key]) return prev;
+            return {
+                ...prev,
+                [key]: true,
+            };
         });
     };
 
@@ -95,36 +64,10 @@ const NavbarMenu = () => {
     const handleOptionHeaderClick = (key: string, e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
-        setExpanded((prev) => {
-            if (key === "showcase") {
-                const nextShowcase = !prev.showcase;
-                return {
-                    ...prev,
-                    showcase: nextShowcase,
-                    connect: nextShowcase ? false : prev.connect,
-                };
-            }
-            if (key === "connect") {
-                const nextConnect = !prev.connect;
-                return {
-                    ...prev,
-                    connect: nextConnect,
-                    showcase: nextConnect ? false : prev.showcase,
-                };
-            }
-            if (key === "clients") {
-                const nextClients = !prev.clients;
-                return {
-                    ...prev,
-                    clients: nextClients,
-                    services: nextClients ? prev.services : false,
-                };
-            }
-            return {
-                ...prev,
-                [key]: !prev[key],
-            };
-        });
+        setExpanded((prev) => ({
+            ...prev,
+            [key]: !prev[key],
+        }));
     };
 
     const handleLinkClick = () => {
@@ -288,26 +231,26 @@ const NavbarMenu = () => {
                             <ul className="explore-links">
                                 <li>
                                     <Link href="/rate-card" onClick={handleLinkClick}>
-                                        <span>Rate Card</span>
-                                        <span style={{ fontSize: "10px", background: "rgba(201, 243, 29, 0.2)", color: "var(--primary, #c9f31d)", padding: "2px 6px", borderRadius: "8px", whiteSpace: "nowrap" }}>Request</span>
+                                        <span className="explore-item-text">Rate Card</span>
+                                        <span className="explore-badge" style={{ fontSize: "10px", background: "rgba(201, 243, 29, 0.2)", color: "var(--primary, #c9f31d)", padding: "2px 6px", borderRadius: "8px", whiteSpace: "nowrap" }}>Request</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="/retainer-service" onClick={handleLinkClick}>
-                                        <span>Monthly Retainer Service</span>
-                                        <span style={{ fontSize: "10px", background: "rgba(255, 255, 255, 0.08)", color: "#aaa", padding: "2px 6px", borderRadius: "8px", whiteSpace: "nowrap" }}>Sample 1</span>
+                                        <span className="explore-item-text">Monthly Retainer Service</span>
+                                        <span className="explore-badge" style={{ fontSize: "10px", background: "rgba(255, 255, 255, 0.08)", color: "#aaa", padding: "2px 6px", borderRadius: "8px", whiteSpace: "nowrap" }}>Sample 1</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="/retainer-calculator" onClick={handleLinkClick}>
-                                        <span>Retainer Fee Calculator</span>
-                                        <span style={{ fontSize: "10px", background: "rgba(255, 255, 255, 0.08)", color: "#aaa", padding: "2px 6px", borderRadius: "8px", whiteSpace: "nowrap" }}>Sample 2</span>
+                                        <span className="explore-item-text">Retainer Fee Calculator</span>
+                                        <span className="explore-badge" style={{ fontSize: "10px", background: "rgba(255, 255, 255, 0.08)", color: "#aaa", padding: "2px 6px", borderRadius: "8px", whiteSpace: "nowrap" }}>Sample 2</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="/careers" onClick={handleLinkClick}>
-                                        <span>Careers</span>
-                                        <span style={{ fontSize: "10px", background: "rgba(255, 255, 255, 0.1)", color: "#fff", padding: "2px 6px", borderRadius: "8px", whiteSpace: "nowrap" }}>Hiring</span>
+                                        <span className="explore-item-text">Careers</span>
+                                        <span className="explore-badge" style={{ fontSize: "10px", background: "rgba(255, 255, 255, 0.1)", color: "#fff", padding: "2px 6px", borderRadius: "8px", whiteSpace: "nowrap" }}>Hiring</span>
                                     </Link>
                                 </li>
                             </ul>
