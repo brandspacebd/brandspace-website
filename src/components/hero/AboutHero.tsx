@@ -13,7 +13,7 @@ const HeroV2 = ({ title }: DataType) => {
             <div className="hero-sec about-hero-sec" id="hero">
                 <div className="custom-container">
                     <div className="hero-inner">
-                        <Image className="hero-shape" src={contact} alt="Shape" />
+                        <Image className="hero-shape" src={contact} alt="Shape" priority />
                         <div className="hero-top">
                             <div className="hero-top-desc">
                                 <p>{`"At Brandspace, we hold that creativity sparks innovation. As a full-spectrum creative firm, we excel in converting ambitious ideas into engaging results."`}</p>

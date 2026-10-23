@@ -20,6 +20,14 @@
         padding-left: 0;
     }
 
+    .hero-sec .hero-inner .hero-shape {
+        right: 30px;
+        bottom: 20px;
+        width: clamp(320px, 28vw, 420px);
+        height: auto;
+        max-height: 420px;
+    }
+
     .hero-sec .hero-bottom {
         flex-direction: column;
         align-items: flex-start;
@@ -250,8 +258,13 @@
         height: 308px;
     }
 
+    .hero-sec .hero-inner .hero-shape,
     .error-hero-sec .hero-inner .hero-shape {
-        right: -51px;
+        right: 25px;
+        bottom: 20px;
+        width: clamp(260px, 30vw, 340px);
+        height: auto;
+        max-height: 340px;
     }
 }
 
@@ -374,8 +387,11 @@
     }
 
     .hero-sec .hero-inner .hero-shape {
-        width: 308px;
-        height: 288px;
+        right: 15px;
+        bottom: 15px;
+        width: clamp(170px, 30vw, 220px);
+        height: auto;
+        max-height: 220px;
     }
 
     .about-hero-sec .hero-inner {
@@ -685,6 +701,13 @@
         gap: 25px;
     }
 
+    .hero-sec .hero-inner .hero-shape {
+        right: 10px;
+        bottom: 10px;
+        width: clamp(130px, 34vw, 175px);
+        max-height: 175px;
+    }
+
 }
 
 @media (max-width: 699px) {
@@ -705,6 +728,13 @@
 @media (max-width: 424px) {
     .hero-sec .hero-inner {
         height: auto;
+    }
+
+    .hero-sec .hero-inner .hero-shape {
+        right: 6px;
+        bottom: 8px;
+        width: clamp(100px, 32vw, 135px);
+        max-height: 135px;
     }
 
     .service-box .service-inner .service-img-box img {
