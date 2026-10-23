@@ -437,12 +437,11 @@ a {
     gap: 16px;
     width: 235px;
     padding: 24px 22px;
-    transition: opacity .22s ease .12s, visibility .22s ease .12s, transform .22s ease .12s;
+    transition: opacity .25s ease .35s, visibility .25s ease .35s, transform .25s ease .35s;
     display: flex;
     position: absolute;
     top: 100%;
     left: 0;
-    overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
@@ -463,7 +462,7 @@ a {
     padding: 4px 0;
     display: flex;
     align-items: center;
-    justifyContent: space-between;
+    justify-content: space-between;
     transition: 0.2s;
     text-transform: none;
 }
@@ -476,6 +475,23 @@ a {
 /* Explore Vertical Dropdown */
 .header-menu-wrap .navbar .menu li.explore-menu-item {
     position: relative !important;
+}
+
+/* Invisible active hover safety buffer so moving across or below items never drops hover */
+.header-menu-wrap .navbar .menu li.explore-menu-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 370px;
+    height: calc(100% + 560px);
+    pointer-events: none;
+    z-index: 98;
+    background: transparent;
+}
+
+.header-menu-wrap .navbar .menu li.explore-menu-item:hover::after {
+    pointer-events: auto;
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown {
@@ -494,17 +510,17 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 14px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-    overflow: hidden;
+    overflow: visible;
 }
 
-/* Invisible hover safety buffer so moving to bottom item never drops hover */
+/* Additional bottom safety buffer on explore dropdown */
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown::after {
     content: '';
     position: absolute;
-    bottom: -35px;
+    bottom: -45px;
     left: -20px;
     right: -20px;
-    height: 40px;
+    height: 50px;
     pointer-events: auto;
     background: transparent;
 }
@@ -578,7 +594,7 @@ a {
     pointer-events: auto;
     padding-top: 8px;
     padding-bottom: 6px;
-    transition: max-height 0.28s cubic-bezier(0.25, 1, 0.5, 1) 0s, opacity 0.2s ease 0s, padding 0.2s ease 0s;
+    transition: max-height 0.28s cubic-bezier(0.25, 1, 0.5, 1) 0.08s, opacity 0.2s ease 0.08s, padding 0.2s ease 0.08s;
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-links li {
@@ -1837,7 +1853,7 @@ a {
 
 .team-cv-box .team-cv-header img {
     display: block;
-    width: 248px;
+    width: 210px;
     max-width: 100%;
     height: auto;
     margin-bottom: 28px;
