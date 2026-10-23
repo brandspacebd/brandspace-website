@@ -6,6 +6,7 @@ const NavbarMenu = () => {
     const [isExploreOpen, setIsExploreOpen] = useState(false);
     const [expanded, setExpanded] = useState<{ [key: string]: boolean }>({
         clients: false,
+        services: false,
         showcase: false,
         connect: false,
     });
@@ -24,11 +25,12 @@ const NavbarMenu = () => {
     // Mouse leaves EXPLORE menu item
     const handleExploreMouseLeave = () => {
         setIsExploreOpen(false);
-        // Reset the 3 options to collapsed after the dropdown finishes fading out
+        // Reset the options to collapsed after the dropdown finishes fading out
         if (resetTimerRef.current) clearTimeout(resetTimerRef.current);
         resetTimerRef.current = setTimeout(() => {
             setExpanded({
                 clients: false,
+                services: false,
                 showcase: false,
                 connect: false,
             });
@@ -41,31 +43,98 @@ const NavbarMenu = () => {
         setIsExploreOpen(false);
         setExpanded({
             clients: false,
+            services: false,
             showcase: false,
             connect: false,
         });
     };
 
-    // When mouse enters one of the 3 main options in EXPLORE -> auto expand and remain expanded
+    // When mouse enters one of the main options or All Services
     const handleOptionMouseEnter = (key: string) => {
         setExpanded((prev) => {
-            if (prev[key]) return prev;
-            return { ...prev, [key]: true };
+            if (key === "clients") {
+                // Clients & Services opens; Showcase & Media and Let's Connect stay closed
+                return {
+                    ...prev,
+                    clients: true,
+                    showcase: false,
+                    connect: false,
+                };
+            }
+            if (key === "showcase") {
+                // Showcase & Media opens, Let's Connect closes (not open together)
+                return {
+                    ...prev,
+                    clients: true,
+                    showcase: true,
+                    connect: false,
+                };
+            }
+            if (key === "connect") {
+                // Let's Connect opens, Showcase & Media closes (not open together)
+                return {
+                    ...prev,
+                    clients: true,
+                    showcase: false,
+                    connect: true,
+                };
+            }
+            if (key === "services") {
+                // All Services expands after hover
+                if (prev.services) return prev;
+                return {
+                    ...prev,
+                    services: true,
+                };
+            }
+            return prev;
         });
     };
 
-    // Clicking on that particular main 3 options header toggles (collapses/expands) it
+    // Clicking header toggles (collapses/expands) it
     const handleOptionHeaderClick = (key: string, e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
-        setExpanded((prev) => ({
-            ...prev,
-            [key]: !prev[key],
-        }));
+        setExpanded((prev) => {
+            if (key === "showcase") {
+                const nextShowcase = !prev.showcase;
+                return {
+                    ...prev,
+                    showcase: nextShowcase,
+                    connect: nextShowcase ? false : prev.connect,
+                };
+            }
+            if (key === "connect") {
+                const nextConnect = !prev.connect;
+                return {
+                    ...prev,
+                    connect: nextConnect,
+                    showcase: nextConnect ? false : prev.showcase,
+                };
+            }
+            if (key === "clients") {
+                const nextClients = !prev.clients;
+                return {
+                    ...prev,
+                    clients: nextClients,
+                    services: nextClients ? prev.services : false,
+                };
+            }
+            return {
+                ...prev,
+                [key]: !prev[key],
+            };
+        });
     };
 
     const handleLinkClick = () => {
         setIsExploreOpen(false);
+        setExpanded({
+            clients: false,
+            services: false,
+            showcase: false,
+            connect: false,
+        });
     };
 
     // Clear timeout on unmount
@@ -147,10 +216,23 @@ const NavbarMenu = () => {
                                         Our Clients
                                     </Link>
                                 </li>
-                                <li className="explore-service-item">
-                                    <Link href="/services" style={{ fontWeight: 600 }} onClick={handleLinkClick}>
+                                <li
+                                    className={`explore-service-item ${expanded.services ? "is-expanded" : ""}`}
+                                    onMouseEnter={() => handleOptionMouseEnter("services")}
+                                >
+                                    <Link href="/services" onClick={handleLinkClick}>
                                         <span>All Services</span>
-                                        <i className="las la-angle-right sub-service-arrow" />
+                                        <i
+                                            className="las la-angle-right sub-service-arrow"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                setExpanded((prev) => ({
+                                                    ...prev,
+                                                    services: !prev.services,
+                                                }));
+                                            }}
+                                        />
                                     </Link>
                                     <div className="sub-service-links">
                                         <Link href="/services#creative-work" onClick={handleLinkClick}>Creative Work</Link>

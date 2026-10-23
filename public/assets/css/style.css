@@ -594,7 +594,7 @@ a {
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col.is-expanded .explore-links {
-    max-height: 400px;
+    max-height: 520px;
     opacity: 1;
     pointer-events: auto;
     padding-top: 8px;
@@ -675,11 +675,13 @@ a {
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-service-item .sub-service-arrow {
-    font-size: 10px;
+    font-size: 11px;
     transition: transform 0.25s ease, color 0.25s ease, opacity 0.25s ease;
     opacity: 0.6;
+    padding: 2px 4px;
 }
 
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-service-item.is-expanded > a .sub-service-arrow,
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-service-item:hover > a .sub-service-arrow {
     transform: rotate(90deg);
     color: var(--primary, #c9f31d);
@@ -700,8 +702,9 @@ a {
     transition: max-height 0.25s cubic-bezier(0.25, 1, 0.5, 1) 0.15s, opacity 0.2s ease 0.15s, margin 0.2s ease 0.15s, border-color 0.2s ease 0.15s;
 }
 
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-service-item.is-expanded .sub-service-links,
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-service-item:hover .sub-service-links {
-    max-height: 240px;
+    max-height: 280px;
     opacity: 1;
     pointer-events: auto;
     margin-top: 6px;
@@ -711,10 +714,11 @@ a {
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .sub-service-links a {
-    font-size: 11.5px !important;
-    color: #999 !important;
-    padding: 2px 0 !important;
+    font-size: 13px !important;
+    color: #ddd !important;
+    padding: 3px 0 !important;
     justify-content: flex-start !important;
+    line-height: 20px;
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .sub-service-links a:hover {
