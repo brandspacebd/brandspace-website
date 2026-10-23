@@ -8,6 +8,8 @@ export interface SiteSettings {
     address?: string;
     copyright?: string;
     socialLinks?: {
+        facebook?: string;
+        youtube?: string;
         instagram?: string;
         twitter?: string;
         behance?: string;

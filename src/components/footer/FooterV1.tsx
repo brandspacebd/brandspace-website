@@ -89,6 +89,20 @@ const FooterV1 = () => {
                                 <div className="footer-widget-top">
                                     <h4>Social</h4>
                                     <ul>
+                                        {socialLinks.facebook && (
+                                            <li>
+                                                <a className="with-border" href={socialLinks.facebook} target="_blank" rel="noreferrer">
+                                                    <Image src={btnArrow} alt="icon" /> Facebook
+                                                </a>
+                                            </li>
+                                        )}
+                                        {socialLinks.youtube && (
+                                            <li>
+                                                <a className="with-border" href={socialLinks.youtube} target="_blank" rel="noreferrer">
+                                                    <Image src={btnArrow} alt="icon" /> YouTube
+                                                </a>
+                                            </li>
+                                        )}
                                         {socialLinks.instagram && (
                                             <li>
                                                 <a className="with-border" href={socialLinks.instagram} target="_blank" rel="noreferrer">

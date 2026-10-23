@@ -72,6 +72,12 @@ content:
         type: object
         description: URLs for social media profiles in header, footer, and off-canvas menu.
         fields:
+          - name: facebook
+            label: Facebook URL
+            type: string
+          - name: youtube
+            label: YouTube URL
+            type: string
           - name: instagram
             label: Instagram URL
             type: string
