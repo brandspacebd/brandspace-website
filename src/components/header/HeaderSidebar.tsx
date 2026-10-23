@@ -261,17 +261,17 @@ const HeaderSidebar = () => {
                                                 <ul className="mobile-explore-links">
                                                     <li>
                                                         <Link href="/service-details/1" className="mobile-explore-link" onClick={handleCloseClick}>
-                                                            <span>Service Details / Single</span>
+                                                            <span>Service Details</span>
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/project-details/1" className="mobile-explore-link" onClick={handleCloseClick}>
-                                                            <span>Project Details / Single</span>
+                                                            <span>Project Details</span>
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/team-details/1" className="mobile-explore-link" onClick={handleCloseClick}>
-                                                            <span>Team Details / Single</span>
+                                                            <span>Team Details</span>
                                                         </Link>
                                                     </li>
                                                     <li>

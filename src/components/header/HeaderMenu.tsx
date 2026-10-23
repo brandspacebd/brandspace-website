@@ -87,9 +87,9 @@ const HeaderMenu = () => {
                                             <i className="las la-angle-down explore-title-arrow" />
                                         </span>
                                         <ul className="explore-links">
-                                            <li><Link href="/service-details/1">Service Details / Single</Link></li>
-                                            <li><Link href="/project-details/1">Project Details / Single</Link></li>
-                                            <li><Link href="/team-details/1">Team Details / Single</Link></li>
+                                            <li><Link href="/service-details/1">Service Details</Link></li>
+                                            <li><Link href="/project-details/1">Project Details</Link></li>
+                                            <li><Link href="/team-details/1">Team Details</Link></li>
                                             <li><Link href="/press-releases">Press Releases</Link></li>
                                             <li><Link href="/stories">Stories</Link></li>
                                             <li><Link href="/credentials">Credentials</Link></li>
