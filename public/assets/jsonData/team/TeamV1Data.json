@@ -4,41 +4,42 @@
     "name": "Alomgir Hossain",
     "designation": "Founder, Art Director",
     "text": "Alomgir Hossain  is the creative force behind our stunning visual designs with a strong background in UI/UX and graphic design.",
-    "thumb": "team1.png"
+    "thumb": "/uploads/alomgir.png"
   },
   {
     "id": 2,
     "name": "Mushfiqur Rahman",
     "designation": "Strategic Creative Advisor, Creative Director",
     "text": "Mushfiqur Rahman oversees all creative projects, bringing his keen eye for design and exceptional storytelling abilities to the table.",
-    "thumb": "team2.png"
+    "thumb": "/uploads/mushfiq.png"
   },
   {
     "id": 3,
     "name": "Partha Sarothi Sarker",
     "designation": "Lead Brand Communication & Business Development",
     "text": "Partha Sarothi Sarker is our tech guru, responsible for turning our creative visions into functional digital solutions.",
-    "thumb": "team3.png"
+    "thumb": "/uploads/partho.png"
   },
   {
     "id": 4,
     "name": "Sunvir Hasan Mitul",
     "designation": "Digital Growth Strategist, SEO & AIO Specialist",
     "text": "Mitul ensures that all our projects are delivered on time and within budget, making sure every project runs smoothly from start to finish.",
-    "thumb": "team4.png"
+    "thumb": "/uploads/mitul.png"
   },
   {
     "id": 5,
     "name": "Asif Islam",
     "designation": "Visualizer, AI specialist",
     "text": "Asif Islam brings a fresh perspective to our design team. He helps our clients stand out in a crowded market.",
-    "thumb": "team5.png"
+    "thumb": "/uploads/asif.png"
   },
   {
     "id": 6,
     "name": "Engr. Md Mahmudur Rashid",
     "designation": "Software Engineer | Cybersecurity Specialist | Automation Expert",
-    "text": "Mahmudur ensures that all our projects are delivered on time and within budget, making sure every project runs smoothly from start to finish."
+    "text": "Mahmudur ensures that all our projects are delivered on time and within budget, making sure every project runs smoothly from start to finish.",
+    "thumb": "/uploads/ankur.png"
   },
   {
     "id": 7,
@@ -50,6 +51,7 @@
     "id": 8,
     "name": "Apurbo Mostofa",
     "designation": "Manager, Client Service.",
-    "text": "Apurbo oversees client relationships, manages service delivery teams, and acts as the main bridge between a company and its clients"
+    "text": "Apurbo oversees client relationships, manages service delivery teams, and acts as the main bridge between a company and its clients",
+    "thumb": "/uploads/apurbo-1.png"
   }
 ]
