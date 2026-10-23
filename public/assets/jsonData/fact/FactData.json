@@ -3,24 +3,24 @@
     "id": 1,
     "title": "Years Experience",
     "end": "12",
-    "thumb": "/uploads/fun-fact2-1.png"
+    "thumb": "/uploads/alomgir-2-1.png"
   },
   {
     "id": 2,
     "title": "Completed Projects",
     "end": "25",
-    "thumb": "/uploads/apurbo.png"
+    "thumb": "/uploads/fun-fact2-1.webp"
   },
   {
     "id": 3,
     "title": "Award Winning",
     "end": "110",
-    "thumb": "fun-fact3.png"
+    "thumb": "/uploads/fun-fact3.webp"
   },
   {
     "id": 4,
     "title": "Satisfied Clients",
     "end": "4",
-    "thumb": "/uploads/fun-fact1-1.png"
+    "thumb": "/uploads/fun-fact4.webp"
   }
 ]
