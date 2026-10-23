@@ -477,23 +477,6 @@ a {
     position: relative !important;
 }
 
-/* Invisible active hover safety buffer so moving across or below items never drops hover */
-.header-menu-wrap .navbar .menu li.explore-menu-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -25px;
-    width: 370px;
-    height: calc(100% + 560px);
-    pointer-events: none;
-    z-index: 98;
-    background: transparent;
-}
-
-.header-menu-wrap .navbar .menu li.explore-menu-item:hover::after {
-    pointer-events: auto;
-}
-
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown {
     width: 320px;
     max-width: calc(100vw - 40px);
@@ -511,16 +494,34 @@ a {
     border-radius: 14px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     overflow: visible;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease 0s, visibility 0.2s ease 0s, transform 0.2s ease 0s;
+}
+
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown.is-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+    transition-delay: 0s !important;
+}
+
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown.is-closed {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(8px) !important;
+    transition: opacity 0.1s ease 0s, visibility 0.1s ease 0s, transform 0.1s ease 0s !important;
 }
 
 /* Additional bottom safety buffer on explore dropdown */
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown::after {
     content: '';
     position: absolute;
-    bottom: -45px;
-    left: -20px;
-    right: -20px;
-    height: 50px;
+    bottom: -30px;
+    left: -10px;
+    right: -10px;
+    height: 35px;
     pointer-events: auto;
     background: transparent;
 }
@@ -562,12 +563,16 @@ a {
     opacity: 0.5;
 }
 
-.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col:hover .explore-col-title {
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col-title:hover {
+    color: var(--primary, #c9f31d);
+}
+
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col.is-expanded .explore-col-title {
     color: var(--primary, #c9f31d);
     border-bottom-color: rgba(201, 243, 29, 0.35);
 }
 
-.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col:hover .explore-col-title .explore-title-arrow {
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col.is-expanded .explore-col-title .explore-title-arrow {
     transform: rotate(180deg);
     color: var(--primary, #c9f31d);
     opacity: 1;
@@ -585,16 +590,47 @@ a {
     opacity: 0;
     overflow: hidden;
     pointer-events: none;
-    transition: max-height 0.28s cubic-bezier(0.25, 1, 0.5, 1) 0.15s, opacity 0.2s ease 0.15s, padding 0.2s ease 0.15s;
+    transition: max-height 0.3s cubic-bezier(0.25, 1, 0.5, 1) 0s, opacity 0.22s ease 0s, padding 0.22s ease 0s;
 }
 
-.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col:hover .explore-links {
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col.is-expanded .explore-links {
     max-height: 400px;
     opacity: 1;
     pointer-events: auto;
     padding-top: 8px;
     padding-bottom: 6px;
-    transition: max-height 0.28s cubic-bezier(0.25, 1, 0.5, 1) 0.08s, opacity 0.2s ease 0.08s, padding 0.2s ease 0.08s;
+    transition: max-height 0.3s cubic-bezier(0.25, 1, 0.5, 1) 0s, opacity 0.22s ease 0s, padding 0.22s ease 0s;
+}
+
+/* CONNECT Option & Immediate Dropdown Shut-off */
+.header-menu-wrap .navbar .menu li.connect-menu-item {
+    position: relative;
+    z-index: 105;
+}
+
+.header-menu-wrap .navbar .menu li.connect-menu-item a {
+    position: relative;
+    z-index: 105;
+}
+
+.header-menu-wrap .navbar .menu li.connect-menu-item:hover a,
+.header-menu-wrap .navbar .menu li.connect-menu-item a:focus {
+    color: var(--primary, #c9f31d) !important;
+}
+
+.header-menu-wrap .navbar .menu li.connect-menu-item:hover a:before,
+.header-menu-wrap .navbar .menu li.connect-menu-item a:focus:before {
+    opacity: 1 !important;
+    width: 100% !important;
+    background: var(--primary, #c9f31d) !important;
+}
+
+/* Sibling safety: if CONNECT is hovered, immediately shut down explore-dropdown with no delay */
+.header-menu-wrap .navbar .menu:has(li.connect-menu-item:hover) .explore-menu-item .dropdown-list {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: none !important;
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-links li {
