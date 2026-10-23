@@ -238,13 +238,11 @@ const NavbarMenu = () => {
                                 <li>
                                     <Link href="/retainer-service" onClick={handleLinkClick}>
                                         <span className="explore-item-text">Monthly Retainer Service</span>
-                                        <span className="explore-badge" style={{ fontSize: "10px", background: "rgba(255, 255, 255, 0.08)", color: "#aaa", padding: "2px 6px", borderRadius: "8px", whiteSpace: "nowrap" }}>Sample 1</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="/retainer-calculator" onClick={handleLinkClick}>
                                         <span className="explore-item-text">Retainer Fee Calculator</span>
-                                        <span className="explore-badge" style={{ fontSize: "10px", background: "rgba(255, 255, 255, 0.08)", color: "#aaa", padding: "2px 6px", borderRadius: "8px", whiteSpace: "nowrap" }}>Sample 2</span>
                                     </Link>
                                 </li>
                                 <li>

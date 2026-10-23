@@ -307,13 +307,11 @@ const HeaderSidebar = () => {
                                                     <li>
                                                         <Link href="/retainer-service" className="mobile-explore-link" onClick={handleCloseClick}>
                                                             <span>Monthly Retainer Service</span>
-                                                            <span className="badge-pill badge-sample">Sample 1</span>
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link href="/retainer-calculator" className="mobile-explore-link" onClick={handleCloseClick}>
                                                             <span>Retainer Fee Calculator</span>
-                                                            <span className="badge-pill badge-sample">Sample 2</span>
                                                         </Link>
                                                     </li>
                                                     <li>
