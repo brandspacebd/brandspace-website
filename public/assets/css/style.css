@@ -437,7 +437,7 @@ a {
     gap: 16px;
     width: 235px;
     padding: 24px 22px;
-    transition: all .25s ease-in-out;
+    transition: opacity .22s ease .12s, visibility .22s ease .12s, transform .22s ease .12s;
     display: flex;
     position: absolute;
     top: 100%;
@@ -449,6 +449,7 @@ a {
 .header-menu-wrap .navbar .menu li:hover>.dropdown-list {
     opacity: 1;
     visibility: visible;
+    transition-delay: 0s;
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list li {
@@ -483,36 +484,29 @@ a {
     left: 0;
     right: auto;
     top: 100%;
-    padding: 16px 20px;
+    padding: 16px 20px 20px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
     background: rgba(14, 14, 14, 0.5);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 14px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
-.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown::-webkit-scrollbar {
-    width: 4px;
-}
-
-.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown::-webkit-scrollbar-track {
+/* Invisible hover safety buffer so moving to bottom item never drops hover */
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: -35px;
+    left: -20px;
+    right: -20px;
+    height: 40px;
+    pointer-events: auto;
     background: transparent;
-}
-
-.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-}
-
-.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown::-webkit-scrollbar-thumb:hover {
-    background: rgba(201, 243, 29, 0.6);
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown::before {
@@ -531,7 +525,7 @@ a {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 700;
-    padding: 8px 0;
+    padding: 10px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     margin-bottom: 0;
     display: flex;
@@ -540,6 +534,10 @@ a {
     cursor: pointer;
     transition: all 0.25s ease;
     user-select: none;
+}
+
+.header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col:last-child .explore-col-title {
+    border-bottom: none;
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col-title .explore-title-arrow {
@@ -571,7 +569,7 @@ a {
     opacity: 0;
     overflow: hidden;
     pointer-events: none;
-    transition: max-height 0.32s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.22s ease, padding 0.25s ease;
+    transition: max-height 0.28s cubic-bezier(0.25, 1, 0.5, 1) 0.15s, opacity 0.2s ease 0.15s, padding 0.2s ease 0.15s;
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-col:hover .explore-links {
@@ -580,6 +578,7 @@ a {
     pointer-events: auto;
     padding-top: 8px;
     padding-bottom: 6px;
+    transition: max-height 0.28s cubic-bezier(0.25, 1, 0.5, 1) 0s, opacity 0.2s ease 0s, padding 0.2s ease 0s;
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-links li {
@@ -646,7 +645,7 @@ a {
     opacity: 0;
     overflow: hidden;
     pointer-events: none;
-    transition: max-height 0.28s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.22s ease, margin 0.22s ease, border-color 0.22s ease;
+    transition: max-height 0.25s cubic-bezier(0.25, 1, 0.5, 1) 0.15s, opacity 0.2s ease 0.15s, margin 0.2s ease 0.15s, border-color 0.2s ease 0.15s;
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .explore-service-item:hover .sub-service-links {
@@ -656,6 +655,7 @@ a {
     margin-top: 6px;
     margin-bottom: 4px;
     border-left-color: rgba(201, 243, 29, 0.4);
+    transition: max-height 0.25s cubic-bezier(0.25, 1, 0.5, 1) 0s, opacity 0.2s ease 0s, margin 0.2s ease 0s, border-color 0.2s ease 0s;
 }
 
 .header-menu-wrap .navbar .menu li .dropdown-list.explore-dropdown .sub-service-links a {
