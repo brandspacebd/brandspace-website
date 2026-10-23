@@ -30,12 +30,14 @@ const TeamDetailsPage = async ({ params }: PageProps) => {
 
     return (
         <>
-            <LayoutV3>
-                <HeroV2 title="Team Details" />
-                {data && <TeamDetailsContent memberData={data} />}
-                <ContactV1 />
-                <PartnerV1 />
-            </LayoutV3>
+            <div className="aixor-main team-details-page">
+                <LayoutV3>
+                    <HeroV2 title="Team Details" />
+                    {data && <TeamDetailsContent memberData={data} />}
+                    <ContactV1 />
+                    <PartnerV1 />
+                </LayoutV3>
+            </div>
         </>
     );
 };

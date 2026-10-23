@@ -11,12 +11,14 @@ export const metadata = {
 const ContactPage = () => {
     return (
         <>
-            <LayoutV3>
-                <HeroV2 title="Contact Us" />
-                <ContactV2 />
-                <FaqV1 />
-                <PartnerV1 />
-            </LayoutV3>
+            <div className="aixor-main contact-page">
+                <LayoutV3>
+                    <HeroV2 title="Contact Us" />
+                    <ContactV2 />
+                    <FaqV1 />
+                    <PartnerV1 />
+                </LayoutV3>
+            </div>
         </>
     );
 };

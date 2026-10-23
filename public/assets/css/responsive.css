@@ -334,7 +334,8 @@
     }
 
     .hamburg-menu {
-        right: 20px;
+        right: 22px !important;
+        top: 15px !important;
         transform: scale(1) !important;
         display: flex !important;
         opacity: 1 !important;
@@ -552,16 +553,21 @@
     }
 
     .footer-area .footer-bottom {
-        height: 92px;
+        height: 125px;
+        padding: 10px 24px 20px;
     }
 
     .footer-area .footer-bottom .split-text-anim {
         height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .footer-area .footer-bottom img {
         width: 100%;
         height: 100%;
+        max-width: 100%;
         object-position: center center;
         object-fit: contain;
         image-rendering: auto;

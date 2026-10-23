@@ -1,7 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
 import btnArrow from "@/assets/images/btn-arrow.svg"
-import footerBigLogo from "@/assets/images/footer-big-logo.png"
 import Image from "next/image";
 import Link from "next/link";
 import siteSettingsRaw from "@/assets/jsonData/settings/siteSettings.json";
