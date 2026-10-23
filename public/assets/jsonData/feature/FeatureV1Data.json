@@ -14,7 +14,7 @@
     "info": "Marketing",
     "subTitle1": "One of our most successful projects in this area",
     "subTitle2": "highlights our ability to design and develop.",
-    "thumb": "project-2.jpg",
+    "thumb": "/uploads/project-2-1.webp",
     "date": "April 12th, 2024"
   },
   {
@@ -23,7 +23,7 @@
     "info": "User Interface",
     "subTitle1": "An elegant project designed to facilitate seamless",
     "subTitle2": "user experiences and intuitive interfaces.",
-    "thumb": "project-3.jpg",
+    "thumb": "/uploads/project-3.webp",
     "date": "March 1st, 2024"
   }
 ]
