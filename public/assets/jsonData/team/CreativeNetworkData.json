@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Olosh MK Mostafa",
+    "designation": "Senior 3D Product Designer & CGI Artist",
+    "text": "12+ years of experience in 3D Product Design, Industrial Design, Product Concept Development, Mold-Ready 3D Modeling, Packaging Design, and Photorealistic CGI Rendering.",
+    "thumb": "/uploads/oloshmk.png"
+  },
+  {
+    "id": 2,
+    "name": "Asif Islam",
+    "designation": "Visualizer & Generative AI Specialist",
+    "text": "Specializing in generative key visuals, custom visual training, and commercial-grade synthetic media direction for bold campaigns.",
+    "thumb": "/uploads/asif.png"
+  },
+  {
+    "id": 3,
+    "name": "Sunvir Hasan Mitul",
+    "designation": "Digital Growth Strategist & AIO Specialist",
+    "text": "Driving artificial intelligence optimization, search architecture, and cross-platform performance funnels for global creative deliverables.",
+    "thumb": "/uploads/mitul.png"
+  },
+  {
+    "id": 4,
+    "name": "Partha Sarothi Sarker",
+    "designation": "Creative Technologist & Brand Producer",
+    "text": "Bridging cutting-edge digital experiences with commercial brand strategy, interactive installations, and multi-format executions.",
+    "thumb": "/uploads/partho.png"
+  }
+]

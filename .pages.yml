@@ -383,6 +383,37 @@ content:
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
 
+  - name: creative-network
+    label: "4. Meet The Team: Creative Network Specialists"
+    type: file
+    path: public/assets/jsonData/team/CreativeNetworkData.json
+    format: json
+    list: true
+    description: "External specialists, visualizers, 3D artists, and growth strategists displayed at /creative-network."
+    fields:
+      - name: id
+        label: Member ID
+        type: number
+        required: true
+        description: Unique numerical ID.
+      - name: name
+        label: Full Name
+        type: string
+        required: true
+      - name: designation
+        label: Job Title / Specialization
+        type: string
+        description: e.g. Senior 3D Product Designer & CGI Artist
+      - name: text
+        label: Bio / Track Record
+        type: text
+        description: Biography or specialization overview.
+      - name: thumb
+        label: Profile Photo
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+
   # ============================================================
   # 5. NAVBAR > OUR VENTURES
   # ============================================================
@@ -685,6 +716,90 @@ content:
             label: Included Deliverables
             type: string
             list: true
+
+  - name: retainer-service
+    label: "8. Explore: Monthly Retainer Service Plans"
+    type: file
+    path: public/assets/jsonData/pricing/RetainerServiceData.json
+    format: json
+    description: "Manage monthly and annual retainer tiers, deliverables, and pricing on /retainer-service."
+    fields:
+      - name: subtitle
+        label: Section Subtitle
+        type: string
+      - name: title
+        label: Section Title
+        type: string
+      - name: description
+        label: Section Description
+        type: text
+      - name: monthly
+        label: Monthly Plans
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: Plan ID
+            type: number
+          - name: title
+            label: Plan Name
+            type: string
+          - name: price
+            label: Price
+            type: string
+          - name: period
+            label: Billing Period
+            type: string
+          - name: notice
+            label: Plan Notice / Note
+            type: string
+          - name: featured
+            label: Featured / Popular Badge
+            type: boolean
+          - name: features
+            label: Included Features
+            type: string
+            list: true
+          - name: buttonText
+            label: CTA Button Text
+            type: string
+          - name: buttonUrl
+            label: CTA Button URL
+            type: string
+      - name: annual
+        label: Annual Plans (Discounted)
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: Plan ID
+            type: number
+          - name: title
+            label: Plan Name
+            type: string
+          - name: price
+            label: Price
+            type: string
+          - name: period
+            label: Billing Period
+            type: string
+          - name: notice
+            label: Plan Notice / Note
+            type: string
+          - name: featured
+            label: Featured / Popular Badge
+            type: boolean
+          - name: features
+            label: Included Features
+            type: string
+            list: true
+          - name: buttonText
+            label: CTA Button Text
+            type: string
+          - name: buttonUrl
+            label: CTA Button URL
+            type: string
+
 
   - name: retainer-calculator
     label: "8. Explore: Retainer Fee Calculator Rates"

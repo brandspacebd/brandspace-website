@@ -4,6 +4,7 @@ import TeamV1 from "@/components/team/TeamV1";
 import ServicesV2 from "@/components/services/ServicesV2";
 import FeatureV1 from "@/components/feature/FeatureV1";
 import ContactV1 from "@/components/contact/ContactV1";
+import CreativeNetworkData from "@/assets/jsonData/team/CreativeNetworkData.json";
 
 export const metadata = {
     title: "Our Creative Network - Brandspace",
@@ -15,7 +16,7 @@ const CreativeNetworkPage = () => {
         <div className="aixor-main creative-network-page">
             <LayoutV3>
                 <HeroV2 title="Our Creative Network" />
-                <TeamV1 />
+                <TeamV1 teamData={CreativeNetworkData} subtitle="CREATIVE NETWORK" />
                 <ServicesV2 />
                 <FeatureV1 />
                 <ContactV1 />

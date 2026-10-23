@@ -9,19 +9,32 @@ import Link from "next/link"
 import TeamV1Data from "@/assets/jsonData/team/TeamV1Data.json"
 import SingleTeamV1 from "./SingleTeamV1"
 
-const TeamV1 = () => {
+interface TeamMember {
+    id: number;
+    name: string;
+    designation: string;
+    text: string;
+    thumb: string;
+}
+
+interface TeamV1Props {
+    teamData?: TeamMember[];
+    subtitle?: string;
+}
+
+const TeamV1 = ({ teamData = TeamV1Data, subtitle = "OUR MEMBERS" }: TeamV1Props) => {
     return (
         <>
             <div className="team-sec" id="team">
                 <div className="section-header">
                     <span className="section-subtitle">
                         <Image src={Union} alt="icon" />
-                        OUR MEMBERS
+                        {subtitle}
                     </span>
                 </div>
 
                 <div className="team-members">
-                    {TeamV1Data.map(member =>
+                    {teamData.map(member =>
                         <SingleTeamV1 member={member} key={member.id} />
                     )}
 

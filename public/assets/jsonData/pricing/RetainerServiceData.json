@@ -1,0 +1,77 @@
+{
+  "subtitle": "PRICING PLANS",
+  "title": "Flexible Plans, Powerful Results",
+  "description": "Whether you're a startup looking for a boost or an established brand aiming to elevate your presence, we have a plan that fits your goals and budget.",
+  "monthly": [
+    {
+      "id": 1,
+      "title": "Standard Plan",
+      "price": "$3,500",
+      "period": "/month",
+      "notice": "* Ideal for growing businesses that need more advanced solutions.",
+      "featured": false,
+      "features": [
+        "Custom website design",
+        "Basic SEO optimization",
+        "Social media setup",
+        "Monthly performance reports",
+        "Email support"
+      ],
+      "buttonText": "Let's Start Now",
+      "buttonUrl": "/contact"
+    },
+    {
+      "id": 2,
+      "title": "Professional Plan",
+      "price": "$6,500",
+      "period": "/month",
+      "notice": "* Ideal for growing businesses that need more advanced solutions.",
+      "featured": true,
+      "features": [
+        "Everything in Standard Plan",
+        "Advanced SEO and keyword targeting",
+        "Content creation and blog management",
+        "Social media management and advertising",
+        "Priority email and phone support"
+      ],
+      "buttonText": "Let's Start Now",
+      "buttonUrl": "/contact"
+    }
+  ],
+  "annual": [
+    {
+      "id": 1,
+      "title": "Standard Plan",
+      "price": "$1,500",
+      "period": "/month",
+      "notice": "* Ideal for growing businesses that need more advanced solutions.",
+      "featured": false,
+      "features": [
+        "Custom website design",
+        "Basic SEO optimization",
+        "Social media setup",
+        "Monthly performance reports",
+        "Email support"
+      ],
+      "buttonText": "Let's Start Now",
+      "buttonUrl": "/contact"
+    },
+    {
+      "id": 2,
+      "title": "Professional Plan",
+      "price": "$4,500",
+      "period": "/month",
+      "notice": "* Ideal for growing businesses that need more advanced solutions.",
+      "featured": true,
+      "features": [
+        "Everything in Standard Plan",
+        "Advanced SEO and keyword targeting",
+        "Content creation and blog management",
+        "Social media management and advertising",
+        "Priority email and phone support"
+      ],
+      "buttonText": "Let's Start Now",
+      "buttonUrl": "/contact"
+    }
+  ]
+}
