@@ -779,3 +779,48 @@
 
     }
 }
+
+/* Credentials Embed Section Responsive */
+@media (max-width: 1199px) {
+    .credentials-header-wrap,
+    .credentials-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .credentials-viewer-frame {
+        height: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .credentials-header-wrap,
+    .credentials-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .credentials-lead-title {
+        font-size: 30px;
+    }
+
+    .credentials-viewer-frame {
+        height: 520px;
+        min-height: 420px;
+    }
+
+    .credentials-toolbar .toolbar-hint {
+        display: none;
+    }
+
+    .credentials-toolbar {
+        padding: 12px 16px;
+    }
+
+    .credentials-footer-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 12px 16px;
+    }
+}

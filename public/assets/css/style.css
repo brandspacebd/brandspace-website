@@ -4451,3 +4451,293 @@ a {
     position: relative;
     top: 3px;
 }
+
+/* ==========================================================================
+   Credentials Embed Section (FlowPaper Flipbook Showcase)
+   ========================================================================== */
+.credentials-embed-sec {
+    padding: 20px 0 80px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.credentials-header-wrap {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 72px;
+    padding-right: 72px;
+}
+
+.credentials-header-wrap .section-header {
+    margin-bottom: 35px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.credentials-header-wrap .section-subtitle {
+    width: auto;
+    padding: 0;
+    color: var(--primary);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.credentials-lead-title {
+    font-family: var(--font-arapey, "Arapey", serif);
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    background: linear-gradient(90deg, #ffffff 0%, #b3b3b3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.credentials-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 72px;
+    box-sizing: border-box;
+}
+
+.credentials-container .credentials-toolbar {
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.credentials-toolbar .toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.credentials-toolbar .live-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.28);
+    color: #10b981;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.credentials-toolbar .live-pulse {
+    width: 7px;
+    height: 7px;
+    background: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #10b981;
+    animation: pulseBadge 1.8s infinite ease-in-out;
+}
+
+@keyframes pulseBadge {
+    0%, 100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.25);
+        opacity: 1;
+        box-shadow: 0 0 14px #10b981;
+    }
+}
+
+.credentials-toolbar .toolbar-title {
+    color: #f0f0f0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+.credentials-toolbar .toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.credentials-toolbar .toolbar-hint {
+    color: #7d7d7d;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 4px;
+}
+
+.credentials-toolbar .toolbar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #e0e0e0;
+    padding: 7px 15px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    line-height: 1.3;
+}
+
+.credentials-toolbar .toolbar-btn:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.credentials-toolbar .toolbar-btn.primary-btn-link {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+.credentials-toolbar .toolbar-btn.primary-btn-link:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #000000;
+}
+
+.credentials-viewer-frame {
+    position: relative;
+    width: 100%;
+    height: 840px;
+    min-height: 600px;
+    background: #080808;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    box-shadow: 0 30px 80px -15px rgba(0, 0, 0, 0.9);
+}
+
+.credentials-viewer-frame .flowpaper-direct-iframe,
+.credentials-viewer-frame iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    border: none !important;
+    display: block !important;
+    background: #080808 !important;
+}
+
+.credentials-viewer-frame .fp-embed-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.credentials-loading-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: #777777;
+    font-size: 14px;
+    background: #080808;
+}
+
+.credentials-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.08);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: credSpinner 0.85s linear infinite;
+}
+
+@keyframes credSpinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.credentials-footer-bar {
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: #777777;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+}
+
+/* Fullscreen styling */
+.credentials-container:fullscreen {
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: #000000 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.credentials-container:fullscreen .credentials-toolbar {
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+}
+
+.credentials-container:fullscreen .credentials-viewer-frame {
+    flex: 1 1 auto !important;
+    height: auto !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.credentials-container:fullscreen .credentials-footer-bar {
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+/* Scoped spacing and contained borders for credentials page (no full-bleed horizontal lines) */
+.credentials-page .awards-sec {
+    padding-top: 30px;
+}
+
+.credentials-page .awards-box {
+    border-bottom: none;
+}
+
+.credentials-page .awards-box .awards-inner {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
