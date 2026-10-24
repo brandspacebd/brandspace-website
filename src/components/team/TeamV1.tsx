@@ -20,9 +20,10 @@ interface TeamMember {
 interface TeamV1Props {
     teamData?: TeamMember[];
     subtitle?: string;
+    hasDetailsLink?: boolean;
 }
 
-const TeamV1 = ({ teamData = TeamV1Data, subtitle = "OUR MEMBERS" }: TeamV1Props) => {
+const TeamV1 = ({ teamData = TeamV1Data, subtitle = "OUR MEMBERS", hasDetailsLink = true }: TeamV1Props) => {
     return (
         <>
             <div className="team-sec" id="team">
@@ -35,7 +36,7 @@ const TeamV1 = ({ teamData = TeamV1Data, subtitle = "OUR MEMBERS" }: TeamV1Props
 
                 <div className="team-members">
                     {teamData.map(member =>
-                        <SingleTeamV1 member={member} key={member.id} />
+                        <SingleTeamV1 member={member} key={member.id} hasDetailsLink={hasDetailsLink} />
                     )}
 
                     {/* Join Us Section */}

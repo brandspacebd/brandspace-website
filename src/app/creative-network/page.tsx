@@ -7,7 +7,7 @@ import ContactV1 from "@/components/contact/ContactV1";
 import CreativeNetworkData from "@/assets/jsonData/team/CreativeNetworkData.json";
 
 export const metadata = {
-    title: "Our Creative Network - Brandspace",
+    title: "Our Creative Network | Brandspace",
     description: "Discover Brandspace's extended global network of directors, generative artists, illustrators, and strategists."
 };
 
@@ -16,7 +16,7 @@ const CreativeNetworkPage = () => {
         <div className="aixor-main creative-network-page">
             <LayoutV3>
                 <HeroV2 title="Our Creative Network" />
-                <TeamV1 teamData={CreativeNetworkData} subtitle="CREATIVE NETWORK" />
+                <TeamV1 teamData={CreativeNetworkData} subtitle="GLOBAL CREATIVE NETWORK" hasDetailsLink={false} />
                 <ServicesV2 />
                 <FeatureV1 />
                 <ContactV1 />

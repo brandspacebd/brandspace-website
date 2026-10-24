@@ -45,7 +45,7 @@ const FooterV1 = () => {
                                         </li>
                                         <li>
                                             <Link className="with-border" href="/projects">
-                                                <Image src={btnArrow} alt="icon" /> Projects
+                                                <Image src={btnArrow} alt="icon" /> The Works
                                             </Link>
                                         </li>
                                     </ul>

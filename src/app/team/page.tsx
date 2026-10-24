@@ -5,7 +5,7 @@ import AboutV2 from "@/components/about/AboutV2";
 import PartnerV1 from "@/components/partner/PartnerV1";
 
 export const metadata = {
-    title: "Our Core Team - Brandspace",
+    title: "Our Core Team | Brandspace",
     description: "Meet the executive leadership and core creative specialists driving innovation at Brandspace."
 };
 
@@ -14,7 +14,7 @@ const CoreTeamPage = () => {
         <div className="aixor-main team-page">
             <LayoutV3>
                 <HeroV2 title="Our Core Team" />
-                <TeamV1 />
+                <TeamV1 subtitle="CORE LEADERSHIP & TEAM" />
                 <AboutV2 />
                 <PartnerV1 />
             </LayoutV3>

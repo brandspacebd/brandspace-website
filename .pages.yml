@@ -186,15 +186,15 @@ content:
             type: string
 
   # ============================================================
-  # 2. NAVBAR > PROJECTS (7)
+  # 2. NAVBAR > THE WORKS (7)
   # ============================================================
   - name: featured-projects
-    label: "2. Projects: Featured Projects (Homepage Carousel)"
+    label: "2. The Works: Featured (Homepage Showcase)"
     type: file
     path: public/assets/jsonData/feature/FeatureV1Data.json
     format: json
     list: true
-    description: "Curated featured client campaigns displayed on the homepage showcase."
+    description: "Curated featured client works displayed on the homepage showcase."
     fields:
       - name: id
         label: Project ID
@@ -225,7 +225,7 @@ content:
         type: string
 
   - name: all-projects
-    label: "2. Projects: All Projects (Portfolio Grid & Case Studies)"
+    label: "2. The Works: All Portfolio Items & Case Studies"
     type: file
     path: public/assets/jsonData/feature/FeatureV2Data.json
     format: json

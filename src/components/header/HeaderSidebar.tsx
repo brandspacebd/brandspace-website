@@ -137,11 +137,11 @@ const HeaderSidebar = () => {
                                     </Link>
                                 </li>
 
-                                {/* PROJECTS */}
+                                {/* THE WORKS */}
                                 <li>
                                     <Link href="/projects" className="mobile-nav-item-link" onClick={handleCloseClick}>
                                         <span>
-                                            PROJECTS <span className="mobile-badge-count">(7)</span>
+                                            THE WORKS <span className="mobile-badge-count">(7)</span>
                                         </span>
                                         <i className="las la-angle-right mobile-arrow-indicator" />
                                     </Link>
@@ -168,7 +168,7 @@ const HeaderSidebar = () => {
                                     </button>
                                     {openTeam && (
                                         <div className="mobile-submenu-collapse">
-                                            <Link href="/team" className="mobile-submenu-link" onClick={handleCloseClick}>
+                                            <Link href="/core-team" className="mobile-submenu-link" onClick={handleCloseClick}>
                                                 Our Core Team
                                             </Link>
                                             <Link href="/creative-network" className="mobile-submenu-link" onClick={handleCloseClick}>

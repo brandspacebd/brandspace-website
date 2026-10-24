@@ -94,7 +94,7 @@ const NavbarMenu = () => {
                     <Link href="/">HOME <span /></Link>
                 </li>
                 <li>
-                    <Link href="/projects">PROJECTS <span>(7)</span></Link>
+                    <Link href="/projects">THE WORKS <span>(7)</span></Link>
                 </li>
                 <li>
                     <Link href="/about">ABOUT US <span /></Link>
@@ -105,9 +105,9 @@ const NavbarMenu = () => {
                     className="dropdown-menu-item"
                     onMouseEnter={() => setIsExploreOpen(false)}
                 >
-                    <Link href="/team">MEET THE TEAM <i className="las la-angle-down" /></Link>
+                    <Link href="/core-team">MEET THE TEAM <i className="las la-angle-down" /></Link>
                     <ul className="dropdown-list">
-                        <li><Link href="/team">Our Core Team</Link></li>
+                        <li><Link href="/core-team">Our Core Team</Link></li>
                         <li><Link href="/creative-network">Our Creative Network</Link></li>
                     </ul>
                 </li>

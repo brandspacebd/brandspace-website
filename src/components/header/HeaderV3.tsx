@@ -26,7 +26,7 @@ const HeaderV3 = () => {
                     <li><a className="anchor active" href="#hero">Hero</a></li>
                     <li><a className="anchor" href="#about">About</a></li>
                     <li><a className="anchor" href="#services">Services</a></li>
-                    <li><a className="anchor" href="#projects">Projects</a></li>
+                    <li><a className="anchor" href="#projects">The Works</a></li>
                     <li><a className="anchor" href="#awards">Awards</a></li>
                     <li><a className="anchor" href="#team">Team</a></li>
                     <li><a className="anchor" href="#pricing">Pricing</a></li>

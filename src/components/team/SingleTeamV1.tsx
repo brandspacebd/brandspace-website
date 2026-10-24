@@ -12,23 +12,33 @@ interface DataType {
     designation?: string;
     text?: string;
     delay?: number;
+    hasDetailsLink?: boolean;
 }
 
-const SingleTeamV1 = ({ member }: { member: DataType }) => {
+const SingleTeamV1 = ({ member, hasDetailsLink = true }: { member: DataType; hasDetailsLink?: boolean }) => {
     const { id, thumb, name, designation, text, delay } = member;
+    const canLink = hasDetailsLink && id !== undefined;
 
     return (
         <>
             <div className="team-member-box" data-aos="fade-up" data-aos-delay={delay}>
                 <div className="img-box">
-                    <Link href={`/team-details/${id}`}>
+                    {canLink ? (
+                        <Link href={`/team-details/${id}`}>
+                            <Image src={getImageUrl(thumb)} alt="team-img" width={790} height={780} />
+                        </Link>
+                    ) : (
                         <Image src={getImageUrl(thumb)} alt="team-img" width={790} height={780} />
-                    </Link>
+                    )}
                 </div>
                 <div className="content">
-                    <Link href={`/team-details/${id}`}>
+                    {canLink ? (
+                        <Link href={`/team-details/${id}`}>
+                            <span className="name">{name}</span>
+                        </Link>
+                    ) : (
                         <span className="name">{name}</span>
-                    </Link>
+                    )}
                     <span className="designation">{designation}</span>
                     <div className="shape"><span /></div>
                     <p>{text}</p>
