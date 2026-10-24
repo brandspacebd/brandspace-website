@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Union from "@/assets/images/Union.svg";
+import credentialsData from "@/assets/jsonData/credentials/CredentialsData.json";
 
 interface CredentialsEmbedProps {
     title?: string;
@@ -10,9 +11,14 @@ interface CredentialsEmbedProps {
 }
 
 const CredentialsEmbed: React.FC<CredentialsEmbedProps> = ({
-    title = "Official Agency Credentials & Dossier",
-    subtitle = "OFFICIAL CREDENTIALS",
+    title,
+    subtitle,
 }) => {
+    const activeSubtitle = subtitle || credentialsData.subtitle || "OFFICIAL CREDENTIALS";
+    const activeTitle = title || credentialsData.title || "Official Agency Credentials & Dossier";
+    const activeDeckTitle = credentialsData.toolbarTitle || "Brandspace Limited : Official Credential Deck";
+    const activeFlipbookUrl = credentialsData.flipbookUrl || "https://flowpaper.com/shared/8528083f/BrandspaceLimitedCredential/";
+
     const containerRef = useRef<HTMLDivElement>(null);
     const iframeRef = useRef<HTMLIFrameElement>(null);
     const [isFullscreen, setIsFullscreen] = useState(false);
@@ -28,7 +34,7 @@ const CredentialsEmbed: React.FC<CredentialsEmbedProps> = ({
                     if (iframe && iframe.contentWindow) {
                         iframe.contentWindow.postMessage(
                             JSON.stringify({
-                                auth: "https://flowpaper.com/shared/8528083f/BrandspaceLimitedCredential/",
+                                auth: activeFlipbookUrl,
                                 loc: window.location.href,
                             }),
                             "*"
@@ -87,9 +93,9 @@ const CredentialsEmbed: React.FC<CredentialsEmbedProps> = ({
                 <div className="section-header">
                     <span className="section-subtitle">
                         <Image src={Union} alt="icon" priority />
-                        {subtitle}
+                        {activeSubtitle}
                     </span>
-                    <h3 className="credentials-lead-title">{title}</h3>
+                    <h3 className="credentials-lead-title">{activeTitle}</h3>
                 </div>
             </div>
 
@@ -102,7 +108,7 @@ const CredentialsEmbed: React.FC<CredentialsEmbedProps> = ({
                             INTERACTIVE FLIPBOOK
                         </span>
                         <span className="toolbar-title">
-                            Brandspace Limited : Official Credential Deck
+                            {activeDeckTitle}
                         </span>
                     </div>
 
@@ -131,7 +137,7 @@ const CredentialsEmbed: React.FC<CredentialsEmbedProps> = ({
                             <span>{isFullscreen ? "Exit Fullscreen" : "Fullscreen"}</span>
                         </button>
                         <a
-                            href="https://flowpaper.com/shared/8528083f/BrandspaceLimitedCredential/"
+                            href={activeFlipbookUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="toolbar-btn primary-btn-link"
@@ -147,7 +153,7 @@ const CredentialsEmbed: React.FC<CredentialsEmbedProps> = ({
                 <div className="credentials-viewer-frame">
                     {/* Official FlowPaper Embed Link (for search crawlers & metadata) */}
                     <a
-                        href="https://flowpaper.com/shared/8528083f/BrandspaceLimitedCredential/"
+                        href={activeFlipbookUrl}
                         className="fp-embed"
                         data-fp-width="100%"
                         data-fp-height="100%"
@@ -158,7 +164,7 @@ const CredentialsEmbed: React.FC<CredentialsEmbedProps> = ({
                     <iframe
                         key={reloadKey}
                         ref={iframeRef}
-                        src="https://flowpaper.com/shared/8528083f/BrandspaceLimitedCredential/"
+                        src={activeFlipbookUrl}
                         title="Brandspace Limited Credential Publication"
                         className="flowpaper-direct-iframe"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"

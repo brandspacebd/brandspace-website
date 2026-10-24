@@ -166,7 +166,7 @@ content:
             label: Second Paragraph
             type: text
       - name: projects
-        label: Homepage Projects Section Header
+        label: "Homepage The Works Section Header"
         type: object
         fields:
           - name: subtitle
@@ -353,12 +353,12 @@ content:
   # 4. NAVBAR > MEET THE TEAM
   # ============================================================
   - name: team
-    label: "4. Meet The Team: Core Team Members & Bios"
+    label: "4. Meet The Team: Our Core Team (Leadership & Specialists)"
     type: file
     path: public/assets/jsonData/team/TeamV1Data.json
     format: json
     list: true
-    description: "Agency leadership, art directors, and creative strategists displayed at /team and /team-details/[id]."
+    description: "Agency leadership, art directors, and core creative specialists displayed at /core-team (and /team) with detail profiles at /team-details/[id]. Kept completely separate from Creative Network."
     fields:
       - name: id
         label: Member ID
@@ -384,12 +384,12 @@ content:
           extensions: [jpg, jpeg, png, webp, svg, gif]
 
   - name: creative-network
-    label: "4. Meet The Team: Creative Network Specialists"
+    label: "4. Meet The Team: Our Creative Network (Global Creators)"
     type: file
     path: public/assets/jsonData/team/CreativeNetworkData.json
     format: json
     list: true
-    description: "External specialists, visualizers, 3D artists, and growth strategists displayed at /creative-network."
+    description: "Extended global network of 3D CGI artists, AI visualizers, motion designers, and creative technologists displayed at /creative-network. Kept completely separate from Core Team."
     fields:
       - name: id
         label: Member ID
@@ -654,6 +654,30 @@ content:
       - name: link
         label: Full Story Link / URL
         type: string
+
+  - name: credentials
+    label: "7. Explore: Credentials Flipbook & Dossier"
+    type: file
+    path: public/assets/jsonData/credentials/CredentialsData.json
+    format: json
+    description: "Interactive FlowPaper publication URL, dossier headline, and toolbar badge displayed at /credentials."
+    fields:
+      - name: subtitle
+        label: Section Subtitle
+        type: string
+        description: Eyebrow label (e.g. OFFICIAL CREDENTIALS).
+      - name: title
+        label: Section Heading
+        type: string
+        description: Lead heading for the dossier showcase.
+      - name: toolbarTitle
+        label: Toolbar Deck Title
+        type: string
+        description: Title shown inside the glassmorphism toolbar.
+      - name: flipbookUrl
+        label: FlowPaper Shared Flipbook URL
+        type: string
+        description: Full URL to the hosted FlowPaper flipbook publication.
 
   - name: awards
     label: "7. Explore: Credentials & Industry Awards"
