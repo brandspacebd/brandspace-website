@@ -1,8 +1,8 @@
 {
   "siteName": "Brandspace",
   "websiteUrl": "https://www.brandspacebd.com",
-  "logo": "logo-1.png",
-  "footerLogo": "logo-1.svg",
+  "logo": "/uploads/logo.svg",
+  "footerLogo": "/uploads/logo-1-1.svg",
   "email": "hello@brandspacebd.com",
   "phone": "+8801727881588",
   "address": "Uccash Shodon, KHA-198, Middle Badda, Dhaka-1212, Bangladesh",
