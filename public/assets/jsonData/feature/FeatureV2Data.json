@@ -5,20 +5,17 @@
     "info": "Brand Identity",
     "textFirst": "We collaborated closely with our client to",
     "textLast": "transform their vision into a reality.",
-    "thumb": "/uploads/work-4-1.png",
     "date": "May 6th, 2024"
   },
   {
     "id": 2,
     "name": "Steinway Essentials",
-    "info": "Web Design",
-    "thumb": "/uploads/work-6-2.png"
+    "info": "Web Design"
   },
   {
     "id": 3,
     "name": "Sil’o Prints",
-    "info": "Development",
-    "thumb": "/uploads/work-3-2.png"
+    "info": "Development"
   },
   {
     "id": 4,
@@ -26,20 +23,17 @@
     "info": "Marketing",
     "textFirst": "We collaborated closely with our client to",
     "textLast": "transform their vision into a reality.",
-    "thumb": "project-2.jpg",
     "date": "May 6th, 2024"
   },
   {
     "id": 5,
     "name": "Innovative Horizon",
-    "info": "Brand Identity",
-    "thumb": "project-6.jpg"
+    "info": "Brand Identity"
   },
   {
     "id": 6,
     "name": "Intuitive Interactions",
-    "info": "Digital Marketing",
-    "thumb": "project-7.jpg"
+    "info": "Digital Marketing"
   },
   {
     "id": 7,
@@ -47,7 +41,6 @@
     "info": "User Interface",
     "textFirst": "We collaborated closely with our client to",
     "textLast": "transform their vision into a reality.",
-    "thumb": "project-3.jpg",
     "date": "May 6th, 2024"
   }
 ]
