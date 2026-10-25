@@ -4,41 +4,34 @@
     "name": "Elena Rostova",
     "designation": "CGI & Spatial Art Director",
     "text": "Specializing in hyper-realistic 3D environmental staging, architectural visualization, and dimensional motion for international brand campaigns.",
-    "thumb": "/assets/images/team1.png"
+    "thumb": "/uploads/nosib.png"
   },
   {
     "id": 102,
     "name": "Marcus Vance",
     "designation": "Generative Media & AI Pipeline Director",
     "text": "Pioneering commercial generative visual workflows, custom latent models, and synthetic production pipelines for high-velocity creative teams.",
-    "thumb": "/assets/images/team2.png"
+    "thumb": "/uploads/tuhin-1.png"
   },
   {
     "id": 103,
     "name": "Kaito Tanaka",
     "designation": "Motion Systems & Interactive Visualist",
     "text": "Crafting fluid brand motion identities, experiential kinetic design, and interactive web installations blending code and aesthetics.",
-    "thumb": "/assets/images/team3.png"
+    "thumb": "/uploads/oloshmk-3.png"
   },
   {
     "id": 104,
     "name": "Nadia O'Connor",
     "designation": "Commercial Sound Architect & Audio Director",
     "text": "Designing bespoke sonic brand identities, spatial audio environments, and dynamic acoustic scores for experiential digital media.",
-    "thumb": "/assets/images/team4.png"
+    "thumb": "/uploads/tuhin-friend-1.png"
   },
   {
     "id": 105,
     "name": "Zayn Al-Mansoor",
     "designation": "Editorial Type Designer & Brand Systems",
     "text": "Creating bespoke multi-script typography, custom brand letterforms, and high-precision typographic design systems for global brands.",
-    "thumb": "/assets/images/team5.png"
-  },
-  {
-    "id": 106,
-    "name": "Camila Duarte",
-    "designation": "Creative Technologist & WebGL Specialist",
-    "text": "Bridging real-time 3D graphics, custom shader development, and immersive interactive web experiences for forward-thinking creative projects.",
-    "thumb": "/assets/images/team1.png"
+    "thumb": "/uploads/jibon-1.png"
   }
 ]
