@@ -10,8 +10,7 @@
     "id": 102,
     "name": "Marcus Vance",
     "designation": "Generative Media & AI Pipeline Director",
-    "text": "Pioneering commercial generative visual workflows, custom latent models, and synthetic production pipelines for high-velocity creative teams.",
-    "thumb": "/uploads/tuhin-1.png"
+    "text": "Pioneering commercial generative visual workflows, custom latent models, and synthetic production pipelines for high-velocity creative teams."
   },
   {
     "id": 103,
@@ -25,13 +24,13 @@
     "name": "Nadia O'Connor",
     "designation": "Commercial Sound Architect & Audio Director",
     "text": "Designing bespoke sonic brand identities, spatial audio environments, and dynamic acoustic scores for experiential digital media.",
-    "thumb": "/uploads/tuhin-friend-1.png"
+    "thumb": "/uploads/tuhin-friend-2.png"
   },
   {
     "id": 105,
     "name": "Zayn Al-Mansoor",
     "designation": "Editorial Type Designer & Brand Systems",
     "text": "Creating bespoke multi-script typography, custom brand letterforms, and high-precision typographic design systems for global brands.",
-    "thumb": "/uploads/jibon-1.png"
+    "thumb": "/uploads/jibon-2.png"
   }
 ]
