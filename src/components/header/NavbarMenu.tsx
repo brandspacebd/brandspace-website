@@ -122,6 +122,7 @@ const NavbarMenu = () => {
                         <li><Link href="/concerns/gardenspace">Gardenspace</Link></li>
                         <li><Link href="/concerns/juniorspace">Juniorspace</Link></li>
                         <li><Link href="/concerns/khyap">Khyap</Link></li>
+                        <li><Link href="/concerns/dads">DAdS</Link></li>
                     </ul>
                 </li>
 

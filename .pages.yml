@@ -5,11 +5,69 @@
 # ============================================================
 
 media:
-  input: public/uploads
-  output: /uploads
-  categories: [image]
-  extensions: [jpg, jpeg, png, webp, svg, gif]
-  rename: safe
+  - name: pages
+    label: "Pages: Hero Banners & Shapes"
+    input: public/uploads/pages
+    output: /uploads/pages
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, svg, gif]
+    rename: random
+
+  - name: ventures
+    label: "Ventures: Graphics & Projects"
+    input: public/uploads/ventures
+    output: /uploads/ventures
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, svg, gif]
+    rename: random
+
+  - name: projects
+    label: "Portfolio: The Works & Case Studies"
+    input: public/uploads/projects
+    output: /uploads/projects
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, svg, gif]
+    rename: random
+
+  - name: clients
+    label: "Clients: Case Studies & Partner Logos"
+    input: public/uploads/clients
+    output: /uploads/clients
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, svg, gif]
+    rename: random
+
+  - name: team
+    label: "Team: Leadership & Creative Network"
+    input: public/uploads/team
+    output: /uploads/team
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, svg, gif]
+    rename: random
+
+  - name: media
+    label: "Media: Stories, Blog & Press Releases"
+    input: public/uploads/media
+    output: /uploads/media
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, svg, gif]
+    rename: random
+
+  - name: branding
+    label: "Branding: Logos, Favicon & Monogram"
+    input: public/uploads/branding
+    output: /uploads/branding
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, svg, gif, ico]
+    rename: random
+
+  - name: default
+    label: "General Uploads"
+    input: public/uploads
+    output: /uploads
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, svg, gif, ico]
+    rename: random
 
 settings:
   content:
@@ -30,6 +88,10 @@ content:
     path: public/assets/jsonData/pages
     format: json
     description: "Customize the floating hero image, title, quote, and author for every page independently. Changing an image here ONLY affects that specific page!"
+    media: pages
+    view:
+      title: pageName
+      subtitle: title
     fields:
       - name: pageName
         label: Page Name
@@ -46,6 +108,7 @@ content:
       - name: heroImage
         label: Hero Floating Image
         type: image
+        media: pages
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Unique floating graphic for this page. Uploading or changing this image will NOT affect any other page.
@@ -75,6 +138,7 @@ content:
     path: public/assets/jsonData/settings/siteSettings.json
     format: json
     description: "Global brand identities displayed across the website header navbar and footer."
+    media: branding
     fields:
       - name: siteName
         label: Website Name
@@ -87,24 +151,28 @@ content:
       - name: logo
         label: Header Logo
         type: image
+        media: branding
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Primary logo image displayed in the website header navigation.
       - name: favicon
         label: Website Favicon
         type: image
+        media: branding
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Browser tab favicon (SVG, PNG, ICO).
       - name: monogram
         label: Brand Monogram / App Icon
         type: image
+        media: branding
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Square brand symbol / monogram icon (e.g. Graphlink Viewer).
       - name: footerLogo
         label: Footer Logo
         type: image
+        media: branding
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Large logo displayed in the website footer.
@@ -252,6 +320,7 @@ content:
     format: json
     list: true
     description: "Curated featured client works displayed on the homepage showcase."
+    media: projects
     fields:
       - name: id
         label: Project ID
@@ -275,6 +344,7 @@ content:
       - name: thumb
         label: Project Image
         type: image
+        media: projects
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: date
@@ -288,6 +358,7 @@ content:
     format: json
     list: true
     description: "Full portfolio project directory displayed at /projects and /project-details/[id]."
+    media: projects
     fields:
       - name: id
         label: Project ID
@@ -315,6 +386,7 @@ content:
       - name: thumb
         label: Project Image
         type: image
+        media: projects
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: date
@@ -331,6 +403,7 @@ content:
     format: json
     list: true
     description: "The 4 key highlight cards on the About Us page & Homepage (Years Experience, Completed Projects, Award Winning, Satisfied Clients). Upload or change the 4 background images here."
+    media: pages
     fields:
       - name: id
         label: Card ID
@@ -346,6 +419,7 @@ content:
       - name: thumb
         label: Card Image
         type: image
+        media: pages
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Upload or pick the card's background image (JPG, PNG, WebP, SVG).
@@ -357,6 +431,7 @@ content:
     format: json
     list: true
     description: "Core agency philosophies and foundational values displayed on /about."
+    media: pages
     fields:
       - name: id
         label: Value ID
@@ -370,6 +445,7 @@ content:
       - name: thumb
         label: Illustration / Icon
         type: image
+        media: pages
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
 
@@ -380,6 +456,7 @@ content:
     format: json
     list: true
     description: "Step-by-step methodology explaining how Brandspace delivers creative projects."
+    media: pages
     fields:
       - name: id
         label: Step ID
@@ -400,6 +477,7 @@ content:
       - name: thumb
         label: Step Image
         type: image
+        media: pages
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: alt
@@ -416,6 +494,7 @@ content:
     format: json
     list: true
     description: "Agency leadership, art directors, and core creative specialists displayed at /core-team (and /team) with detail profiles at /team-details/[id]. Kept completely separate from Creative Network."
+    media: team
     fields:
       - name: id
         label: Member ID
@@ -437,6 +516,7 @@ content:
       - name: thumb
         label: Profile Photo
         type: image
+        media: team
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
 
@@ -447,6 +527,7 @@ content:
     format: json
     list: true
     description: "Extended global network of 3D CGI artists, AI visualizers, motion designers, and creative technologists displayed at /creative-network. Kept completely separate from Core Team."
+    media: team
     fields:
       - name: id
         label: Member ID
@@ -468,6 +549,7 @@ content:
       - name: thumb
         label: Profile Photo
         type: image
+        media: team
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
 
@@ -480,6 +562,7 @@ content:
     path: public/assets/jsonData/ventures/VenturesData.json
     format: json
     description: "Manage content, descriptions, and hero graphics for Brandspace's four ventures (Juniorspace, Khyap, Gardenspace, DAdS)."
+    media: ventures
     fields:
       - name: juniorspace
         label: Juniorspace (Education & Young Minds)
@@ -497,6 +580,7 @@ content:
           - name: heroImage
             label: Hero Floating Graphic
             type: image
+            media: ventures
             options:
               extensions: [jpg, jpeg, png, webp, svg, gif]
           - name: description
@@ -524,6 +608,7 @@ content:
           - name: heroImage
             label: Hero Floating Graphic
             type: image
+            media: ventures
             options:
               extensions: [jpg, jpeg, png, webp, svg, gif]
           - name: description
@@ -551,6 +636,7 @@ content:
           - name: heroImage
             label: Hero Floating Graphic
             type: image
+            media: ventures
             options:
               extensions: [jpg, jpeg, png, webp, svg, gif]
           - name: description
@@ -578,6 +664,7 @@ content:
           - name: heroImage
             label: Hero Floating Graphic
             type: image
+            media: ventures
             options:
               extensions: [jpg, jpeg, png, webp, svg, gif]
           - name: description
@@ -597,6 +684,7 @@ content:
     format: json
     list: true
     description: "Independent projects showcased on the /concerns/juniorspace page. Editing images here ONLY affects Juniorspace."
+    media: ventures
     fields:
       - name: id
         label: Project ID
@@ -621,6 +709,7 @@ content:
       - name: thumb
         label: Project Image
         type: image
+        media: ventures
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: date
@@ -634,6 +723,7 @@ content:
     format: json
     list: true
     description: "Independent projects showcased on the /concerns/khyap page. Editing images here ONLY affects Khyap."
+    media: ventures
     fields:
       - name: id
         label: Project ID
@@ -658,6 +748,7 @@ content:
       - name: thumb
         label: Project Image
         type: image
+        media: ventures
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: date
@@ -671,6 +762,7 @@ content:
     format: json
     list: true
     description: "Independent projects showcased on the /concerns/gardenspace page. Editing images here ONLY affects Gardenspace."
+    media: ventures
     fields:
       - name: id
         label: Project ID
@@ -695,6 +787,7 @@ content:
       - name: thumb
         label: Project Image
         type: image
+        media: ventures
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: date
@@ -708,6 +801,7 @@ content:
     format: json
     list: true
     description: "Independent projects showcased on the /concerns/dads page. Editing images here ONLY affects DAdS."
+    media: ventures
     fields:
       - name: id
         label: Project ID
@@ -732,6 +826,7 @@ content:
       - name: thumb
         label: Project Image
         type: image
+        media: ventures
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: date
@@ -748,6 +843,7 @@ content:
     format: json
     list: true
     description: "Client brand logos displayed in partner carousels on the homepage, /clients, and /credentials."
+    media: clients
     fields:
       - name: id
         label: Partner ID
@@ -755,6 +851,7 @@ content:
       - name: thumb
         label: Partner Logo Image
         type: image
+        media: clients
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
 
@@ -765,6 +862,7 @@ content:
     format: json
     list: true
     description: "Independent case studies shown on the /clients page. Editing images here does NOT affect The Works (/projects)."
+    media: clients
     fields:
       - name: id
         label: Case Study ID
@@ -789,6 +887,7 @@ content:
       - name: thumb
         label: Case Study Image
         type: image
+        media: clients
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: date
@@ -802,6 +901,7 @@ content:
     format: json
     list: true
     description: "Core agency capabilities displayed in the services directory at /services and /service-details/[id]."
+    media: pages
     fields:
       - name: id
         label: Service ID
@@ -816,24 +916,28 @@ content:
       - name: icon
         label: Service Icon
         type: image
+        media: pages
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Icon graphic representing the service.
       - name: thumb
         label: Thumbnail Image
         type: image
+        media: pages
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Card preview image shown in the services grid.
       - name: thumbFull1
         label: Detail Image 1
         type: image
+        media: pages
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: First large showcase image on the /service-details/[id] page.
       - name: thumbFull2
         label: Detail Image 2
         type: image
+        media: pages
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Second large showcase image on the /service-details/[id] page.
@@ -860,6 +964,7 @@ content:
     format: json
     list: true
     description: "In-depth editorial articles and stories displayed on the /stories page. Editing images here does NOT affect the Blog."
+    media: media
     fields:
       - name: id
         label: Article ID
@@ -884,11 +989,13 @@ content:
       - name: thumb
         label: Card Thumbnail
         type: image
+        media: media
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: thumbFull
         label: Full Story Cover Image
         type: image
+        media: media
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
       - name: content
@@ -905,6 +1012,7 @@ content:
     format: json
     list: true
     description: "Articles displayed at /blog and /blog-details/[id]. Editing images here does NOT affect Stories or Press Releases."
+    media: media
     fields:
       - name: id
         label: Article ID
@@ -935,12 +1043,14 @@ content:
       - name: thumb
         label: Card Thumbnail
         type: image
+        media: media
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Blog card image for listings.
       - name: thumbFull
         label: Full Article Cover Image
         type: image
+        media: media
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Large featured hero image for /blog-details/[id].
@@ -959,6 +1069,7 @@ content:
     format: json
     list: true
     description: "Official press releases and company news shown at /press-releases. Editing images here does NOT affect Blog or Stories."
+    media: media
     fields:
       - name: id
         label: Release ID
@@ -986,6 +1097,7 @@ content:
       - name: thumb
         label: Press Release Image
         type: image
+        media: media
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
 
@@ -1267,6 +1379,7 @@ content:
     format: json
     list: true
     description: "Verified client feedback, endorsements, and ratings displayed on homepage and /clients."
+    media: clients
     fields:
       - name: id
         label: Testimonial ID
@@ -1288,6 +1401,7 @@ content:
       - name: thumb
         label: Client Photo / Avatar
         type: image
+        media: clients
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
 
@@ -1326,79 +1440,3 @@ content:
             label: Answer
             type: text
             description: Full answer text.
-
-  # ============================================================
-  # GLOBAL: BRAND ASSETS & SITE SETTINGS
-  # ============================================================
-  - name: site-settings
-    label: "Global: Brand Assets & Site Settings"
-    type: file
-    path: public/assets/jsonData/settings/siteSettings.json
-    format: json
-    description: "Manage global brand identity including header logo, favicon, monogram, footer logo, contact info, and social channels."
-    fields:
-      - name: siteName
-        label: Brand / Site Name
-        type: string
-        required: true
-      - name: websiteUrl
-        label: Canonical Website URL
-        type: string
-      - name: logo
-        label: Primary Brand Logo (Header)
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif]
-        description: "Official full logo used in header navigation (e.g. /logo/logo.svg)."
-      - name: favicon
-        label: Browser Favicon
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif, ico]
-        description: "Browser tab icon (e.g. /logo/favicon.svg)."
-      - name: monogram
-        label: Brand Monogram / App Icon
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif]
-        description: "Icon mark / graphlink viewer square monogram (e.g. /logo/graphlink-viewer.svg)."
-      - name: footerLogo
-        label: Giant Footer Wordmark Logo
-        type: image
-        options:
-          extensions: [jpg, jpeg, png, webp, svg, gif]
-        description: "Large footer statement mark (e.g. /uploads/logo-1-1.svg or /logo/logo.svg)."
-      - name: email
-        label: Official Email Address
-        type: string
-      - name: phone
-        label: Contact Phone / WhatsApp
-        type: string
-      - name: address
-        label: Registered Physical Office Address
-        type: string
-      - name: copyright
-        label: Copyright Statement
-        type: string
-      - name: socialLinks
-        label: Official Social Links
-        type: object
-        fields:
-          - name: facebook
-            label: Facebook URL
-            type: string
-          - name: youtube
-            label: YouTube URL
-            type: string
-          - name: instagram
-            label: Instagram URL
-            type: string
-          - name: twitter
-            label: X / Twitter URL
-            type: string
-          - name: behance
-            label: Behance URL
-            type: string
-          - name: dribbble
-            label: Dribbble URL
-            type: string
