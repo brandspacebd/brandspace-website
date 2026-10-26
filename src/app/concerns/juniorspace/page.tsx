@@ -5,6 +5,8 @@ import FeatureV2 from "@/components/feature/FeatureV2";
 import ProcessV1 from "@/components/process/ProcessV1";
 import ContactV1 from "@/components/contact/ContactV1";
 import venturesData from "@/assets/jsonData/ventures/VenturesData.json";
+import juniorspaceHeroData from "@/assets/jsonData/pages/juniorspace.json";
+import juniorspaceProjects from "@/assets/jsonData/ventures/juniorspaceProjects.json";
 
 export const metadata = {
     title: `${venturesData?.juniorspace?.name || "Juniorspace"} - Brandspace Venture`,
@@ -12,14 +14,13 @@ export const metadata = {
 };
 
 const JuniorspacePage = () => {
-    const data = venturesData?.juniorspace;
     return (
         <div className="aixor-main concerns-page juniorspace-page">
             <LayoutV3>
-                <HeroV2 title={data?.name || "Juniorspace"} />
-                <ServicesV1 />
-                <FeatureV2 />
-                <ProcessV1 />
+                <HeroV2 data={juniorspaceHeroData} />
+                <ServicesV1 subtitle="Juniorspace Programs" description="Igniting youth imagination through tactile arts, interactive storytelling, and maker workshops." />
+                <FeatureV2 items={juniorspaceProjects} />
+                <ProcessV1 subtitle="Creative Youth Pedagogy" title={<>Sparking Wonder, <span>Building Confidence</span></>} />
                 <ContactV1 />
             </LayoutV3>
         </div>

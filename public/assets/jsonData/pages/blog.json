@@ -1,0 +1,12 @@
+{
+  "id": "blog",
+  "pageName": "Blog Articles",
+  "title": "Articles & Journal",
+  "subtitle": "Brandspace",
+  "heroImage": "/assets/images/work-4.png",
+  "quote": "\"Perspectives on design theory, emerging creative technology, brand strategy, and the evolving visual landscape.\"",
+  "authorName": "Studio Journal",
+  "authorRole": "Brandspace Thought Leadership",
+  "buttonText": "Read Articles",
+  "buttonUrl": "/contact"
+}

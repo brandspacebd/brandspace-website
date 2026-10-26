@@ -1,0 +1,12 @@
+{
+  "id": "retainer-calculator",
+  "pageName": "Retainer Fee Calculator",
+  "title": "Retainer Fee Calculator",
+  "subtitle": "Brandspace",
+  "heroImage": "/assets/images/pricing-shape2.png",
+  "quote": "\"Interactive hourly allocation calculator to estimate custom monthly agency retainer commitments for multi-disciplinary teams.\"",
+  "authorName": "Commercial Office",
+  "authorRole": "Brandspace Pricing",
+  "buttonText": "Calculate Retainer",
+  "buttonUrl": "/contact"
+}

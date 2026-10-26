@@ -1,0 +1,12 @@
+{
+  "id": "about",
+  "pageName": "About Us",
+  "title": "About Us",
+  "subtitle": "Brandspace",
+  "heroImage": "/assets/images/contact.png",
+  "quote": "\"At Brandspace, we hold that creativity sparks innovation. As a full-spectrum creative firm, we excel in converting ambitious ideas into engaging results.\"",
+  "authorName": "Ahshan M",
+  "authorRole": "Chief Executive Officer",
+  "buttonText": "Let's Connect",
+  "buttonUrl": "/contact"
+}

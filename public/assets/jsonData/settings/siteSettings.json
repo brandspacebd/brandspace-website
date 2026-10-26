@@ -1,7 +1,9 @@
 {
   "siteName": "Brandspace",
   "websiteUrl": "https://www.brandspacebd.com",
-  "logo": "/uploads/logo-2.svg",
+  "logo": "/logo/logo.svg",
+  "favicon": "/logo/favicon.svg",
+  "monogram": "/logo/graphlink-viewer.svg",
   "footerLogo": "/uploads/logo-1-1.svg",
   "email": "hello@brandspacebd.com",
   "phone": "+8801727881588",

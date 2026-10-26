@@ -1,0 +1,12 @@
+{
+  "id": "retainer-service",
+  "pageName": "Monthly Retainer Service",
+  "title": "Monthly Retainer Plans",
+  "subtitle": "Brandspace",
+  "heroImage": "/assets/images/pricing-shape1.png",
+  "quote": "\"Dedicated, embedded creative teams providing continuous high-output design, video, and strategy with priority delivery windows.\"",
+  "authorName": "Commercial Office",
+  "authorRole": "Brandspace Retainers",
+  "buttonText": "Reserve Team",
+  "buttonUrl": "/contact"
+}

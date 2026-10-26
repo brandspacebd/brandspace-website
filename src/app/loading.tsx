@@ -1,4 +1,5 @@
-import brandspaceLogo from "@/assets/images/logo-1.svg";
+import siteSettingsRaw from "@/assets/jsonData/settings/siteSettings.json";
+import getImageUrl from "@/components/utilities/getImageUrl";
 import Image from "next/image";
 
 const Preloader = () => {
@@ -8,7 +9,13 @@ const Preloader = () => {
                 <video loop muted autoPlay>
                     <source src="/assets/video/hero-video.mp4" type="video/mp4" />
                 </video>
-                <Image src={brandspaceLogo} alt="Brandspace Logo" width={280} height={75} priority />
+                <Image 
+                    src={getImageUrl(siteSettingsRaw.logo, "/logo/logo.svg")} 
+                    alt={siteSettingsRaw.siteName || "Brandspace Logo"} 
+                    width={280} 
+                    height={75} 
+                    priority 
+                />
             </div>
         </>
     );

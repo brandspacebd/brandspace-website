@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Apex Global FinTech Modernization",
+    "textFirst": "Enterprise Rebranding & Interactive Digital Platform",
+    "textLast": "Positioning a regional financial leader as a global innovator",
+    "info": "FinTech & Banking",
+    "description": "Comprehensive overhaul of brand architecture, mobile banking UI system, and multi-market investor communications for over 2M active users.",
+    "thumb": "/assets/images/project-3.jpg",
+    "date": "2025"
+  },
+  {
+    "id": 2,
+    "name": "Solaris Clean Energy Transition Campaign",
+    "textFirst": "Strategic Identity & Public Awareness Movement",
+    "textLast": "Galvanizing community adoption for clean decentralized solar",
+    "info": "Clean Energy",
+    "description": "Dynamic visual identity and multimedia storytelling campaign that helped secure $40M in Series B green venture capital funding.",
+    "thumb": "/assets/images/project-4.jpg",
+    "date": "2025"
+  },
+  {
+    "id": 3,
+    "name": "Lumina Luxury Hospitality Identity",
+    "textFirst": "Curated Brand Persona & Tactile Spatial Collateral",
+    "textLast": "Crafting quiet luxury benchmarks for bespoke boutique resorts",
+    "info": "Hospitality & Leisure",
+    "description": "Refined typography, bespoke leather and foil-stamped collateral, and multi-language guest digital experiences across 5 boutique resorts.",
+    "thumb": "/assets/images/project-5.jpg",
+    "date": "2024"
+  },
+  {
+    "id": 4,
+    "name": "NovaHealth Telemedicine Breakthrough",
+    "textFirst": "Patient-Centric Mobile Experience & Medical Brand",
+    "textLast": "Making elite healthcare consultations accessible in 3 clicks",
+    "info": "HealthTech",
+    "description": "Empathetic, clear, and reassuring visual identity and design system facilitating over 100,000 monthly verified virtual doctor consultations.",
+    "thumb": "/assets/images/project-6.jpg",
+    "date": "2024"
+  }
+]

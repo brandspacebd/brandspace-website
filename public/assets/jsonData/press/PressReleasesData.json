@@ -6,7 +6,8 @@
     "category": "Company News",
     "summary": "Pioneering the intersection of artificial intelligence and human artistic direction to deliver breakthrough campaigns for global brands.",
     "source": "Brandspace Media Room",
-    "link": "/stories"
+    "link": "/stories",
+    "thumb": "/assets/images/blog5.jpg"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "category": "Ventures",
     "summary": "Celebrated for innovative educational design tools and experiential creative workshops for youth across South Asia.",
     "source": "Creative Press Asia",
-    "link": "/concerns/juniorspace"
+    "link": "/concerns/juniorspace",
+    "thumb": "/assets/images/blog6.jpg"
   },
   {
     "id": 3,
@@ -24,6 +26,7 @@
     "category": "Expansion",
     "summary": "Scaling talent access across 3D motion, prompt engineering, generative art, and cultural brand positioning.",
     "source": "Design Wire",
-    "link": "/creative-network"
+    "link": "/creative-network",
+    "thumb": "/assets/images/blog1.jpg"
   }
 ]

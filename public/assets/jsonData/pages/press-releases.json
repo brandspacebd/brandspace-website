@@ -1,0 +1,12 @@
+{
+  "id": "press-releases",
+  "pageName": "Press Releases",
+  "title": "Press Releases",
+  "subtitle": "Brandspace",
+  "heroImage": "/assets/images/fun-fact4.png",
+  "quote": "\"Official corporate announcements, strategic media coverage, industry recognitions, and global studio milestones.\"",
+  "authorName": "Media Relations",
+  "authorRole": "Brandspace Communications",
+  "buttonText": "Media Inquiries",
+  "buttonUrl": "/contact"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "core-team",
+  "pageName": "Core Team",
+  "title": "Core Team",
+  "subtitle": "Brandspace",
+  "heroImage": "/assets/images/team1.png",
+  "quote": "\"A collective of art directors, strategists, and creative technologists committed to redefining the benchmarks of brand building.\"",
+  "authorName": "Leadership Team",
+  "authorRole": "Brandspace Executive",
+  "buttonText": "Let's Connect",
+  "buttonUrl": "/contact"
+}

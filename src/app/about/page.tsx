@@ -7,6 +7,7 @@ import PartnerV1 from "@/components/partner/PartnerV1";
 import ProcessV1 from "@/components/process/ProcessV1";
 import ServicesV2 from "@/components/services/ServicesV2";
 import TeamV1 from "@/components/team/TeamV1";
+import aboutData from "@/assets/jsonData/pages/about.json";
 
 export const metadata = {
     title: "Brandspace - About Us"
@@ -17,7 +18,7 @@ const AboutPage = () => {
         <>
             <div className="aixor-main about-page">
                 <LayoutV3>
-                    <HeroV2 title="About Us" />
+                    <HeroV2 data={aboutData} />
                     <AboutV2 />
                     <ServicesV2 />
                     <ProcessV1 />

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Subculture Underground Chronicles",
+    "textFirst": "Raw Avant-Garde Typography & Visual Interventions",
+    "textLast": "Defying conventional commercial design with radical aesthetics",
+    "info": "Subculture Art",
+    "description": "A limited-edition visual zine and guerrilla street art campaign exploring counter-culture, underground sounds, and raw street typography.",
+    "thumb": "/assets/images/project-2.jpg",
+    "date": "2025"
+  },
+  {
+    "id": 2,
+    "name": "Dystopian Sonic Visual Project",
+    "textFirst": "Glitch Aesthetics, Industrial Noise & Generative Art",
+    "textLast": "Audiovisual installation translating ambient soundscapes to light",
+    "info": "Experimental AV",
+    "description": "A darkened warehouse gallery installation using real-time audio reactivity to generate violent glitch art and distorted typographic landscapes.",
+    "thumb": "/assets/images/project-3.jpg",
+    "date": "2025"
+  },
+  {
+    "id": 3,
+    "name": "Radical Reinterpretation of Folk Motifs",
+    "textFirst": "Cultural Heritage Decoded into Cyberpunk Forms",
+    "textLast": "Synthesizing ancestral folklore with cyber-mechanical motifs",
+    "info": "Cultural Vanguard",
+    "description": "An unapologetic art series bringing centuries-old regional folk tapestries into the era of AI and cybernetic visual identity.",
+    "thumb": "/assets/images/project-4.jpg",
+    "date": "2024"
+  },
+  {
+    "id": 4,
+    "name": "Anti-Consumerist Guerrilla Exhibition",
+    "textFirst": "Ephemeral Pop-Up Art & Provocative Manifestos",
+    "textLast": "Challenging mainstream consumption through rebellious design",
+    "info": "Manifesto & Art",
+    "description": "A 48-hour pop-up exhibition held in an abandoned textile factory displaying large-scale screen-printed manifestos and raw sculpted artifacts.",
+    "thumb": "/assets/images/project-5.jpg",
+    "date": "2024"
+  }
+]

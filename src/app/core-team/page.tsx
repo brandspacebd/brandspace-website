@@ -3,6 +3,7 @@ import LayoutV3 from "@/components/layouts/LayoutV3";
 import TeamV1 from "@/components/team/TeamV1";
 import AboutV2 from "@/components/about/AboutV2";
 import PartnerV1 from "@/components/partner/PartnerV1";
+import coreTeamHeroData from "@/assets/jsonData/pages/core-team.json";
 
 export const metadata = {
     title: "Our Core Team | Brandspace",
@@ -13,7 +14,7 @@ const CoreTeamPage = () => {
     return (
         <div className="aixor-main core-team-page team-page">
             <LayoutV3>
-                <HeroV2 title="Our Core Team" />
+                <HeroV2 data={coreTeamHeroData} />
                 <TeamV1 subtitle="CORE LEADERSHIP & TEAM" />
                 <AboutV2 />
                 <PartnerV1 />

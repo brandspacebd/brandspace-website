@@ -3,6 +3,7 @@
     "name": "Juniorspace",
     "tagline": "Next-Gen Creative Education & Young Minds",
     "badge": "Creative Venture",
+    "heroImage": "/assets/images/service3.png",
     "description": "Juniorspace is Brandspace's dedicated creative and educational venture designed for young minds, families, and next-generation creative thinkers. We empower early imagination through visual arts, storytelling, and creative workshops.",
     "buttonText": "Explore Juniorspace",
     "buttonUrl": "/concerns/juniorspace"
@@ -11,6 +12,7 @@
     "name": "Khyap",
     "tagline": "Avant-Garde Cultural & Experimental Branding",
     "badge": "Art & Culture",
+    "heroImage": "/assets/images/service4.png",
     "description": "Khyap is Brandspace's avant-garde cultural, artistic, and experimental branding venture. Unapologetic, raw, and boundary-pushing, Khyap produces unique creative interventions and subculture campaigns.",
     "buttonText": "Explore Khyap",
     "buttonUrl": "/concerns/khyap"
@@ -19,8 +21,18 @@
     "name": "Gardenspace",
     "tagline": "Spatial Design & Experiential Lifestyle",
     "badge": "Spatial & Environmental",
+    "heroImage": "/assets/images/service2.png",
     "description": "Gardenspace is Brandspace's environmental, spatial design, and experiential lifestyle branding venture. Merging natural aesthetics with contemporary architecture to craft unforgettable sensory spaces.",
     "buttonText": "Explore Gardenspace",
     "buttonUrl": "/concerns/gardenspace"
+  },
+  "dads": {
+    "name": "DAdS",
+    "tagline": "Digital Advertising & Strategy Studio",
+    "badge": "Performance & Media",
+    "heroImage": "/assets/images/work-6.png",
+    "description": "DAdS (Digital Advertising & Strategy) is Brandspace's performance-driven marketing, media strategy, and data-fueled creative advertising venture.",
+    "buttonText": "Explore DAdS",
+    "buttonUrl": "/concerns/dads"
   }
 }

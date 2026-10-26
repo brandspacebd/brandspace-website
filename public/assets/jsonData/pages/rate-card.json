@@ -1,0 +1,12 @@
+{
+  "id": "rate-card",
+  "pageName": "Agency Rate Card",
+  "title": "Agency Rate Card",
+  "subtitle": "Brandspace",
+  "heroImage": "/assets/images/pricing-shape1.png",
+  "quote": "\"Transparent, structured pricing packages tailored to brand development, digital execution, and comprehensive creative retainers.\"",
+  "authorName": "Commercial Office",
+  "authorRole": "Brandspace Studio",
+  "buttonText": "Request Scope",
+  "buttonUrl": "/contact"
+}

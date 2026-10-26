@@ -1,0 +1,12 @@
+{
+  "id": "services",
+  "pageName": "Our Services",
+  "title": "Our Services",
+  "subtitle": "Brandspace",
+  "heroImage": "/assets/images/service1.png",
+  "quote": "\"We fuse strategic foresight with boundary-pushing creative craft to engineer brands that lead markets and shape modern culture.\"",
+  "authorName": "Creative Directorate",
+  "authorRole": "Brandspace Studio",
+  "buttonText": "Let's Connect",
+  "buttonUrl": "/contact"
+}

@@ -3,6 +3,7 @@ import LayoutV3 from "@/components/layouts/LayoutV3";
 import RetainerCalculatorSection from "@/components/pricing/RetainerCalculatorSection";
 import FaqV1 from "@/components/faq/FaqV1";
 import ContactV1 from "@/components/contact/ContactV1";
+import retainerCalculatorHeroData from "@/assets/jsonData/pages/retainer-calculator.json";
 
 export const metadata = {
     title: "Monthly Retainer Fee Calculator - Brandspace",
@@ -13,7 +14,7 @@ const RetainerCalculatorPage = () => {
     return (
         <div className="aixor-main retainer-calculator-page">
             <LayoutV3>
-                <HeroV2 title="Retainer Fee Calculator" />
+                <HeroV2 data={retainerCalculatorHeroData} />
                 <RetainerCalculatorSection />
                 <FaqV1 />
                 <ContactV1 />

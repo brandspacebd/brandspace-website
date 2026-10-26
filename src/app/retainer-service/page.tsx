@@ -4,6 +4,7 @@ import PriceV1 from "@/components/pricing/PriceV1";
 import ProcessV1 from "@/components/process/ProcessV1";
 import ServicesV2 from "@/components/services/ServicesV2";
 import ContactV1 from "@/components/contact/ContactV1";
+import retainerServiceHeroData from "@/assets/jsonData/pages/retainer-service.json";
 
 export const metadata = {
     title: "Monthly Retainer Service - Brandspace",
@@ -14,7 +15,7 @@ const RetainerServicePage = () => {
     return (
         <div className="aixor-main retainer-service-page">
             <LayoutV3>
-                <HeroV2 title="Monthly Retainer Service" />
+                <HeroV2 data={retainerServiceHeroData} />
                 <PriceV1 />
                 <ServicesV2 />
                 <ProcessV1 />

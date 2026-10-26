@@ -13,10 +13,12 @@ interface DataType {
     info?: string;
     date?: string;
     delay?: string;
+    link?: string;
 }
 
 const SingleFeatureV2 = ({ feature }: { feature: DataType }) => {
-    const { id, thumb, name, textFirst, textLast, info, date, delay } = feature
+    const { id, thumb, name, textFirst, textLast, info, date, delay, link } = feature;
+    const projectLink = link || (id ? `/project-details/${id}` : '/projects');
 
     const { containerRef, hoverElementRef } = useHoverEffect();
 
@@ -25,7 +27,7 @@ const SingleFeatureV2 = ({ feature }: { feature: DataType }) => {
             <div className="feature-project-single">
                 <div className="feature-project" data-aos="fade-up" data-aos-delay={delay} ref={containerRef}>
                     <div className="hover_mouse" ref={hoverElementRef}>
-                        <Link href={`/project-details/${id}`}>View</Link>
+                        <Link href={projectLink}>View</Link>
                     </div>
                     <div className="img-box">
                         <Image src={getImageUrl(thumb)} alt="image" width={2544} height={1336} />
@@ -33,7 +35,7 @@ const SingleFeatureV2 = ({ feature }: { feature: DataType }) => {
                     <div className="feature-project-infos">
                         <div className="feature-project-info-box">
                             <span className="title">Project Name:</span>
-                            <Link href={`/project-details/${id}`}>
+                            <Link href={projectLink}>
                                 <span className="subtitle">{name}</span>
                             </Link>
                         </div>

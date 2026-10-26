@@ -7,9 +7,15 @@ import ServicesV1Data from "@/assets/jsonData/services/ServicesV1Data.json"
 import SingleServicesV1 from "./SingleServicesV1"
 import { useState } from "react"
 
-const ServicesV1 = () => {
+interface ServicesV1Props {
+    servicesData?: any[];
+    subtitle?: string;
+    description?: string;
+}
 
-    const [activeServiceId, setActiveServiceId] = useState(ServicesV1Data[0]?.id || null);
+const ServicesV1 = ({ servicesData, subtitle, description }: ServicesV1Props = {}) => {
+    const list = servicesData && servicesData.length > 0 ? servicesData : ServicesV1Data;
+    const [activeServiceId, setActiveServiceId] = useState(list[0]?.id || null);
 
     const handleMouseEnter = (id: number) => {
         setActiveServiceId(id);
@@ -26,10 +32,10 @@ const ServicesV1 = () => {
                     <div className="section-header">
                         <span className="section-subtitle">
                             <Image src={Union} alt="icon" />
-                            Our Service
+                            {subtitle || "Our Service"}
                         </span>
                         <AnimatedText>
-                            {`At Brandspace, we offer tailored creative solutions to elevate your brand and drive success, exceeding your expectations with our expert team's dedicated services.`}
+                            {description || `At Brandspace, we offer tailored creative solutions to elevate your brand and drive success, exceeding your expectations with our expert team's dedicated services.`}
                         </AnimatedText>
                     </div>
                 </div>
@@ -53,7 +59,7 @@ const ServicesV1 = () => {
 
                     {/* Service Lists */}
                     <div className="service-lists">
-                        {ServicesV1Data.map(services =>
+                        {list.map(services =>
                             <div
                                 className={`service-box ${activeServiceId === services.id ? 'active' : ''}`}
                                 key={services.id}

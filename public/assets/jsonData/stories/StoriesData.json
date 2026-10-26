@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Behind The Scenes: Engineering Brandspace's Generative AI Production Suite",
+    "title2": "How human artistic vision guides artificial intelligence to produce brand breakthroughs",
+    "author": "Creative Tech Lab",
+    "date": "18 Jan 2025",
+    "comment": "Design Innovation",
+    "thumb": "/assets/images/blog1.jpg",
+    "thumbFull": "/assets/images/blog1Full.jpg",
+    "content": "<p>Artificial intelligence is neither a replacement for the creative director nor a shortcut for mediocre craft. At Brandspace, we treat machine intelligence as an elastic extension of human intuition—a high-dimensional canvas that executes at the velocity of thought.</p><p>Over the past twelve months, our team integrated custom generative models into our standard art direction pipeline, accelerating early exploratory phases from weeks to hours.</p>"
+  },
+  {
+    "id": 2,
+    "title": "The Architecture of Quiet Luxury: Designing Brands That Do Not Need to Shout",
+    "title2": "Why understatement, tactile restraint, and editorial pacing define the new elite brands",
+    "author": "Brand Strategy Desk",
+    "date": "04 Jan 2025",
+    "comment": "Brand Strategy",
+    "thumb": "/assets/images/blog2.jpg",
+    "thumbFull": "/assets/images/blog2Full.jpg",
+    "content": "<p>In an attention economy overflowing with neon stimuli and kinetic chaos, deliberate quietness becomes the ultimate luxury. When every brand screams for five seconds of attention, the brand that whispers with absolute confidence commands the entire room.</p>"
+  },
+  {
+    "id": 3,
+    "title": "Bridging the Physical & Virtual: Biophilic Environments in Commercial Headquarters",
+    "title2": "How Gardenspace reimagines modern corporate workspaces as living sanctuaries",
+    "author": "Gardenspace Studio",
+    "date": "22 Dec 2024",
+    "comment": "Spatial Design",
+    "thumb": "/assets/images/blog3.jpg",
+    "thumbFull": "/assets/images/blog3Full.jpg",
+    "content": "<p>Humans are biologically hardwired to respond to natural patterns, fluctuating light, and organic textures. When corporate architecture severs this connection, creativity diminishes. Discover how living walls, reclaimed timber, and daylight calibration reshape focus.</p>"
+  },
+  {
+    "id": 4,
+    "title": "From Subculture to Mainstream: The Cultural Mechanics of Khyap",
+    "title2": "Why counter-cultural aesthetics provide the blueprint for tomorrow's commercial hits",
+    "author": "Khyap Collective",
+    "date": "10 Dec 2024",
+    "comment": "Culture & Art",
+    "thumb": "/assets/images/blog4.jpg",
+    "thumbFull": "/assets/images/blog4Full.jpg",
+    "content": "<p>True novelty never originates in corporate boardrooms. It is born in underground clubs, illicit zines, DIY music basements, and rebellious street art. By embedding Khyap into regional subcultures, Brandspace decodes cultural trends years before they hit the mass market.</p>"
+  }
+]

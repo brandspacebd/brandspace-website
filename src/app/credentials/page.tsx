@@ -5,6 +5,7 @@ import AwardsV1 from "@/components/awards/AwardsV1";
 import AboutV2 from "@/components/about/AboutV2";
 import PartnerV1 from "@/components/partner/PartnerV1";
 import ContactV1 from "@/components/contact/ContactV1";
+import credentialsHeroData from "@/assets/jsonData/pages/credentials.json";
 
 export const metadata = {
     title: "Credentials & Accreditations | Brandspace",
@@ -15,7 +16,7 @@ const CredentialsPage = () => {
     return (
         <div className="aixor-main credentials-page">
             <LayoutV3>
-                <HeroV2 title="Credentials & Accreditations" />
+                <HeroV2 data={credentialsHeroData} />
                 <CredentialsEmbed />
                 <AwardsV1 />
                 <AboutV2 />

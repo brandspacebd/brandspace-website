@@ -34,6 +34,17 @@ export const metadata: Metadata = {
   title: "Brandspace - Creative Agency",
   description: "Brandspace is a full-service creative agency transforming bold ideas into compelling realities.",
   metadataBase: new URL("https://www.brandspacebd.com"),
+  icons: {
+    icon: [
+      { url: "/logo/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/logo/favicon.svg",
+    apple: [
+      { url: "/logo/graphlink-viewer.svg", sizes: "180x180", type: "image/svg+xml" },
+      { url: "/logo/favicon.svg" }
+    ],
+  },
 };
 
 export default function RootLayout({

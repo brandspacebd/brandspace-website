@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Biophilic Headquarters Pavilion",
+    "textFirst": "Spatial Interior Architecture & Natural Living Systems",
+    "textLast": "Crafting sustainable and sensory work environments",
+    "info": "Spatial Design",
+    "description": "An immersive eco-workspace combining natural light, reclaimed materials, and living vertical gardens to elevate daily productivity and brand atmosphere.",
+    "thumb": "/assets/images/project-1.jpg",
+    "date": "2025"
+  },
+  {
+    "id": 2,
+    "name": "Verdant Retail Flagship Experience",
+    "textFirst": "Experiential Environmental Branding & Materials",
+    "textLast": "Harmonizing tactile organic elements with contemporary retail",
+    "info": "Experiential Branding",
+    "description": "A flagship sensory retail store conceptualized around natural materials, botanical textures, and ambient acoustic scapes.",
+    "thumb": "/assets/images/project-2.jpg",
+    "date": "2025"
+  },
+  {
+    "id": 3,
+    "name": "Urban Oasis Botanical Lounge",
+    "textFirst": "Sensory Landscape & Hospitality Architecture",
+    "textLast": "Creating calming sanctuaries in dense metropolis spaces",
+    "info": "Hospitality Architecture",
+    "description": "Architectural transformation of a rooftop space into an all-season living ecosystem and exclusive culinary sanctuary.",
+    "thumb": "/assets/images/project-3.jpg",
+    "date": "2024"
+  },
+  {
+    "id": 4,
+    "name": "Sustainable Living Installation",
+    "textFirst": "Circular Design & Sustainable Material Innovations",
+    "textLast": "Interactive eco-installation showcased at design biennales",
+    "info": "Sustainable Art",
+    "description": "A zero-waste exhibition pavilion built entirely from bio-composite materials, demonstrating circular construction principles.",
+    "thumb": "/assets/images/project-4.jpg",
+    "date": "2024"
+  }
+]

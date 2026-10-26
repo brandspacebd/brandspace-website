@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Young Creators Art & Tech Lab",
+    "textFirst": "Interactive Educational Design & Visual Storytelling",
+    "textLast": "Inspiring youth through tactile art and digital mediums",
+    "info": "Youth Education",
+    "description": "A multi-sensory educational ecosystem where children experiment with color theory, motion, digital illustration, and hands-on maker craft.",
+    "thumb": "/assets/images/project-5.jpg",
+    "date": "2025"
+  },
+  {
+    "id": 2,
+    "name": "Whimsical Illustrated Story World",
+    "textFirst": "Character Design, Children's Books & Animation",
+    "textLast": "Sparking early imagination through rich whimsical characters",
+    "info": "Illustration & IP",
+    "description": "Original children's literature brand identity featuring tactile pop-up books, animated interactive apps, and whimsical character worlds.",
+    "thumb": "/assets/images/project-6.jpg",
+    "date": "2025"
+  },
+  {
+    "id": 3,
+    "name": "Next-Gen Creative Summer Academy",
+    "textFirst": "Experiential Learning & Creative Discovery Camps",
+    "textLast": "Hands-on workshops teaching design thinking for young innovators",
+    "info": "Creative Workshops",
+    "description": "A seasonal bootcamp for curious young minds exploring architecture, robotics art, generative creativity, and eco-craft.",
+    "thumb": "/assets/images/project-7.jpg",
+    "date": "2024"
+  },
+  {
+    "id": 4,
+    "name": "Playful Family Museum Exhibit",
+    "textFirst": "Spatial Play Installations & Discovery Playgrounds",
+    "textLast": "Museum spaces designed for intergenerational learning and wonder",
+    "info": "Museum Curation",
+    "description": "An interactive, touch-friendly gallery space welcoming young explorers to touch, construct, and co-create collaborative art walls.",
+    "thumb": "/assets/images/project-1.jpg",
+    "date": "2024"
+  }
+]

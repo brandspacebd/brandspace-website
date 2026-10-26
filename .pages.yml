@@ -22,6 +22,51 @@ settings:
 
 content:
   # ============================================================
+  # 0. PAGES: INDEPENDENT HERO BANNERS & IMAGES
+  # ============================================================
+  - name: page-heroes
+    label: "Pages: All Hero Banners & Images (Per-Page Independent)"
+    type: collection
+    path: public/assets/jsonData/pages
+    format: json
+    description: "Customize the floating hero image, title, quote, and author for every page independently. Changing an image here ONLY affects that specific page!"
+    fields:
+      - name: pageName
+        label: Page Name
+        type: string
+        description: Human-readable name of the page.
+      - name: title
+        label: Hero Main Heading
+        type: string
+        description: Primary title heading (e.g. About Us, The Works, Services, Juniorspace).
+      - name: subtitle
+        label: Hero Subtitle Line
+        type: string
+        description: Secondary line (e.g. Brandspace, Brandspace Venture).
+      - name: heroImage
+        label: Hero Floating Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+        description: Unique floating graphic for this page. Uploading or changing this image will NOT affect any other page.
+      - name: quote
+        label: Hero Inspirational Quote
+        type: text
+        description: Statement paragraph displayed in the top right.
+      - name: authorName
+        label: Quote Author Name
+        type: string
+      - name: authorRole
+        label: Quote Author Role
+        type: string
+      - name: buttonText
+        label: CTA Button Text
+        type: string
+      - name: buttonUrl
+        label: CTA Button Link
+        type: string
+
+  # ============================================================
   # NAVBAR > SITE & GLOBAL BRANDING
   # ============================================================
   - name: site-settings
@@ -45,6 +90,18 @@ content:
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
         description: Primary logo image displayed in the website header navigation.
+      - name: favicon
+        label: Website Favicon
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+        description: Browser tab favicon (SVG, PNG, ICO).
+      - name: monogram
+        label: Brand Monogram / App Icon
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+        description: Square brand symbol / monogram icon (e.g. Graphlink Viewer).
       - name: footerLogo
         label: Footer Logo
         type: image
@@ -418,11 +475,11 @@ content:
   # 5. NAVBAR > OUR VENTURES
   # ============================================================
   - name: ventures
-    label: "5. Our Ventures: Juniorspace, Khyap & Gardenspace"
+    label: "5. Our Ventures: Juniorspace, Khyap, Gardenspace & DAdS"
     type: file
     path: public/assets/jsonData/ventures/VenturesData.json
     format: json
-    description: "Manage content, descriptions, and taglines for Brandspace's three ventures (Juniorspace, Khyap, Gardenspace)."
+    description: "Manage content, descriptions, and hero graphics for Brandspace's four ventures (Juniorspace, Khyap, Gardenspace, DAdS)."
     fields:
       - name: juniorspace
         label: Juniorspace (Education & Young Minds)
@@ -437,6 +494,11 @@ content:
           - name: badge
             label: Badge Label
             type: string
+          - name: heroImage
+            label: Hero Floating Graphic
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, svg, gif]
           - name: description
             label: Overview Description
             type: text
@@ -459,6 +521,11 @@ content:
           - name: badge
             label: Badge Label
             type: string
+          - name: heroImage
+            label: Hero Floating Graphic
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, svg, gif]
           - name: description
             label: Overview Description
             type: text
@@ -481,6 +548,11 @@ content:
           - name: badge
             label: Badge Label
             type: string
+          - name: heroImage
+            label: Hero Floating Graphic
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, svg, gif]
           - name: description
             label: Overview Description
             type: text
@@ -490,6 +562,181 @@ content:
           - name: buttonUrl
             label: Destination Link
             type: string
+      - name: dads
+        label: DAdS (Digital Advertising & Strategy)
+        type: object
+        fields:
+          - name: name
+            label: Venture Name
+            type: string
+          - name: tagline
+            label: Tagline
+            type: string
+          - name: badge
+            label: Badge Label
+            type: string
+          - name: heroImage
+            label: Hero Floating Graphic
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp, svg, gif]
+          - name: description
+            label: Overview Description
+            type: text
+          - name: buttonText
+            label: Button Label
+            type: string
+          - name: buttonUrl
+            label: Destination Link
+            type: string
+
+  - name: juniorspace-projects
+    label: "5. Our Ventures: Juniorspace Showcase Projects"
+    type: file
+    path: public/assets/jsonData/ventures/juniorspaceProjects.json
+    format: json
+    list: true
+    description: "Independent projects showcased on the /concerns/juniorspace page. Editing images here ONLY affects Juniorspace."
+    fields:
+      - name: id
+        label: Project ID
+        type: number
+        required: true
+      - name: name
+        label: Project Name
+        type: string
+        required: true
+      - name: info
+        label: Category / Tag
+        type: string
+      - name: textFirst
+        label: First Description Line
+        type: string
+      - name: textLast
+        label: Second Description Line
+        type: string
+      - name: description
+        label: Full Project Description
+        type: text
+      - name: thumb
+        label: Project Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: date
+        label: Date / Year
+        type: string
+
+  - name: khyap-projects
+    label: "5. Our Ventures: Khyap Showcase Projects"
+    type: file
+    path: public/assets/jsonData/ventures/khyapProjects.json
+    format: json
+    list: true
+    description: "Independent projects showcased on the /concerns/khyap page. Editing images here ONLY affects Khyap."
+    fields:
+      - name: id
+        label: Project ID
+        type: number
+        required: true
+      - name: name
+        label: Project Name
+        type: string
+        required: true
+      - name: info
+        label: Category / Tag
+        type: string
+      - name: textFirst
+        label: First Description Line
+        type: string
+      - name: textLast
+        label: Second Description Line
+        type: string
+      - name: description
+        label: Full Project Description
+        type: text
+      - name: thumb
+        label: Project Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: date
+        label: Date / Year
+        type: string
+
+  - name: gardenspace-projects
+    label: "5. Our Ventures: Gardenspace Showcase Projects"
+    type: file
+    path: public/assets/jsonData/ventures/gardenspaceProjects.json
+    format: json
+    list: true
+    description: "Independent projects showcased on the /concerns/gardenspace page. Editing images here ONLY affects Gardenspace."
+    fields:
+      - name: id
+        label: Project ID
+        type: number
+        required: true
+      - name: name
+        label: Project Name
+        type: string
+        required: true
+      - name: info
+        label: Category / Tag
+        type: string
+      - name: textFirst
+        label: First Description Line
+        type: string
+      - name: textLast
+        label: Second Description Line
+        type: string
+      - name: description
+        label: Full Project Description
+        type: text
+      - name: thumb
+        label: Project Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: date
+        label: Date / Year
+        type: string
+
+  - name: dads-projects
+    label: "5. Our Ventures: DAdS Showcase Projects"
+    type: file
+    path: public/assets/jsonData/ventures/dadsProjects.json
+    format: json
+    list: true
+    description: "Independent projects showcased on the /concerns/dads page. Editing images here ONLY affects DAdS."
+    fields:
+      - name: id
+        label: Project ID
+        type: number
+        required: true
+      - name: name
+        label: Project Name
+        type: string
+        required: true
+      - name: info
+        label: Category / Tag
+        type: string
+      - name: textFirst
+        label: First Description Line
+        type: string
+      - name: textLast
+        label: Second Description Line
+        type: string
+      - name: description
+        label: Full Project Description
+        type: text
+      - name: thumb
+        label: Project Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: date
+        label: Date / Year
+        type: string
 
   # ============================================================
   # 6. NAVBAR > EXPLORE > CLIENTS & SERVICES
@@ -510,6 +757,43 @@ content:
         type: image
         options:
           extensions: [jpg, jpeg, png, webp, svg, gif]
+
+  - name: clients-case-studies
+    label: "6. Explore: Our Clients Case Studies & Projects"
+    type: file
+    path: public/assets/jsonData/clients/ClientsCaseStudiesData.json
+    format: json
+    list: true
+    description: "Independent case studies shown on the /clients page. Editing images here does NOT affect The Works (/projects)."
+    fields:
+      - name: id
+        label: Case Study ID
+        type: number
+        required: true
+      - name: name
+        label: Client / Case Study Name
+        type: string
+        required: true
+      - name: info
+        label: Industry / Tag
+        type: string
+      - name: textFirst
+        label: Scope Summary
+        type: string
+      - name: textLast
+        label: Impact Metric
+        type: string
+      - name: description
+        label: Full Overview
+        type: text
+      - name: thumb
+        label: Case Study Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: date
+        label: Year / Period
+        type: string
 
   - name: services
     label: "6. Explore: All Services (Categories & Detail Pages)"
@@ -569,13 +853,58 @@ content:
   # ============================================================
   # 7. NAVBAR > EXPLORE > SHOWCASE & MEDIA
   # ============================================================
+  - name: stories
+    label: "7. Explore: Stories & Insights (Brandspace Stories)"
+    type: file
+    path: public/assets/jsonData/stories/StoriesData.json
+    format: json
+    list: true
+    description: "In-depth editorial articles and stories displayed on the /stories page. Editing images here does NOT affect the Blog."
+    fields:
+      - name: id
+        label: Article ID
+        type: number
+        required: true
+      - name: title
+        label: Story Headline
+        type: string
+        required: true
+      - name: title2
+        label: Secondary Headline / Topic
+        type: string
+      - name: author
+        label: Author Name
+        type: string
+      - name: date
+        label: Publication Date
+        type: string
+      - name: comment
+        label: Category / Topic Tag
+        type: string
+      - name: thumb
+        label: Card Thumbnail
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: thumbFull
+        label: Full Story Cover Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+      - name: content
+        label: Full Article Content
+        type: rich-text
+        options:
+          format: html
+          switcher: true
+
   - name: blog
-    label: "7. Explore: Stories & Insights (Articles & Case Studies)"
+    label: "7. Explore: Blog Articles & Insights (/blog)"
     type: file
     path: public/assets/jsonData/feature/FeatureV3Data.json
     format: json
     list: true
-    description: "In-depth editorial articles, campaign retrospectives, and stories displayed at /stories, /blog, and /blog-details/[id]."
+    description: "Articles displayed at /blog and /blog-details/[id]. Editing images here does NOT affect Stories or Press Releases."
     fields:
       - name: id
         label: Article ID
@@ -624,12 +953,12 @@ content:
         description: Full article body editor with rich formatting, bold, italics, bullet lists, headings, and links.
 
   - name: press-releases
-    label: "7. Explore: Press Releases & Media Coverage"
+    label: "7. Explore: Press Releases & Media Coverage (/press-releases)"
     type: file
     path: public/assets/jsonData/press/PressReleasesData.json
     format: json
     list: true
-    description: "Official press releases, media coverage announcements, and company news shown at /press-releases."
+    description: "Official press releases and company news shown at /press-releases. Editing images here does NOT affect Blog or Stories."
     fields:
       - name: id
         label: Release ID
@@ -654,6 +983,11 @@ content:
       - name: link
         label: Full Story Link / URL
         type: string
+      - name: thumb
+        label: Press Release Image
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
 
   - name: credentials
     label: "7. Explore: Credentials Flipbook & Dossier"
@@ -992,3 +1326,79 @@ content:
             label: Answer
             type: text
             description: Full answer text.
+
+  # ============================================================
+  # GLOBAL: BRAND ASSETS & SITE SETTINGS
+  # ============================================================
+  - name: site-settings
+    label: "Global: Brand Assets & Site Settings"
+    type: file
+    path: public/assets/jsonData/settings/siteSettings.json
+    format: json
+    description: "Manage global brand identity including header logo, favicon, monogram, footer logo, contact info, and social channels."
+    fields:
+      - name: siteName
+        label: Brand / Site Name
+        type: string
+        required: true
+      - name: websiteUrl
+        label: Canonical Website URL
+        type: string
+      - name: logo
+        label: Primary Brand Logo (Header)
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+        description: "Official full logo used in header navigation (e.g. /logo/logo.svg)."
+      - name: favicon
+        label: Browser Favicon
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif, ico]
+        description: "Browser tab icon (e.g. /logo/favicon.svg)."
+      - name: monogram
+        label: Brand Monogram / App Icon
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+        description: "Icon mark / graphlink viewer square monogram (e.g. /logo/graphlink-viewer.svg)."
+      - name: footerLogo
+        label: Giant Footer Wordmark Logo
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp, svg, gif]
+        description: "Large footer statement mark (e.g. /uploads/logo-1-1.svg or /logo/logo.svg)."
+      - name: email
+        label: Official Email Address
+        type: string
+      - name: phone
+        label: Contact Phone / WhatsApp
+        type: string
+      - name: address
+        label: Registered Physical Office Address
+        type: string
+      - name: copyright
+        label: Copyright Statement
+        type: string
+      - name: socialLinks
+        label: Official Social Links
+        type: object
+        fields:
+          - name: facebook
+            label: Facebook URL
+            type: string
+          - name: youtube
+            label: YouTube URL
+            type: string
+          - name: instagram
+            label: Instagram URL
+            type: string
+          - name: twitter
+            label: X / Twitter URL
+            type: string
+          - name: behance
+            label: Behance URL
+            type: string
+          - name: dribbble
+            label: Dribbble URL
+            type: string

@@ -5,6 +5,8 @@ import FeatureV2 from "@/components/feature/FeatureV2";
 import ProcessV1 from "@/components/process/ProcessV1";
 import ContactV1 from "@/components/contact/ContactV1";
 import venturesData from "@/assets/jsonData/ventures/VenturesData.json";
+import gardenspaceHeroData from "@/assets/jsonData/pages/gardenspace.json";
+import gardenspaceProjects from "@/assets/jsonData/ventures/gardenspaceProjects.json";
 
 export const metadata = {
     title: `${venturesData?.gardenspace?.name || "Gardenspace"} - Brandspace Venture`,
@@ -12,14 +14,13 @@ export const metadata = {
 };
 
 const GardenspacePage = () => {
-    const data = venturesData?.gardenspace;
     return (
         <div className="aixor-main concerns-page gardenspace-page">
             <LayoutV3>
-                <HeroV2 title={data?.name || "Gardenspace"} />
-                <ServicesV1 />
-                <FeatureV2 />
-                <ProcessV1 />
+                <HeroV2 data={gardenspaceHeroData} />
+                <ServicesV1 subtitle="Gardenspace Capabilities" description="Harmonizing nature, biophilic materials, and architectural craft into transcendent brand spaces." />
+                <FeatureV2 items={gardenspaceProjects} />
+                <ProcessV1 subtitle="Spatial Methodology" title={<>Sensory Design, <span>Sustainable Spaces</span></>} />
                 <ContactV1 />
             </LayoutV3>
         </div>

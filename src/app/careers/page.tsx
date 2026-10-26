@@ -5,6 +5,7 @@ import TeamV1 from "@/components/team/TeamV1";
 import ServicesV2 from "@/components/services/ServicesV2";
 import ContactV1 from "@/components/contact/ContactV1";
 import careersData from "@/assets/jsonData/careers/CareersData.json";
+import careersHeroData from "@/assets/jsonData/pages/careers.json";
 
 export const metadata = {
     title: "Careers at Brandspace - Join Our Creative Crew",
@@ -22,7 +23,7 @@ const CareersPage = () => {
     return (
         <div className="aixor-main careers-page">
             <LayoutV3>
-                <HeroV2 title="Careers at Brandspace" />
+                <HeroV2 data={careersHeroData} />
                 <AboutV2 />
                 <div style={{ padding: "60px 0 20px" }}>
                     <div className="custom-container">
