@@ -200,9 +200,6 @@ const HeaderSidebar = () => {
                                             <Link href="/concerns/khyap" className="mobile-submenu-link" onClick={handleCloseClick}>
                                                 Khyap
                                             </Link>
-                                            <Link href="/concerns/dads" className="mobile-submenu-link" onClick={handleCloseClick}>
-                                                DAdS
-                                            </Link>
                                         </div>
                                     )}
                                 </li>

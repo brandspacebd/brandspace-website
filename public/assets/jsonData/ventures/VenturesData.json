@@ -25,14 +25,5 @@
     "description": "Gardenspace is Brandspace's environmental, spatial design, and experiential lifestyle branding venture. Merging natural aesthetics with contemporary architecture to craft unforgettable sensory spaces.",
     "buttonText": "Explore Gardenspace",
     "buttonUrl": "/concerns/gardenspace"
-  },
-  "dads": {
-    "name": "DAdS",
-    "tagline": "Digital Advertising & Strategy Studio",
-    "badge": "Performance & Media",
-    "heroImage": "/assets/images/work-6.png",
-    "description": "DAdS (Digital Advertising & Strategy) is Brandspace's performance-driven marketing, media strategy, and data-fueled creative advertising venture.",
-    "buttonText": "Explore DAdS",
-    "buttonUrl": "/concerns/dads"
   }
 }
