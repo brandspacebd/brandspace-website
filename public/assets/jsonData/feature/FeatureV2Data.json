@@ -1,46 +1,72 @@
 [
   {
     "id": 1,
-    "name": "Dimension Dynamics",
-    "info": "Brand Identity",
-    "textFirst": "We collaborated closely with our client to",
-    "textLast": "transform their vision into a reality.",
+    "name": "Simple Tree - Real Estate Stories",
+    "info": "Brand Identity & Strategy",
+    "textFirst": "We collaborated closely with Simple Tree to",
+    "textLast": "transform their architectural vision into living stories.",
+    "description": "Comprehensive brand identity, spatial storytelling, and multi-channel marketing collateral developed for Simple Tree's luxury residential developments.",
+    "thumb": "/uploads/projects/work-1.png",
     "date": "May 6th, 2024"
   },
   {
     "id": 2,
-    "name": "Steinway Essentials",
-    "info": "Web Design"
+    "name": "Milano Ceramic Signature",
+    "info": "Campaign & Creative Direction",
+    "textFirst": "Immerse in refined elegance and seamless",
+    "textLast": "interior design aesthetics for modern living spaces.",
+    "description": "End-to-end creative direction, photography styling, and national billboard campaign for Milano's premium ceramic collection.",
+    "thumb": "/uploads/projects/work-2.png",
+    "date": "April 18th, 2024"
   },
   {
     "id": 3,
-    "name": "Sil’o Prints",
-    "info": "Development"
+    "name": "Fresh Happy Life - MGI",
+    "info": "Packaging & Healthcare FMCG",
+    "textFirst": "Empathetic, premium healthcare packaging and",
+    "textLast": "retail presence for national hygiene products.",
+    "description": "Packaging design, structural communication, and visual identity for Meghna Group of Industries' Happy Life adult diaper product line.",
+    "thumb": "/uploads/projects/work-3.png",
+    "date": "March 24th, 2024"
   },
   {
     "id": 4,
-    "name": "Creative Nexus",
-    "info": "Marketing",
-    "textFirst": "We collaborated closely with our client to",
-    "textLast": "transform their vision into a reality.",
-    "date": "May 6th, 2024"
+    "name": "Treelogy - Crafting Living Spaces",
+    "info": "Marketing & Spatial Identity",
+    "textFirst": "A time-tested testimony of reliability, craftsmanship,",
+    "textLast": "and intimate spaces tailored for modern families.",
+    "description": "Full-spectrum property launch collateral, interactive investor presentations, and architectural identity for Treelogy at Bashundhara R/A.",
+    "thumb": "/uploads/projects/work-4.png",
+    "date": "March 10th, 2024"
   },
   {
     "id": 5,
-    "name": "Innovative Horizon",
-    "info": "Brand Identity"
+    "name": "Oriental Eco Woods",
+    "info": "Brand Identity & Sustainable Products",
+    "textFirst": "Bringing sustainable eco-wood innovations and",
+    "textLast": "green modern interiors into everyday homes.",
+    "description": "Visual campaign highlighting eco-friendly timber alternatives, emphasizing fire resistance, water durability, and environmental conservation.",
+    "thumb": "/uploads/projects/work-6.png",
+    "date": "February 15th, 2024"
   },
   {
     "id": 6,
-    "name": "Intuitive Interactions",
-    "info": "Digital Marketing"
+    "name": "Intuitive Interactions - S24 Showcase",
+    "info": "Digital Experience & User Interface",
+    "textFirst": "Next-generation device showcase and tactile",
+    "textLast": "digital mockup system built for modern creators.",
+    "description": "Hyper-realistic 3D mockups and tactile digital interface experience designed to highlight cutting-edge mobile hardware features.",
+    "thumb": "/uploads/projects/project-1.webp",
+    "date": "January 28th, 2024"
   },
   {
     "id": 7,
-    "name": "Creative Nexus",
-    "info": "User Interface",
-    "textFirst": "We collaborated closely with our client to",
-    "textLast": "transform their vision into a reality.",
-    "date": "May 6th, 2024"
+    "name": "Treelogy Family Sanctuary",
+    "info": "Integrated Campaign & Advertising",
+    "textFirst": "Editorial lifestyle campaign celebrating comfort,",
+    "textLast": "intergenerational warmth, and lasting residential value.",
+    "description": "Multi-tier social and print advertising suite depicting the warmth and reliability of home, capturing moments that matter across generations.",
+    "thumb": "/uploads/projects/work-4-1.png",
+    "date": "January 12th, 2024"
   }
 ]

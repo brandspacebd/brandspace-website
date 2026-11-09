@@ -11,6 +11,14 @@ A modern, high-performance agency website built with Next.js 16 and fully integr
 - npm 10+
 
 ### Installation & Development
+
+#### One-Click Run (Windows)
+Double-click `run.bat` (or `start.bat`) in the root directory. It automatically:
+- Checks for Node.js and installs missing dependencies if needed.
+- Finds an available port (if 3000 is occupied, it switches to 3001, 3002, etc.).
+- Starts the local dev server and automatically opens the site in your default browser.
+
+#### Manual Terminal Setup
 ```bash
 # Install dependencies with legacy peer dependency handling
 npm install --legacy-peer-deps

@@ -33,7 +33,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                 </div>
                 <div className="feature-project">
                     <div className="img-box">
-                        <Image className="scaleDown" src={getImageUrl(thumb)} width={2544} height={1336} alt="project-single" />
+                        <Image className="scaleDown" src={getImageUrl(thumb, '/uploads/projects/work-1.png')} width={2544} height={1336} alt={name || "project-single"} />
                     </div>
                     <div className="feature-project-infos">
                         <div className="feature-project-info-box project-name">
@@ -97,7 +97,7 @@ const ProjectDetailsContent = ({ projectData }: { projectData: Datatype }) => {
                     </div>
                 </div>
                 <div className="full-image">
-                    <Image className="scaleDown" src={getImageUrl(thumb)} alt="project-single" width={2544} height={1336} />
+                    <Image className="scaleDown" src={getImageUrl(thumb, '/uploads/projects/work-1.png')} alt={name || "project-single"} width={2544} height={1336} />
                 </div>
             </div>
         </>

@@ -30,7 +30,7 @@ const SingleFeatureV2 = ({ feature }: { feature: DataType }) => {
                         <Link href={projectLink}>View</Link>
                     </div>
                     <div className="img-box">
-                        <Image src={getImageUrl(thumb)} alt="image" width={2544} height={1336} />
+                        <Image src={getImageUrl(thumb, '/uploads/projects/work-1.png')} alt={name || "Project image"} width={2544} height={1336} />
                     </div>
                     <div className="feature-project-infos">
                         <div className="feature-project-info-box">
