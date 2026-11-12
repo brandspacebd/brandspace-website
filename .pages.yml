@@ -357,7 +357,10 @@ content:
     path: public/assets/jsonData/feature/FeatureV2Data.json
     format: json
     list: true
-    description: "Full portfolio project directory displayed at /projects and /project-details/[id]."
+    collapsible:
+      collapsed: true
+      summary: "{name} — {info}"
+    description: "Full portfolio project directory displayed at /projects and /project-details/[id]. You can delete, reorder, or add any individual project."
     media: projects
     fields:
       - name: id
@@ -493,7 +496,10 @@ content:
     path: public/assets/jsonData/team/TeamV1Data.json
     format: json
     list: true
-    description: "Agency leadership, art directors, and core creative specialists displayed at /core-team (and /team) with detail profiles at /team-details/[id]. Kept completely separate from Creative Network."
+    collapsible:
+      collapsed: true
+      summary: "{name} — {designation}"
+    description: "Agency leadership, art directors, and core creative specialists displayed at /core-team (and /team) with detail profiles at /team-details/[id]. You can delete, reorder, or add any individual member."
     media: team
     fields:
       - name: id
@@ -526,7 +532,10 @@ content:
     path: public/assets/jsonData/team/CreativeNetworkData.json
     format: json
     list: true
-    description: "Extended global network of 3D CGI artists, AI visualizers, motion designers, and creative technologists displayed at /creative-network. Kept completely separate from Core Team."
+    collapsible:
+      collapsed: true
+      summary: "{name} — {designation}"
+    description: "Extended global network of 3D CGI artists, AI visualizers, motion designers, and creative technologists displayed at /creative-network. You can delete, reorder, or add any individual member."
     media: team
     fields:
       - name: id

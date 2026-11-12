@@ -4,6 +4,7 @@ import LayoutV3 from '@/components/layouts/LayoutV3';
 import PartnerV1 from '@/components/partner/PartnerV1';
 import TeamDetailsContent from '@/components/team/TeamDetailsContent';
 import TeamV1Data from "@/assets/jsonData/team/TeamV1Data.json";
+import { notFound } from 'next/navigation';
 
 export const metadata = {
     title: "Brandspace - Team Details"
@@ -26,14 +27,18 @@ interface PageProps {
 const TeamDetailsPage = async ({ params }: PageProps) => {
 
     const { id } = await params;
-    const data = TeamV1Data.find(member => member.id === parseInt(id))
+    const data = TeamV1Data.find(member => member.id === parseInt(id));
+
+    if (!data) {
+        notFound();
+    }
 
     return (
         <>
             <div className="aixor-main team-details-page">
                 <LayoutV3>
                     <HeroV2 title="Team Details" />
-                    {data && <TeamDetailsContent memberData={data} />}
+                    <TeamDetailsContent memberData={data} />
                     <ContactV1 />
                     <PartnerV1 />
                 </LayoutV3>

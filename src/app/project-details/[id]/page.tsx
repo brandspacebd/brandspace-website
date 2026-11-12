@@ -1,6 +1,7 @@
 import ProjectDetailsContent from "@/components/project/ProjectDetailsContent";
 import FeatureV2Data from '@/assets/jsonData/feature/FeatureV2Data.json';
 import LayoutV3 from "@/components/layouts/LayoutV3";
+import { notFound } from 'next/navigation';
 
 export const metadata = {
     title: "Brandspace - Project Details"
@@ -23,13 +24,17 @@ interface PageProps {
 const ProjectDetailsPage = async ({ params }: PageProps) => {
 
     const { id } = await params;
-    const data = FeatureV2Data.find(project => project.id === parseInt(id))
+    const data = FeatureV2Data.find(project => project.id === parseInt(id));
+
+    if (!data) {
+        notFound();
+    }
 
     return (
         <>
             <div className="aixor-main single-project">
                 <LayoutV3>
-                    {data && <ProjectDetailsContent projectData={data} />}
+                    <ProjectDetailsContent projectData={data} />
                 </LayoutV3>
             </div>
         </>
