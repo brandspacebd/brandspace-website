@@ -14,7 +14,7 @@ interface TeamMember {
     name: string;
     designation: string;
     text: string;
-    thumb: string;
+    thumb?: string;
 }
 
 interface TeamV1Props {
